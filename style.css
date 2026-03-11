@@ -1,0 +1,97 @@
+:root {
+  --primary: #0b2545;
+  --secondary: #f2f2f2;
+  --tertiary: #d96c06;
+  --quator: #ffcfa2;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  list-style: none;
+}
+
+/* Générique */
+
+button {
+  margin: 1rem;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 10px;
+}
+
+/* Bannière */
+
+.banniere {
+  background-color: var(--tertiary);
+  padding: 2rem;
+  text-align: center;
+  color: var(--secondary);
+  h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 0.5rem;
+  }
+}
+
+/* Avis des clients */
+
+.avisclients {
+  background-color: var(--secondary);
+  h2 {
+    margin: 0 1rem 0 0;
+    padding: 1rem;
+    color: var(--primary);
+    text-align: center;
+  }
+}
+
+.temoignages {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  padding: 1rem;
+  margin: 1rem;
+  background-color: white;
+  p {
+    font-style: italic;
+  }
+}
+
+.profession {
+  color: var(--tertiary);
+  font-weight: bold;
+}
+
+span {
+  color: var(--tertiary);
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Footer */
+
+footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: var(--primary);
+  color: var(--secondary);
+  div {
+    padding: 1rem;
+  }
+  h3 {
+    padding: 1 rem;
+    margin: 1rem 0;
+  }
+}
+
+.newsletter {
+  ul {
+    li {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+}
