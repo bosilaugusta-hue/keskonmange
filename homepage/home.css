@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+    .home-cta {
+        background-image: url('keskonmange_vide.png');
+        background-size: cover;
+
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+        width: 100%;
+
+        .test-btn {
+            font-weight: bold;
+            font-size: 1.8rem;
+            color: white;
+            background-color: green;
+            border: none;
+            border-radius: 10px;
+            padding: 2rem 3rem;
+        }
+    }
+
+    .box-section {
+        width: 100%;
+        margin: auto;
+        background-color: beige;
+        padding: 1rem 4rem;
+
+        .card {
+            background-color: white;
+            border: 1px solid black;
+            padding: 1rem;
+            width: max-content;
+
+            .shop-btn {
+                color: white;
+                background-color: orange;
+                padding: 1rem;
+            }
+        }
+    }
+
+
+
+
+
+
+}
