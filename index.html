@@ -7,74 +7,156 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <section></section>
+    <!-- ===== SECTION CONTACT ===== -->
+    <section>
+      <div class="contact">
+        <!-- Infos de contact -->
+        <div class="firstcontact">
+          <h2>Restons en contact</h2>
+          <p>
+            Nous sommes là pour répondre à toutes vos questions et vous aider à
+            découvrir nos meilleurs plats. N'hésitez pas à nous contacter !
+          </p>
+          <span>92 Avenue de la République, Paris, 75001</span>
+          <span>contact@keskonmange.fr</span>
+          <span>06 77 12 88 05</span>
+
+          <!-- Réseaux sociaux -->
+          <span>Suivez-nous</span>
+          <ul>
+            <li>
+              <img src="./Images/icons8-facebook.svg" alt="Logo Facebook" />
+            </li>
+            <li>
+              <img src="./Images/icons8-instagram.svg" alt="Logo Instagram" />
+            </li>
+            <li><img src="./Images/icons8-tiktok.svg" alt="Logo Tiktok" /></li>
+            <li>
+              <img src="./Images/icons8-linkedin.svg" alt="Logo Linkedin" />
+            </li>
+          </ul>
+        </div>
+
+        <!-- Formulaire de contact -->
+        <div class="secondcontact">
+          <h2>Contactez-nous</h2>
+          <form>
+            <input type="text" placeholder="Nom d'utilisateur" />
+            <input type="email" placeholder="Email" />
+            <input type="tel" placeholder="Téléphone" />
+            <textarea placeholder="Message"></textarea>
+            <button type="submit">Envoyer</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== BANNIÈRE CTA ===== -->
     <section class="banniere">
       <h2>Rejoignez notre communauté</h2>
       <p>Découvrez ce que nos clients disent de nous</p>
       <button>Rejoignez-nous !</button>
     </section>
+
+    <!-- ===== AVIS CLIENTS ===== -->
     <section class="avisclients">
       <h2>Lisez les avis de nos clients</h2>
+
       <div class="temoignages">
-        <section>
-          <span>"</span>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
-            laudantium repellat maiores cupiditate nemo, enim cum error eum!
-            Fugit ducimus odio soluta quis molestiae corrupti quae itaque.
-            Suscipit, minus repellat?
+        <!-- Carte 1 : sans auteur -->
+        <section class="carte-temoignage">
+          <span class="guillemet">"</span>
+          <p class="texte">
+            Keskonmange a révolutionné mes repas entre deux concerts. Des plats
+            savoureux livrés en un clin d'œil !
           </p>
-          <img src="./Images/icons8-facebook.svg" alt="" />
-          <p>Michel Sardou</p>
-          <p class="profession">Chanteur</p>
+          <div class="auteur">
+            <img
+              src="./Images/Alain Pierre.png"
+              alt="Portrait de Alain Pierre"
+            />
+            <div>
+              <p class="nom">Alain Pierre</p>
+              <p class="profession">Chanteur</p>
+            </div>
+          </div>
         </section>
-        <section>
-          <span>"</span>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
-            laudantium repellat maiores cupiditate nemo, enim cum error eum!
-            Fugit ducimus odio soluta quis molestiae corrupti quae itaque.
-            Suscipit, minus repellat?
+
+        <!-- Carte 2 : sans auteur -->
+        <section class="carte-temoignage">
+          <span class="guillemet">"</span>
+          <p class="texte">
+            Gain de temps considérable au quotidien. Je recommande à tous mes
+            associés, la qualité est au rendez-vous !
           </p>
-          <img src="" alt="" />
-          <p>Nom Prénom</p>
-          <p class="profession">Profession</p>
+          <div class="auteur">
+            <img
+              src="./Images/Pierre Lenet.png"
+              alt="Portrait de Pierre Lene"
+            />
+            <div>
+              <p class="nom">Pierre Lenet</p>
+              <p class="profession">Entrepreneur</p>
+            </div>
+          </div>
         </section>
-        <section>
-          <span>"</span>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
-            laudantium repellat maiores cupiditate nemo, enim cum error eum!
-            Fugit ducimus odio soluta quis molestiae corrupti quae itaque.
-            Suscipit, minus repellat?
+
+        <!-- Carte 3 : avec auteur -->
+        <section class="carte-temoignage">
+          <span class="guillemet">"</span>
+          <p class="texte">
+            Parfait pour la pause déjeuner au bureau. Des menus variés et
+            équilibrés à petit prix, que demander de plus ?
           </p>
-          <img src="" alt="" />
-          <p>Nom Prénom</p>
-          <p class="profession">Profession</p>
+          <div class="auteur">
+            <img
+              src="./Images/Martin Chesnay.png"
+              alt="Portrait de Martin Chesnay"
+            />
+            <div>
+              <p class="nom">Martin Chesnay</p>
+              <p class="profession">Fonctionnaire</p>
+            </div>
+          </div>
         </section>
-        <section>
-          <span>"</span>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
-            laudantium repellat maiores cupiditate nemo, enim cum error eum!
-            Fugit ducimus odio soluta quis molestiae corrupti quae itaque.
-            Suscipit, minus repellat?
+
+        <!-- Carte 4 : avec auteur -->
+        <section class="carte-temoignage">
+          <span class="guillemet">"</span>
+          <p class="texte">
+            Même moi qui travaille dans la restauration, je suis conquise ! Des
+            saveurs authentiques et une livraison rapide.
           </p>
-          <img src="" alt="" />
-          <p>Nom Prénom</p>
-          <p class="profession">Profession</p>
+          <div class="auteur">
+            <img
+              src="./Images/Orane Marcheterre.png"
+              alt="Portrait de Orane Marcheterre"
+            />
+            <div>
+              <p class="nom">Orane Marcheterre</p>
+              <p class="profession">Serveuse</p>
+            </div>
+          </div>
         </section>
       </div>
     </section>
+
+    <!-- ===== FOOTER ===== -->
     <footer>
-      <div>
-        <img src="" alt="" />
+      <!-- Description du site -->
+      <div class="footer-logo">
+        <img
+          class="logo-footer"
+          src="./Images/Logo.png"
+          alt="Logo Keskonmange"
+        />
         <p>
           Keskonmange vous propose les meilleurs plats pour satisfaire vos
           envies culinaires. Découvrez notre sélection de repas savoureux et
           équilibrés.
         </p>
       </div>
+      <!-- Plan du site -->
       <div>
         <h3>Plan du site</h3>
         <ul>
@@ -84,16 +166,17 @@
           <li>Shop</li>
         </ul>
       </div>
+
+      <!-- Newsletter + réseaux sociaux -->
       <div class="newsletter">
         <h3>Newsletter</h3>
-        <input type="text" />
+        <input type="email" placeholder="Votre email" />
         <button>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
             height="16"
             fill="currentColor"
-            class="s-icon s-icon-icon-send"
             viewBox="0 0 16 16"
           >
             <path
@@ -102,6 +185,8 @@
             />
           </svg>
         </button>
+
+        <!-- Réseaux sociaux footer -->
         <ul>
           <li>
             <img src="./Images/icons8-facebook.svg" alt="Logo Facebook" />

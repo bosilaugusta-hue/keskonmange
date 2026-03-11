@@ -1,97 +1,404 @@
 :root {
-  --primary: #0b2545;
-  --secondary: #f2f2f2;
-  --tertiary: #d96c06;
-  --quator: #ffcfa2;
+  --couleur-primaire: #e05a1e;
+  --couleur-primaire-hover: #c44d17;
+  --couleur-texte: #2d3748;
+  --couleur-texte-doux: #4a5568;
+  --couleur-texte-clair: #718096;
+  --couleur-fond: #f5f3ef;
+  --couleur-fond-dark: #1a202c;
+  --couleur-fond-dark2: #2d3748;
+  --couleur-bordure: #d0cce8;
+  --couleur-violet: #7b6fb0;
+  --couleur-violet-clair: #a09bc5;
+  --border-radius: 12px;
+  --transition: 0.2s;
 }
 
+/* ===== Initialisation ===== */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: var(--couleur-fond);
+  color: var(--couleur-texte);
+}
+
+/* ===== SECTION CONTACT ===== */
+.contact {
+  display: flex;
+  gap: 4rem;
+  padding: 4rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Infos de contact */
+.firstcontact {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1;
+}
+
+.firstcontact h2 {
+  font-size: 1.8rem;
+  color: var(--couleur-texte);
+}
+
+.firstcontact p {
+  color: var(--couleur-texte-clair);
+  line-height: 1.6;
+}
+
+.firstcontact span {
+  display: block;
+  color: var(--couleur-texte-doux);
+  font-size: 0.95rem;
+}
+
+/* Réseaux sociaux contact */
+.firstcontact ul {
+  display: flex;
+  gap: 1rem;
   list-style: none;
+  margin-top: 0.5rem;
 }
 
-/* Générique */
+.firstcontact ul li img {
+  width: 28px;
+  height: 28px;
+  filter: none;
+  &:hover {
+    cursor: pointer;
+  }
+}
 
-button {
-  margin: 1rem;
-  padding: 0.5rem;
+/* Formulaire de contact */
+.secondcontact {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  flex: 1;
+}
+
+.secondcontact h2 {
+  font-size: 1.8rem;
+  color: var(--couleur-texte);
+}
+
+.secondcontact form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.secondcontact input,
+.secondcontact textarea {
+  border: 1.5px solid var(--couleur-bordure);
+  border-radius: var(--border-radius);
+  padding: 16px;
+  font-size: 15px;
+  color: var(--couleur-violet);
+  outline: none;
+  font-family: inherit;
+  background: white;
+}
+
+.secondcontact input::placeholder,
+.secondcontact textarea::placeholder {
+  color: var(--couleur-violet-clair);
+}
+
+.secondcontact input:focus,
+.secondcontact textarea:focus {
+  border-color: var(--couleur-violet-clair);
+}
+
+.secondcontact textarea {
+  height: 140px;
+  resize: vertical;
+}
+
+.secondcontact button[type="submit"] {
+  align-self: flex-start;
+  background-color: var(--couleur-primaire);
+  color: white;
   border: none;
-  border-radius: 10px;
+  border-radius: var(--border-radius);
+  padding: 12px 28px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background var(--transition);
 }
 
-/* Bannière */
+.secondcontact button[type="submit"]:hover {
+  background-color: var(--couleur-primaire-hover);
+}
 
+/* ===== BANNIÈRE communautyé ===== */
 .banniere {
-  background-color: var(--tertiary);
-  padding: 2rem;
+  background-color: var(--couleur-primaire);
+  color: white;
   text-align: center;
-  color: var(--secondary);
-  h2 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    padding: 0.5rem;
-  }
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
 
-/* Avis des clients */
+.banniere h2 {
+  font-size: 2rem;
+}
 
+.banniere p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.banniere button {
+  background: white;
+  color: var(--couleur-primaire);
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity var(--transition);
+}
+
+.banniere button:hover {
+  opacity: 0.9;
+}
+
+/* ===== AVIS CLIENTS ===== */
 .avisclients {
-  background-color: var(--secondary);
-  h2 {
-    margin: 0 1rem 0 0;
-    padding: 1rem;
-    color: var(--primary);
-    text-align: center;
-  }
+  padding: 4rem 2rem;
+  text-align: center;
 }
 
+.avisclients h2 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  color: var(--couleur-texte);
+}
+
+/* Grid des témoignages */
 .temoignages {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-  padding: 1rem;
-  margin: 1rem;
-  background-color: white;
-  p {
-    font-style: italic;
-  }
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.carte-temoignage {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  text-align: left;
+}
+
+.guillemet {
+  font-size: 2.5rem;
+  color: var(--couleur-primaire);
+  font-weight: bold;
+  line-height: 1;
+}
+
+.texte {
+  color: var(--couleur-texte-doux);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* Auteur */
+.auteur {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.auteur img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover; /* ← recadre proprement l'image en cercle */
+  flex-shrink: 0;
+}
+
+.nom {
+  font-weight: 700;
+  color: var(--couleur-texte);
 }
 
 .profession {
-  color: var(--tertiary);
-  font-weight: bold;
+  color: var(--couleur-primaire);
+  font-size: 0.9rem;
 }
 
-span {
-  color: var(--tertiary);
-  font-size: 2rem;
-  font-weight: bold;
-}
-
-/* Footer */
-
+/* ===== FOOTER ===== */
 footer {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  background-color: var(--primary);
-  color: var(--secondary);
-  div {
-    padding: 1rem;
-  }
-  h3 {
-    padding: 1 rem;
-    margin: 1rem 0;
+  background-color: var(--couleur-fond-dark);
+  color: #cbd5e0;
+  display: flex;
+  gap: 0;
+  padding: 3rem 4rem;
+  align-items: center;
+}
+
+footer div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1;
+  padding-right: 3rem;
+  align-items: flex-start;
+}
+
+footer div + div {
+  border-left: 2px solid var(--couleur-primaire);
+  padding-left: 3rem;
+}
+
+/* Bloc logo : plus large et centré */
+.footer-logo {
+  flex: 2;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-logo img {
+  width: 80px;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+.footer-logo p {
+  text-align: center;
+}
+
+footer h3 {
+  color: white;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+footer p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #a0aec0;
+}
+
+/* Plan du site */
+footer ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+footer ul li {
+  color: #a0aec0;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: color var(--transition);
+}
+
+footer ul li:hover {
+  color: white;
+}
+
+/* Newsletter */
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.newsletter input {
+  background: var(--couleur-fond-dark2);
+  border: 1px solid #4a5568;
+  border-radius: 8px;
+  padding: 10px 14px;
+  color: white;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.newsletter input::placeholder {
+  color: var(--couleur-texte-clair);
+}
+
+.newsletter button {
+  align-self: flex-start;
+  background-color: var(--couleur-primaire);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: background var(--transition);
+}
+
+.newsletter button:hover {
+  background-color: var(--couleur-primaire-hover);
+}
+
+/* Réseaux sociaux footer */
+.newsletter ul {
+  flex-direction: row;
+}
+
+.newsletter ul li img {
+  width: 24px;
+  height: 24px;
+  &:hover {
+    cursor: pointer;
   }
 }
 
-.newsletter {
-  ul {
-    li {
-      display: flex;
-      flex-direction: row;
-    }
+.newsletter ul li img[alt="Logo Tiktok"] {
+  filter: brightness(0) invert(1);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .contact {
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .temoignages {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    flex-direction: column;
+    padding: 2rem;
+    align-items: stretch;
+  }
+
+  footer div + div {
+    border-left: 2px solid var(--couleur-primaire);
+    border-top: none;
+    padding-left: 1.5rem;
+    padding-top: 0;
+    margin-top: 1.5rem;
+  }
+
+  .footer-logo {
+    align-items: center;
+    padding-right: 0;
   }
 }
