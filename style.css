@@ -9,16 +9,16 @@
 }
 
 :root {
-    --fredoka-main: 'FredokaOne';
-    --fredoka-sans-serif: 'FredokaOne', sans-serif;
-    --roboto-main: 'RobotoMono';
-    --roboto-sans-serif: 'RobotoMono', sans-serif;
-    --blue-color: #0b2545;
-    --white-color: #f2f2f2;
-    --orange-color: #d96c06;
-    --orange-background: #db6d0680;
-    --peach-color: #ffcfa2;
-    --peach-background: #ffcfa280;
+    --main-font: 'FredokaOne';
+    --main-font-sans-serif: 'FredokaOne', sans-serif;
+    --second-font: 'RobotoMono';
+    --second-font-sans-serif: 'RobotoMono', sans-serif;
+    --primary: #0b2545;
+    --secondary: #f2f2f2;
+    --tertiary: #d96c06;
+    --quator: #ffcfa2;
+    --primary-background-color: #db6d0680;
+    --second-background-color: #ffcfa280;
 
 }
 
