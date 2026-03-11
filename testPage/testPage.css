@@ -1,0 +1,22 @@
+ body {
+     margin: 0;
+     height: 100vh;
+     position: relative;
+     overflow: hidden;
+
+
+     /* Méthode avec clip-path */
+     /* .gauche {
+         position: absolute;
+         inset: 0;
+         background: #3498db;
+         clip-path: polygon(0 0, 60% 0, 40% 100%, 0 100%);
+     }
+
+     .droite {
+         position: absolute;
+         inset: 0;
+         background: #e74c3c;
+         clip-path: polygon(60% 0, 100% 0, 100% 100%, 40% 100%);
+     } */
+ }
