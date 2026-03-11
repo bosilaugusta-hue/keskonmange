@@ -1,0 +1,97 @@
+:root{
+    --radius: 16px;
+    --gap: 12px;
+    --transition: 0.5s cubic-bezier(.25,.9,.25,1);
+
+}
+
+
+/* section 2 LES ACCORDEONS */
+.s2 {
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+    height: 45vh;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.accordeus {
+    margin: 0;
+    /* min-height: 100vh; */
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.accordion {
+    display: flex;
+    gap: var(--gap);
+    width: min(1000px, 95vw);
+    height: 280px;
+}
+
+details {
+    flex: 0 0 90px;
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    transition: flex-basis var(--transition), transform var(--transition);
+    position: relative;
+}
+
+details[open] {
+    flex: 1 1 auto;
+    transform: translateY(-4px);
+}
+
+summary {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    list-style: none;
+    color: white;
+    background: red;
+    transition: opacity var(--transition), background var(--transition);
+    user-select: none;
+}
+
+details:nth-child(2) summary {background: rgb(75, 3, 3);}
+details:nth-child(3) summary{background-color: rgb(110, 54, 34);}
+summary::-webkit-details-marker {display: none;}
+details[open] summary {
+    pointer-events: none;
+}
+
+.content {
+    position: absolute;
+    inset:0;
+    padding: 30px 40px;
+    background: white;
+    opacity: 0;
+    transform: translateX(40px);
+    transition: opacity var(--transition), transform var(--transition);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+details[open] .content {
+    opacity: 1;
+    transform: translateX(0);
+    position: initial;
+}
