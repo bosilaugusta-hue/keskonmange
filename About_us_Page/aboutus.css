@@ -16,7 +16,6 @@
     height: 45vh;
     width: 60%;
     margin: 0 auto;
-
 }
 
 .accordeus {
@@ -47,7 +46,6 @@ details {
     box-shadow: 0 4px 16px rgba(0,0,0,0.08);
     transition: flex-basis var(--transition), transform var(--transition);
     position: relative;
-
 }
 
 details[open] {
@@ -71,6 +69,7 @@ summary {
     transition: opacity var(--transition), background var(--transition);
     user-select: none;
 }
+
 details:nth-child(2) summary {background: rgb(75, 3, 3);}
 details:nth-child(3) summary{background-color: rgb(110, 54, 34);}
 summary::-webkit-details-marker {display: none;}
