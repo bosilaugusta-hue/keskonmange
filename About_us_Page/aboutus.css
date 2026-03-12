@@ -2,31 +2,147 @@
     --radius: 16px;
     --gap: 12px;
     --transition: 0.5s cubic-bezier(.25,.9,.25,1);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color:#FFCFA2;
+}
+
+/* section 1 Qui qu'on est? */
+.s1 {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@property --a{
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: true;
+}
+
+.box1 {
+    position: relative;
+    width: 60rem;
+    height: 30rem;
+    border-radius: 25px;
+    background: repeating-conic-gradient(from var(--a), #D96C06 0%, #D96C06 5%, transparent 5%, transparent 40%, #D96C06 50%);
+    /* border: 2px solid white; */
+    animation: animate 4s linear infinite;
+}
+
+@keyframes animate {
+    0%{
+        --a: 0deg;
+    }
+    100%{
+        --a: 360deg;
+    }
+}
+
+.box1::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: repeating-conic-gradient(from var(--a), #D96C06 0%, #D96C06 5%, transparent 5%, transparent 40%, #D96C06 50%);
+    animation: animate 4s linear infinite;
+    animation-delay: -1s;
+    border-radius: 25px;
+}
+
+.box1::after{
+    content: '';
+    position: absolute;
+    width: 97%;
+    height: 97%;
+    background:#0B2545;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 25px;
+}
+
+/* dans la boite1 */
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-800px);
+    }
+  
+    to {
+        transform: translateX(0);
+    }
 
 }
 
+.heading-1 {
+    animation-name: slideInLeft;
+    animation-duration: 0.75s;
+    animation-timing-function: ease-in;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: both;
+
+    transform: translateX(-150px);
+}
+
+.box1_inside{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 3%;
+    color: #FFCFA2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.box1_inside p{
+    padding: 0.5rem 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.box1_inside h1{
+    color: #FFCFA2;
+    font-size: 4rem;
+    padding: 0.5rem 1rem;
+    padding-bottom: 2rem;
+    max-width: 100%;
+}
 
 /* section 2 LES ACCORDEONS */
 .s2 {
-    border-radius: 25px;
+    /* border-radius: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: blue;
     height: 45vh;
-    width: 60%;
+    width: 60%; */
     margin: 0 auto;
 }
 
 .accordeus {
     margin: 0;
-    /* min-height: 100vh; */
-    border-radius: 25px;
+    min-height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: whitesmoke;
     color: black;
     font-family: 'Times New Roman', Times, serif;
 }
@@ -42,7 +158,7 @@ details {
     flex: 0 0 90px;
     border-radius: var(--radius);
     overflow: hidden;
-    background: white;
+    background:#F2F2F2;
     box-shadow: 0 4px 16px rgba(0,0,0,0.08);
     transition: flex-basis var(--transition), transform var(--transition);
     position: relative;
@@ -64,14 +180,14 @@ summary {
     font-size: 14px;
     cursor: pointer;
     list-style: none;
-    color: white;
-    background: red;
+    color: #F2F2F2;
+    background: #EC5082;
     transition: opacity var(--transition), background var(--transition);
     user-select: none;
 }
 
-details:nth-child(2) summary {background: rgb(75, 3, 3);}
-details:nth-child(3) summary{background-color: rgb(110, 54, 34);}
+details:nth-child(2) summary {background:#44634D;}
+details:nth-child(3) summary{background-color: #1B3E31;}
 summary::-webkit-details-marker {display: none;}
 details[open] summary {
     pointer-events: none;
@@ -81,7 +197,7 @@ details[open] summary {
     position: absolute;
     inset:0;
     padding: 30px 40px;
-    background: white;
+    background: #F2F2F2;
     opacity: 0;
     transform: translateX(40px);
     transition: opacity var(--transition), transform var(--transition);
