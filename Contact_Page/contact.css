@@ -72,6 +72,7 @@ body {
   width: 28px;
   height: 28px;
   filter: none;
+
   &:hover {
     cursor: pointer;
   }
@@ -233,7 +234,8 @@ body {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  object-fit: cover; /* ← recadre proprement l'image en cercle */
+  object-fit: cover;
+  /* ← recadre proprement l'image en cercle */
   flex-shrink: 0;
 }
 
@@ -266,7 +268,7 @@ footer div {
   align-items: flex-start;
 }
 
-footer div + div {
+footer div+div {
   border-left: 2px solid var(--couleur-primaire);
   padding-left: 3rem;
 }
@@ -363,6 +365,7 @@ footer ul li:hover {
 .newsletter ul li img {
   width: 24px;
   height: 24px;
+
   &:hover {
     cursor: pointer;
   }
@@ -389,7 +392,7 @@ footer ul li:hover {
     align-items: stretch;
   }
 
-  footer div + div {
+  footer div+div {
     border-left: 2px solid var(--couleur-primaire);
     border-top: none;
     padding-left: 1.5rem;
