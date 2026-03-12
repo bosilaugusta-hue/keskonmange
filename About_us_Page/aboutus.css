@@ -13,7 +13,7 @@
 html, body {
     width: 100%;
     height: 100%;
-    background-color:#FFCFA2;
+    background-color:var(--quator);
 }
 
 /* section 1 Qui qu'on est? */
@@ -66,7 +66,7 @@ html, body {
     position: absolute;
     width: 97%;
     height: 97%;
-    background:#0B2545;
+    background:var(--primary);
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -102,7 +102,7 @@ html, body {
     width: 100%;
     height: 100%;
     padding: 3%;
-    color: #FFCFA2;
+    color: var(--quator);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -111,31 +111,22 @@ html, body {
 }
 
 .box1_inside p{
+    font-family: var(--second-font);
     padding: 0.5rem 1rem;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 .box1_inside h1{
-    color: #FFCFA2;
-    font-size: 4rem;
+    color: var(--quator);
+    font-family: var(--main-font);
+    font-size: 3rem;
     padding: 0.5rem 1rem;
     padding-bottom: 2rem;
     max-width: 100%;
 }
 
 /* section 2 LES ACCORDEONS */
-.s2 {
-    /* border-radius: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: blue;
-    height: 45vh;
-    width: 60%; */
-    margin: 0 auto;
-}
-
 .accordeus {
     margin: 0;
     min-height: 50vh;
@@ -143,8 +134,8 @@ html, body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: black;
-    font-family: 'Times New Roman', Times, serif;
+    color: var(--primary);
+    font-family: var(--second-font);
 }
 
 .accordion {
@@ -158,7 +149,7 @@ details {
     flex: 0 0 90px;
     border-radius: var(--radius);
     overflow: hidden;
-    background:#F2F2F2;
+    background:var(--secondary);
     box-shadow: 0 4px 16px rgba(0,0,0,0.08);
     transition: flex-basis var(--transition), transform var(--transition);
     position: relative;
@@ -170,24 +161,28 @@ details[open] {
 }
 
 summary {
-    writing-mode: vertical-rl;
+    writing-mode: vertical-lr;
     text-orientation: mixed;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 12px;
+    font-family: var(--second-font-sans-serif);
     font-weight: 600;
-    font-size: 14px;
+    font-size: 1rem;
     cursor: pointer;
     list-style: none;
     color: #F2F2F2;
-    background: #EC5082;
+    background: #587850;
     transition: opacity var(--transition), background var(--transition);
     user-select: none;
+    height: 96px;
+    min-height: 96px;
+    flex-shrink: 0;
 }
 
-details:nth-child(2) summary {background:#44634D;}
-details:nth-child(3) summary{background-color: #1B3E31;}
+details:nth-child(2) summary {background:#709479;}
+details:nth-child(3) summary{background-color: #71ad9c;}
 summary::-webkit-details-marker {display: none;}
 details[open] summary {
     pointer-events: none;
@@ -196,7 +191,8 @@ details[open] summary {
 .content {
     position: absolute;
     inset:0;
-    padding: 30px 40px;
+    padding-left: 90px;
+    padding-right: 60px;
     background: #F2F2F2;
     opacity: 0;
     transform: translateX(40px);
@@ -205,6 +201,10 @@ details[open] summary {
     flex-direction: column;
     justify-content: center;
 }
+.content h3{
+    font-family: var(--main-font-sans-serif);
+    font-size: 1.5rem;
+}
 
 details[open] .content {
     opacity: 1;
@@ -212,7 +212,7 @@ details[open] .content {
     position: initial;
 }
 
-
+/* section 3 Cards... */
 
 
 
