@@ -1,0 +1,249 @@
+:root {
+    --primary-blue: #0B2545;
+    --primary-orange: #D96C06;
+    --bg-light: #F2F2F2;
+    --white: #FFFFFF;
+    --font-family: 'Fredoka One', cursive;
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-light);
+    color: var(--primary-blue);
+    line-height: 1.6;
+}
+
+/* HEADER & NAVBAR (Finition Image 2) */
+.header-container {
+    width: 100%;
+}
+
+.navbar {
+    background-color: var(--primary-blue);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 60px;
+}
+
+.nav-logo {
+    height: 75px;
+    /* Logo agrandi comme demandé */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+    color: var(--primary-orange);
+}
+
+/* HERO BANNER (Finition Image 3 - Zoom sur Logo2) */
+.hero-banner {
+    background-image: url('Logo2.jpg');
+    background-size: cover;
+    background-position: center 20%;
+    /* Ajusté pour voir le splash bleu/orange */
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 4.5rem;
+    color: var(--primary-blue);
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    max-width: 700px;
+}
+
+/* BOUTONS ANIMÉS */
+.btn-main {
+    background-color: var(--primary-orange);
+    color: var(--white);
+    border: none;
+    padding: 18px 45px;
+    border-radius: 15px;
+    font-family: var(--font-family);
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(217, 108, 6, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-main:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(217, 108, 6, 0.5);
+}
+
+/* GRILLE DES CARTES (Image 1) */
+.main-content {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.food-card {
+    background: var(--white);
+    border-radius: 35px;
+    /* Bords très arrondis comme la maquette */
+    display: flex;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.food-card:hover {
+    transform: scale(1.02);
+}
+
+.card-content {
+    padding: 35px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.small-icon {
+    height: 30px;
+}
+
+.card-footer {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.price {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.btn-order {
+    background-color: var(--primary-orange);
+    color: var(--white);
+    border: none;
+    padding: 10px 25px;
+    border-radius: 10px;
+    font-family: var(--font-family);
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+.card-img {
+    width: 240px;
+}
+
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* FOOTER */
+.footer-cta {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    text-align: center;
+    padding: 80px 20px;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1.5s ease-in;
+}
+
+.slide-up {
+    animation: slideUp 0.8s ease-out both;
+}
+
+.pulse {
+    animation: pulse-shadow 2s infinite;
+}
+
+@keyframes pulse-shadow {
+    0% {
+        box-shadow: 0 0 0 0px rgba(217, 108, 6, 0.5);
+    }
+
+    100% {
+        box-shadow: 0 0 0 20px rgba(217, 108, 6, 0);
+    }
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .navbar {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero-text h1 {
+        font-size: 3rem;
+    }
+}
