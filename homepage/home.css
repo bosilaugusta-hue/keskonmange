@@ -34,15 +34,28 @@
             padding-bottom: 2rem;
         }
 
-        .cards {
+        .carousel-container {
             display: flex;
-            /*justify-content: center;*/
-            gap: 2rem;
-            margin: auto;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            scroll-behavior: smooth;
+            align-items: center;
 
+            #left {
+                background-color: blue;
+                border-radius: 50%;
+                width: 40px;
+            }
+
+            .cards {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 2rem;
+                width: 600px;
+                margin: auto;
+                overflow-x: auto;
+                /*pour faire apparaitre une partie des cartes*/
+                scroll-snap-type: x mandatory;
+                scroll-behavior: smooth;
+                /*
             &::scroll-button(inline-start) {
                 content: "flèche";
                 display: flex;
@@ -63,23 +76,24 @@
                 color: white;
                 border-radius: 50%;
                 cursor: pointor;
+            }*/
             }
-        }
 
-        .card {
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 5px 5px 10px grey;
-            padding: 1rem;
-            min-width: 14rem;
-
-            .shop-btn {
-                color: white;
-                background-color: orange;
+            .card {
+                background-color: white;
                 border-radius: 10px;
-                border: none;
-                padding: 0.6rem;
-                text-align: left;
+                box-shadow: 5px 5px 10px grey;
+                padding: 1rem;
+                min-width: 14rem;
+
+                .shop-btn {
+                    color: white;
+                    background-color: orange;
+                    border-radius: 10px;
+                    border: none;
+                    padding: 0.6rem;
+                    text-align: left;
+                }
             }
         }
     }
