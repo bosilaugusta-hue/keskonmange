@@ -115,6 +115,7 @@
                          border-color: var(--tertiary);
 
                      }
+
                  }
 
                  #previousButton {
@@ -133,5 +134,12 @@
                  }
              }
          }
+     }
+
+     footer {
+         background-color: var(--primary);
+         padding: 1em;
+         z-index: 1;
+         width: 100%;
      }
  }
