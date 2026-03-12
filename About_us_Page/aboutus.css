@@ -87,7 +87,7 @@ html, body {
 
 .heading-1 {
     animation-name: slideInLeft;
-    animation-duration: 0.75s;
+    animation-duration: 1s;
     animation-timing-function: ease-in;
     animation-delay: 1s;
     animation-iteration-count: 1;
@@ -211,3 +211,9 @@ details[open] .content {
     transform: translateX(0);
     position: initial;
 }
+
+
+
+
+
+/* ===== FOOTER ===== */
