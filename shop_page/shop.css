@@ -1,249 +1,531 @@
 :root {
-    --primary-blue: #0B2545;
-    --primary-orange: #D96C06;
-    --bg-light: #F2F2F2;
-    --white: #FFFFFF;
-    --font-family: 'Fredoka One', cursive;
+
+    --bleu: #0B2545;
+    --orange: #D96C06;
+    --beige: #FFCFA2;
+    --blanc: #F2F2F2;
+
 }
 
 /* RESET */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Fredoka One', cursive;
 }
 
 body {
-    font-family: var(--font-family);
-    background-color: var(--bg-light);
-    color: var(--primary-blue);
-    line-height: 1.6;
+    background: #efefef;
 }
 
-/* HEADER & NAVBAR (Finition Image 2) */
-.header-container {
-    width: 100%;
-}
+
+
+/* NAVBAR */
 
 .navbar {
-    background-color: var(--primary-blue);
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 60px;
+
+    padding: 14px 80px;
+
+    background: #0B2545;
+
 }
 
-.nav-logo {
-    height: 75px;
-    /* Logo agrandi comme demandé */
-}
 
-.nav-links {
+/* LEFT SIDE */
+
+.nav-left {
+
     display: flex;
-    list-style: none;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.logo-icon {
+
+    width: 48px;
+
+}
+
+.logo-text {
+
+    color: #D96C06;
+
+    font-size: 24px;
+    margin-left: 8px;
+
+}
+
+
+/* MENU */
+
+.nav-menu {
+
+    display: flex;
+    align-items: center;
+
     gap: 30px;
+
+    list-style: none;
+
 }
 
-.nav-links a {
+.nav-menu a {
+
+    color: white;
+
     text-decoration: none;
-    color: var(--white);
-    font-size: 1.1rem;
-    transition: color 0.3s ease;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+
 }
 
-.nav-links a.active,
-.nav-links a:hover {
-    color: var(--primary-orange);
+.nav-menu a:hover {
+
+    color: #D96C06;
+
 }
 
-/* HERO BANNER (Finition Image 3 - Zoom sur Logo2) */
-.hero-banner {
-    background-image: url('Logo2.jpg');
-    background-size: cover;
-    background-position: center 20%;
-    /* Ajusté pour voir le splash bleu/orange */
-    height: 450px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.active a {
+
+    color: #D96C06;
+
+}
+
+
+/* LOG-IN / SIGN-IN DIVIDER */
+
+.divider {
+
+    width: 1px;
+
+    height: 18px;
+
+    background: white;
+
+    opacity: 0.5;
+
+}
+
+
+
+/* HERO */
+
+.hero {
+
     text-align: center;
+
+    padding: 120px 20px;
+
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)),
+        url("Logo2.png");
+
+    background-size: cover;
+    background-position: center;
+
 }
 
-.hero-text h1 {
-    font-size: 4.5rem;
-    color: var(--primary-blue);
+.hero h1 {
+
+    font-size: 46px;
+
+    color: var(--bleu);
+
     margin-bottom: 10px;
+
 }
 
-.hero-text p {
-    font-size: 1.3rem;
+.hero p {
+
+    font-size: 18px;
+
+    color: #444;
+
     margin-bottom: 30px;
-    max-width: 700px;
+
 }
 
-/* BOUTONS ANIMÉS */
-.btn-main {
-    background-color: var(--primary-orange);
-    color: var(--white);
+
+
+/* BUTTON */
+
+.btn-primary {
+
+    background: var(--orange);
+
+    color: white;
+
     border: none;
-    padding: 18px 45px;
-    border-radius: 15px;
-    font-family: var(--font-family);
-    font-size: 1.2rem;
+
+    padding: 14px 28px;
+
+    font-size: 16px;
+
+    border-radius: 8px;
+
     cursor: pointer;
-    box-shadow: 0 4px 15px rgba(217, 108, 6, 0.3);
-    transition: all 0.3s ease;
+
+    transition: 0.3s;
+
 }
 
-.btn-main:hover {
+.btn-primary:hover {
+
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(217, 108, 6, 0.5);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+
 }
 
-/* GRILLE DES CARTES (Image 1) */
-.main-content {
-    max-width: 1200px;
-    margin: 60px auto;
-    padding: 0 20px;
-}
 
-.grid-container {
+
+/* BOX SECTION */
+
+.box-container {
+
     display: grid;
+
     grid-template-columns: repeat(2, 1fr);
+
     gap: 40px;
+
+    padding: 80px 140px;
+
+    max-width: 1200px;
+
+    margin: auto;
+
 }
 
-.food-card {
-    background: var(--white);
-    border-radius: 35px;
-    /* Bords très arrondis comme la maquette */
+
+
+/* BOX CARD */
+
+.box-card {
+
     display: flex;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease;
-}
 
-.food-card:hover {
-    transform: scale(1.02);
-}
+    justify-content: space-between;
 
-.card-content {
-    padding: 35px;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-.card-header {
-    display: flex;
     align-items: center;
-    gap: 12px;
-    margin-bottom: 10px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+
+    height: 190px;
+
+    width: 100%;
+
+    overflow: hidden;
+
+
+    transition: 0.3s;
+
 }
 
-.small-icon {
-    height: 30px;
+.box-card:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+
 }
 
-.card-footer {
-    margin-top: auto;
+
+
+/* LEFT SIDE */
+
+.box-left {
+
+    padding: 25px;
+
+    background: #f7f2ed;
+
+    height: 100%;
+
     display: flex;
+
     flex-direction: column;
-    gap: 15px;
+
+    justify-content: center;
+
+    gap: 6px;
+
+    width: 55%;
+
 }
+
+
+
+.box-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+}
+
+.box-image {
+
+    width: 45%;
+
+    height: 100%;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+.box-image img {
+
+    width: 120%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+.box-image::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    top: 0;
+
+    height: 100%;
+
+    width: 90px;
+
+    background: linear-gradient(to right,
+            #F7F2ED,
+            rgba(247, 242, 237, 0));
+
+    z-index: 2;
+
+}
+
+.mini-logo {
+
+    width: 20px;
+
+}
+
+
+
+.box-left h3 {
+
+    color: var(--bleu);
+
+    font-size: 16px;
+
+}
+
+
+
+.box-left p {
+
+    font-size: 13px;
+
+    color: #444;
+
+}
+
+
+
+/* PRICE */
 
 .price {
-    font-size: 1.8rem;
+
+    color: var(--bleu);
+
+    font-size: 18px;
+
     font-weight: bold;
+
+    margin-top: 5px;
+
 }
+
+
+
+/* ORDER BUTTON */
 
 .btn-order {
-    background-color: var(--primary-orange);
-    color: var(--white);
+
+    margin-top: 8px;
+
+    background: var(--orange);
+
     border: none;
-    padding: 10px 25px;
-    border-radius: 10px;
-    font-family: var(--font-family);
+
+    color: white;
+
+    padding: 8px 18px;
+
+    border-radius: 8px;
+
     cursor: pointer;
-    align-self: flex-start;
+
+    box-shadow: 0 4px 12px rgba(217, 108, 6, 0.4);
+
+    transition: 0.3s;
+
 }
 
-.card-img {
-    width: 240px;
+.btn-order:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
 }
 
-.card-img img {
-    width: 100%;
+
+
+/* RIGHT SIDE IMAGE */
+
+.box-right {
+
+    width: 40%;
+
     height: 100%;
+
+}
+
+.box-right img {
+
+    width: 115%;
+
+    height: 100%;
+
     object-fit: cover;
+
+
 }
 
-/* FOOTER */
-.footer-cta {
-    background-color: var(--primary-blue);
-    color: var(--white);
+
+
+
+/* CTA SECTION */
+
+.cta {
+
+    background: var(--bleu);
+
+    color: white;
+
     text-align: center;
-    padding: 80px 20px;
+
+    padding: 60px;
+
 }
 
-/* ANIMATIONS */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
+.cta h2 {
 
-    to {
-        opacity: 1;
-    }
+    margin-bottom: 20px;
+
+    font-size: 26px;
+
 }
 
-@keyframes slideUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
-.fade-in {
-    animation: fadeIn 1.5s ease-in;
-}
-
-.slide-up {
-    animation: slideUp 0.8s ease-out both;
-}
+/* BUTTON PULSE ANIMATION */
 
 .pulse {
-    animation: pulse-shadow 2s infinite;
+
+    animation: pulse 2s infinite;
+
 }
 
-@keyframes pulse-shadow {
+@keyframes pulse {
+
     0% {
-        box-shadow: 0 0 0 0px rgba(217, 108, 6, 0.5);
+        box-shadow: 0 0 0 0 rgba(217, 108, 6, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 15px rgba(217, 108, 6, 0);
     }
 
     100% {
-        box-shadow: 0 0 0 20px rgba(217, 108, 6, 0);
+        box-shadow: 0 0 0 0 rgba(217, 108, 6, 0);
     }
+
 }
 
-/* RESPONSIVE */
-@media (max-width: 900px) {
-    .grid-container {
+@media (max-width:1024px) {
+
+    .box-container {
+
         grid-template-columns: 1fr;
+
+        padding: 60px;
+
     }
 
-    .navbar {
-        padding: 15px 20px;
-        flex-direction: column;
-        gap: 15px;
+    .box-card {
+
+        height: 200px;
+
     }
 
-    .hero-text h1 {
-        font-size: 3rem;
+    @media (max-width:768px) {
+
+        .box-container {
+
+            padding: 40px 20px;
+
+            gap: 25px;
+
+        }
+
+        .box-card {
+
+            flex-direction: column;
+
+            height: auto;
+
+        }
+
+        .box-left {
+
+            width: 100%;
+
+            padding: 20px;
+
+        }
+
+        .box-image {
+
+            width: 100%;
+            height: 160px;
+
+        }
+
+        .box-image::before {
+            display: none;
+        }
+
     }
-}
