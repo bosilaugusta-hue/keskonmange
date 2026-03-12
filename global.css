@@ -1,0 +1,154 @@
+:root {
+  --couleur-primaire: #e05a1e;
+  --couleur-primaire-hover: #c44d17;
+  --couleur-texte: #2d3748;
+  --couleur-texte-doux: #4a5568;
+  --couleur-texte-clair: #718096;
+  --couleur-fond: #f5f3ef;
+  --couleur-fond-dark: #1a202c;
+  --couleur-fond-dark2: #2d3748;
+  --couleur-bordure: #d0cce8;
+  --couleur-violet: #7b6fb0;
+  --couleur-violet-clair: #a09bc5;
+  --border-radius: 12px;
+  --transition: 0.2s;
+}
+
+/* ===== Initialisation ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: var(--couleur-fond);
+  color: var(--couleur-texte);
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: var(--couleur-fond-dark);
+  color: #cbd5e0;
+  display: flex;
+  gap: 0;
+  padding: 3rem 4rem;
+  align-items: center;
+}
+
+footer div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1;
+  padding-right: 3rem;
+  align-items: flex-start;
+}
+
+footer div + div {
+  border-left: 2px solid var(--couleur-primaire);
+  padding-left: 3rem;
+}
+
+/* Bloc logo : plus large et centré */
+.footer-logo {
+  flex: 2;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-logo img {
+  width: 80px;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+.footer-logo p {
+  text-align: center;
+}
+
+footer h3 {
+  color: white;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+footer p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #a0aec0;
+}
+
+/* Plan du site */
+footer ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+footer ul li {
+  color: #a0aec0;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: color var(--transition);
+}
+
+footer ul li:hover {
+  color: white;
+}
+
+/* Newsletter */
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.newsletter input {
+  background: var(--couleur-fond-dark2);
+  border: 1px solid #4a5568;
+  border-radius: 8px;
+  padding: 10px 14px;
+  color: white;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.newsletter input::placeholder {
+  color: var(--couleur-texte-clair);
+}
+
+.newsletter button {
+  align-self: flex-start;
+  background-color: var(--couleur-primaire);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: background var(--transition);
+}
+
+.newsletter button:hover {
+  background-color: var(--couleur-primaire-hover);
+}
+
+/* Réseaux sociaux footer */
+.newsletter ul {
+  flex-direction: row;
+}
+
+.newsletter ul li img {
+  width: 24px;
+  height: 24px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.newsletter ul li img[alt="Logo Tiktok"] {
+  filter: brightness(0) invert(1);
+}
