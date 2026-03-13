@@ -2,38 +2,73 @@
 
     body {
         overflow: auto;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
 
     }
+
 
     main {
-        height: 100%;
-    }
-
-    section {
-        height: 0%;
-
-        #quizz {
-            width: 80%;
-            height: auto;
-            font-size: 0.8em;
-
-
-
-        }
-    }
-
-    #backgroundLogo {
+        flex: 1;
         position: relative;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%) rotate(-25deg);
-        z-index: 0;
-        width: 20em;
-        height: auto;
+        overflow: hidden;
+
+        .gauche {
+            position: absolute;
+            inset: 0;
+            background: var(--tertiary-background-color);
+            clip-path: polygon(0 0, 100% 0, 0 100%, 0 100%);
+            z-index: -1;
+        }
+
+        .droite {
+            position: absolute;
+            inset: 0;
+            background: var(--quator-background-color);
+            clip-path: polygon(100% 0, 100% 0, 100% 100%, 0 100%);
+            z-index: -1;
+        }
+
+        section {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 1rem;
+            /* ← remplace height: 0% qui cassait tout */
+
+
+            #quizz {
+                width: 80%;
+                height: auto;
+                font-size: 0.8em;
+
+                h2 {
+                    font-size: 2rem;
+                }
+
+                h3 {
+                    font-size: 1.5rem;
+                }
+
+
+
+            }
+        }
+
+        #backgroundLogo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-25deg);
+            z-index: 0;
+            width: 20em;
+            height: auto;
+        }
+
+
     }
-
-
-
 
     footer {
         flex-direction: column;
@@ -68,6 +103,10 @@
             width: 100%;
             text-align: center;
             font-size: 1.5em;
+
+            button {
+                height: auto;
+            }
         }
 
         #emailField {
@@ -92,17 +131,35 @@
 @media (min-width: 768px) and (max-width: 1024px) {
 
 
-    #quizz {
-        width: 80%;
-        height: auto;
-    }
+    main {
+        section {
+            #quizz {
+                width: 60%;
+                /* ← augmenter, était 80% */
+                height: auto;
+                font-size: 0.8em;
 
-    #burgerImage {
-        display: none;
-    }
+                h2 {
+                    font-size: 2rem;
+                    /* ← réduire la taille du titre */
+                    word-break: keep-all;
+                    /* ← évite la coupure au milieu d'un mot */
+                }
 
-    #legumsFish {
-        display: none;
+                h3 {
+                    font-size: 1.4rem;
+                    /* ← réduire aussi */
+                }
+            }
+        }
+
+        #burgerImage {
+            display: none;
+        }
+
+        #legumsFish {
+            display: none;
+        }
     }
 }
 
