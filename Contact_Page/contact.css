@@ -1,15 +1,30 @@
 :root {
-  --couleur-primaire: #e05a1e;
-  --couleur-primaire-hover: #c44d17;
-  --couleur-texte: #2d3748;
-  --couleur-texte-doux: #4a5568;
-  --couleur-texte-clair: #718096;
-  --couleur-fond: #f5f3ef;
-  --couleur-fond-dark: #1a202c;
-  --couleur-fond-dark2: #2d3748;
-  --couleur-bordure: #d0cce8;
-  --couleur-violet: #7b6fb0;
-  --couleur-violet-clair: #a09bc5;
+  --main-font: "FredokaOne";
+  --main-font-sans-serif: "FredokaOne", sans-serif;
+  --second-font: "RobotoMono";
+  --second-font-sans-serif: "RobotoMono", sans-serif;
+
+  --primary: #0b2545;
+  --secondary: #f2f2f2;
+  --tertiary: #d96c06;
+  --quator: #ffcfa2;
+  --primary-background-color: #0b264680;
+  --secondary-background-color: #f2f2f280;
+  --tertiary-background-color: #db6d0680;
+  --quator-background-color: #ffcfa280;
+
+  /* Alias fonctionnels dérivés de la palette */
+  --couleur-primaire: var(--tertiary); /* #d96c06 — CTA, accents */
+  --couleur-primaire-hover: #b85905; /* tertiary assombri */
+  --couleur-texte: var(--primary); /* #0b2545 — texte principal */
+  --couleur-texte-doux: #1a3a62; /* primary éclairci */
+  --couleur-texte-clair: #4a6a96; /* primary très éclairci */
+  --couleur-fond: var(--secondary); /* #f2f2f2 — fond page */
+  --couleur-fond-dark: var(--primary); /* #0b2545 — footer */
+  --couleur-fond-dark2: #162f55; /* primary légèrement éclairci */
+  --couleur-bordure: var(--quator); /* #ffcfa2 — bordures inputs */
+  --couleur-violet: var(--primary); /* #0b2545 — texte inputs */
+  --couleur-violet-clair: #4a6a96; /* primary éclairci — placeholder */
   --border-radius: 12px;
   --transition: 0.2s;
 }
@@ -22,7 +37,7 @@
 }
 
 body {
-  font-family: "Segoe UI", sans-serif;
+  font-family: var(--main-font-sans-serif);
   background-color: var(--couleur-fond);
   color: var(--couleur-texte);
 }
@@ -116,7 +131,7 @@ body {
 
 .secondcontact input:focus,
 .secondcontact textarea:focus {
-  border-color: var(--couleur-violet-clair);
+  border-color: var(--couleur-primaire);
 }
 
 .secondcontact textarea {
@@ -140,7 +155,7 @@ body {
   background-color: var(--couleur-primaire-hover);
 }
 
-/* ===== BANNIÈRE communautyé ===== */
+/* ===== BANNIÈRE communauté ===== */
 .banniere {
   background-color: var(--couleur-primaire);
   color: white;
@@ -235,7 +250,6 @@ body {
   height: 48px;
   border-radius: 50%;
   object-fit: cover;
-  /* ← recadre proprement l'image en cercle */
   flex-shrink: 0;
 }
 
@@ -252,7 +266,7 @@ body {
 /* ===== FOOTER ===== */
 footer {
   background-color: var(--couleur-fond-dark);
-  color: #cbd5e0;
+  color: var(--quator);
   display: flex;
   gap: 0;
   padding: 3rem 4rem;
@@ -268,7 +282,7 @@ footer div {
   align-items: flex-start;
 }
 
-footer div+div {
+footer div + div {
   border-left: 2px solid var(--couleur-primaire);
   padding-left: 3rem;
 }
@@ -291,7 +305,7 @@ footer div+div {
 }
 
 footer h3 {
-  color: white;
+  color: var(--secondary);
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
 }
@@ -299,7 +313,7 @@ footer h3 {
 footer p {
   font-size: 0.9rem;
   line-height: 1.6;
-  color: #a0aec0;
+  color: var(--quator);
 }
 
 /* Plan du site */
@@ -311,14 +325,14 @@ footer ul {
 }
 
 footer ul li {
-  color: #a0aec0;
+  color: var(--quator);
   font-size: 0.9rem;
   cursor: pointer;
   transition: color var(--transition);
 }
 
 footer ul li:hover {
-  color: white;
+  color: var(--secondary);
 }
 
 /* Newsletter */
@@ -330,10 +344,10 @@ footer ul li:hover {
 
 .newsletter input {
   background: var(--couleur-fond-dark2);
-  border: 1px solid #4a5568;
+  border: 1px solid var(--primary-background-color);
   border-radius: 8px;
   padding: 10px 14px;
-  color: white;
+  color: var(--secondary);
   font-size: 0.9rem;
   outline: none;
 }
@@ -392,7 +406,7 @@ footer ul li:hover {
     align-items: stretch;
   }
 
-  footer div+div {
+  footer div + div {
     border-left: 2px solid var(--couleur-primaire);
     border-top: none;
     padding-left: 1.5rem;
