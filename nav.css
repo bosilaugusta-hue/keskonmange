@@ -5,8 +5,8 @@
     align-items: center;
     padding: 20px;
     z-index: 2;
-    position: relative;
-    width: auto;
+    position: absolute;
+    width: 100%;
 
     img {
         height: 72px;
