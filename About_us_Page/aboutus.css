@@ -15,7 +15,7 @@ html {
     overflow-y: scroll;
     width: 100%;
     background-color:var(--quator);
-    /* background: url(/); */
+    /* background: url(/) center/cover; */
 }
 
 /* section 1 Qui qu'on est? */
@@ -140,12 +140,13 @@ html {
     align-items: center;
     color: var(--primary);
     font-family: var(--second-font);
+    background: url(/About_us_Page/pictures_backgournd/KeskonmangeBannerNOLOGO.png) center/cover;
 }
 
 .accordion {
     display: flex;
     gap: var(--gap);
-    width: min(1000px, 95vw);
+    width: min(1010px, 95vw);
     height: 280px;
 }
 
@@ -153,7 +154,7 @@ details {
     flex: 0 0 90px;
     border-radius: var(--radius);
     overflow: hidden;
-    background:var(--secondary);
+    background:var(--quator);
     box-shadow: 0 4px 16px rgba(0,0,0,0.08);
     transition: flex-basis var(--transition), transform var(--transition);
     position: relative;
@@ -176,7 +177,7 @@ summary {
     font-size: 1rem;
     cursor: pointer;
     list-style: none;
-    color: #F2F2F2;
+    color: var(--quator);
     background: #587850;
     transition: opacity var(--transition), background var(--transition);
     user-select: none;
@@ -197,7 +198,7 @@ details[open] summary {
     inset:0;
     padding-left: 90px;
     padding-right: 60px;
-    background: #F2F2F2;
+    background: var(--quator);
     opacity: 0;
     transform: translateX(40px);
     transition: opacity var(--transition), transform var(--transition);
@@ -216,6 +217,9 @@ details[open] .content {
     position: initial;
 }
 
+
+
+
 /* section 3 Cards... */
 .Container{
     scroll-snap-align: start;
@@ -228,7 +232,7 @@ details[open] .content {
     gap: 2rem;
     padding-bottom: 2rem;
     font-family: var(--second-font-sans-serif);
-    /* background: url(/Assets/Image/KeskonmangeBanner.png) center/cover; */
+    background: url(/About_us_Page/pictures_backgournd/Logo.png) center 45%;
 }
 
 .Container h1{
@@ -237,7 +241,7 @@ details[open] .content {
     font-size: 4rem;
     width: 100%;
     text-align: center;
-    text-shadow: 4px 4px 8px var(--tertiary);
+    text-shadow: 4px 4px 4px var(--tertiary);
 }
 .crew-cards{
     width: 100%;
@@ -255,7 +259,6 @@ details[open] .content {
     cursor: pointer;
     border-radius: 20px;
     color: var(--primary);
-    /* border: 2px solid white; */
 }
 
 .top{
@@ -275,10 +278,11 @@ details[open] .content {
 
 .top img{
     object-fit: contain;
-    max-width: 98%;
-    max-height: 98%;
-    border: 1.5px solid white;
-    border-radius: 20px;
+    max-width: 96%;
+    max-height: 96%;
+    border: 0.3rem solid var(--secondary);
+    border-radius: 8px;
+
 }
 
 .card:hover .top{
@@ -317,5 +321,133 @@ details[open] .content {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 }
+
+
+
+/* section4 OTRAS COSAS  */
+
+.s4{
+    scroll-snap-align: start;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--quator);
+}
+
+.s4box{
+    background: var(--primary);
+    color: var(--tertiary);
+    width: 60rem;
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+    gap: 2rem;
+    padding: 2rem 3rem;
+    padding-bottom: 95px;
+    justify-content: center;
+    align-items: center;
+}
+
+.s4box h2{
+    font-family: var(--main-font);
+    color: var(--quator);
+    font-size: 2rem;
+    text-align: center;
+    text-shadow: 4px 4px 4px var(--tertiary);
+    margin-bottom: 2rem;
+
+}
+
+.iconbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.4rem;
+}
+
+.iconitem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--quator);
+    font-family: var(--second-font-sans-serif);
+    font-size: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.iconwrap {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+    margin-bottom: 0.5rem;
+}
+
+.iconwrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.iconwrap:hover {
+    transform: scale(1.15);
+    box-shadow: 0 0 20px 8px var(--tertiary-background-color);
+}
+
+a {
+    color: var(--quator);
+    font-family: var(--second-font-sans-serif);
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    border: 1px solid var(--quator);
+    transition: background 0.1s ease, color 0.1s ease;
+    transform-style: preserve-3d;
+    display: inline-block;
+}
+
+a:hover {
+    background: var(--quator);
+    color: var(--primary);
+    transform: rotateX(360deg);
+    transition: background 0.3s ease, color 0.3s ease, transform 2s ease;;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ===== FOOTER ===== */
