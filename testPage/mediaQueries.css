@@ -1,0 +1,162 @@
+@media (max-width: 768px) {
+
+    body {
+        overflow: auto;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+
+    main {
+        flex: 1;
+        position: relative;
+        overflow: hidden;
+
+        .gauche {
+            position: absolute;
+            inset: 0;
+            background: var(--tertiary-background-color);
+            clip-path: polygon(0 0, 100% 0, 0 100%, 0 100%);
+            z-index: -1;
+        }
+
+        .droite {
+            position: absolute;
+            inset: 0;
+            background: var(--quator-background-color);
+            clip-path: polygon(100% 0, 100% 0, 100% 100%, 0 100%);
+            z-index: -1;
+        }
+
+        section {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 1rem;
+            /* ← remplace height: 0% qui cassait tout */
+
+
+            #quizz {
+                width: 80%;
+                height: auto;
+                font-size: 0.8em;
+
+                h2 {
+                    font-size: 2rem;
+                }
+
+                h3 {
+                    font-size: 1.5rem;
+                }
+
+
+
+            }
+        }
+
+        #backgroundLogo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-25deg);
+            z-index: 0;
+            width: 20em;
+            height: auto;
+        }
+
+
+    }
+
+    footer {
+        flex-direction: column;
+        height: auto;
+        padding: 2em;
+        gap: 1.5em;
+        width: 100%;
+        box-sizing: border-box;
+
+        hr {
+            height: 3px;
+
+            width: 75%;
+        }
+
+        #logoAndPitchDiv {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+
+            #text {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                font-size: 1.5em;
+            }
+        }
+
+        #linkDiv,
+        #newsletterDiv {
+            width: 100%;
+            text-align: center;
+            font-size: 1.5em;
+
+            button {
+                height: auto;
+            }
+        }
+
+        #emailField {
+            width: 100%;
+        }
+
+        #email {
+            width: 80%;
+
+        }
+    }
+
+    #burgerImage {
+        display: none;
+    }
+
+    #legumsFish {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+
+    main {
+        section {
+            #quizz {
+                width: 60%;
+                height: auto;
+                font-size: 0.8em;
+
+                h2 {
+                    font-size: 2rem;
+                    word-break: keep-all;
+                }
+
+                h3 {
+                    font-size: 1.4rem;
+                }
+            }
+        }
+
+        #burgerImage {
+            display: none;
+        }
+
+        #legumsFish {
+            display: none;
+        }
+    }
+}
+
+@media (min-width: 1024px) {}
