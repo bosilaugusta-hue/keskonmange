@@ -9,12 +9,14 @@
 }
 
 footer {
-  background-color: var(--couleur-fond-dark);
-  color: #cbd5e0;
+  background-color: var(--primary);
+  color: var(--secondary);
+  position: absolute;
   display: flex;
   gap: 0;
-  padding: 3rem 4rem;
+  padding: 1rem 1.5rem;
   align-items: center;
+  width: 100%;
 }
 
 footer div {
@@ -27,7 +29,7 @@ footer div {
 }
 
 footer div + div {
-  border-left: 2px solid var(--couleur-primaire);
+  border-left: 2px solid var(--tertiary);
   padding-left: 3rem;
 }
 
@@ -49,7 +51,7 @@ footer div + div {
 }
 
 footer h3 {
-  color: white;
+  color: var(--secondary);
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
 }
@@ -57,7 +59,7 @@ footer h3 {
 footer p {
   font-size: 0.9rem;
   line-height: 1.6;
-  color: #a0aec0;
+  color: var(--secondary);
 }
 
 /* Plan du site */
@@ -69,14 +71,14 @@ footer ul {
 }
 
 footer ul li {
-  color: #a0aec0;
+  color: var(--secondary);
   font-size: 0.9rem;
   cursor: pointer;
   transition: color var(--transition);
 }
 
 footer ul li:hover {
-  color: white;
+  color: var(--secondary);
 }
 
 /* Newsletter */
@@ -87,23 +89,23 @@ footer ul li:hover {
 }
 
 .newsletter input {
-  background: var(--couleur-fond-dark2);
-  border: 1px solid #4a5568;
+  background: var(--primary-background-color);
+  border: 1px solid var(--tertiary);
   border-radius: 8px;
   padding: 10px 14px;
-  color: white;
+  color: var(--secondary);
   font-size: 0.9rem;
   outline: none;
 }
 
 .newsletter input::placeholder {
-  color: var(--couleur-texte-clair);
+  color: var(--secondary);
 }
 
 .newsletter button {
   align-self: flex-start;
-  background-color: var(--couleur-primaire);
-  color: white;
+  background-color: var(--tertiary);
+  color: var(--secondary);
   border: none;
   border-radius: 8px;
   padding: 10px 16px;
@@ -112,7 +114,7 @@ footer ul li:hover {
 }
 
 .newsletter button:hover {
-  background-color: var(--couleur-primaire-hover);
+  background-color: var(--tertiary);
 }
 
 /* Réseaux sociaux footer */
