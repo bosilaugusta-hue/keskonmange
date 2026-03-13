@@ -1,7 +1,7 @@
 :root{
     --radius: 16px;
     --gap: 12px;
-    --transition: 0.5s cubic-bezier(.25,.9,.25,1);
+    --transition: 1s cubic-bezier(.25,.9,.25,1);
 }
 
 *{
@@ -14,7 +14,7 @@ html {
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
     width: 100%;
-    background-color:var(--quator);
+    background:var(--quator);
     /* background: url(/) center/cover; */
 }
 
@@ -96,7 +96,6 @@ html {
     animation-iteration-count: 1;
     animation-direction: normal;
     animation-fill-mode: both;
-
     transform: translateX(-150px);
 }
 
@@ -333,7 +332,6 @@ details[open] .content {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--quator);
 }
 
 .s4box{
@@ -421,31 +419,9 @@ a:hover {
     background: var(--quator);
     color: var(--primary);
     transform: rotateX(360deg);
-    transition: background 0.3s ease, color 0.3s ease, transform 2s ease;;
+    transition: background 0.3s ease, color 0.3s ease, transform 2s ease;
+    box-shadow: 0 0 20px 8px var(--tertiary-background-color);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
