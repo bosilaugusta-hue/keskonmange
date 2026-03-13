@@ -97,6 +97,8 @@ body {
 .active a {
 
     color: #D96C06;
+    border-bottom: 3px solid var(--orange);
+    padding-bottom: 7px;
 
 }
 
@@ -231,7 +233,6 @@ body {
     width: 100%;
 
     overflow: hidden;
-
 
     transition: 0.3s;
 
