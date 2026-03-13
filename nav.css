@@ -4,7 +4,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    z-index: 1;
+    z-index: 2;
     position: relative;
     width: auto;
 
@@ -29,9 +29,62 @@
                 font-family: var(--main-font);
 
                 &:hover {
-                    color: var(--quator);
+                    color: var(--tertiary);
                 }
             }
+        }
+
+    }
+
+    #burgerIcon {
+        cursor: pointer;
+        display: none;
+        font-family: var(--main-font);
+        color: var(--tertiary);
+        padding: 0.5rem;
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        ul {
+            position: fixed;
+            left: -100%;
+            top: 111.98px;
+            flex-direction: column;
+            background: var(--primary-background-color);
+            width: 100%;
+            text-align: center;
+            transition: 0.5s;
+
+            li {
+                padding: 3px 0;
+
+                &:hover {
+                    color: var(--tertiary);
+
+                }
+            }
+
+            .active {
+                ul {
+                    left: 0;
+                }
+            }
+        }
+
+        #burgerIcon {
+            display: block;
+
+            &::before {
+                content: "\2630";
+            }
+
+            .active #icons::before {
+                content: "\2715";
+            }
+
         }
     }
 }

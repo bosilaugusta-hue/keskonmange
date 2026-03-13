@@ -81,7 +81,7 @@
         hr {
             height: 3px;
 
-            width: 90%;
+            width: 75%;
         }
 
         #logoAndPitchDiv {
@@ -135,20 +135,16 @@
         section {
             #quizz {
                 width: 60%;
-                /* ← augmenter, était 80% */
                 height: auto;
                 font-size: 0.8em;
 
                 h2 {
                     font-size: 2rem;
-                    /* ← réduire la taille du titre */
                     word-break: keep-all;
-                    /* ← évite la coupure au milieu d'un mot */
                 }
 
                 h3 {
                     font-size: 1.4rem;
-                    /* ← réduire aussi */
                 }
             }
         }
