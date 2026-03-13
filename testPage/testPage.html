@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <link rel="stylesheet" href="../nav.css">
+    <link rel="stylesheet" href="../global.css">
+    <link rel="stylesheet" href="testPage.css">
+    <link rel="stylesheet" href="mediaQueries.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keskonmange | Test</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <img src="../Assets/Image/Logo.png" alt="Keskonmange Logo" />
+            <ul>
+                <li><a href="#">Comunity</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Test</a></li>
+                <li class="logInLink"><a href="#">Log-in</a></li>
+                <hr />
+                <li class="signInLink"><a href="#">Sign-in</a></li>
+            </ul>
+            <div id="burgerIcon" class="burgerMenuActive"></div>
+        </nav>
+    </header>
+    <main>
+        <img src="../Assets/Image/Logo.png" alt="Logo" id="backgroundLogo">
+        <section>
+            <div id="quizz">
+                <h2 id="title">
+                    Keskonmange ?
+                </h2>
+                <progress value="1" max="5"></progress>
+                <p id="questionNumber">Question 1/5</p>
+                <h3 id="quizzQuestion">Quel est ton envie ?</h3>
+                <button class="answerButton">Plaisir</button>
+                <button class="answerButton">Sain</button>
+                <button class="answerButton">Sportif</button>
+                <button class="answerButton">Régime</button>
+                <button id="previousButton">Précédent</button>
+            </div>
+        </section>
+        <img id="burgerImage" src="../Assets/Image/Burger.png" alt="Burger frites" />
+        <img id="legumsFish" src="../Assets/Image/LegumsFish.png" alt="Salade poisson" />
+
+        <div class="gauche"></div>
+        <div class="droite"></div>
+    </main>
+    <footer>
+        <div id="logoAndPitchDiv">
+            <img id="logo-footer" src="../Assets/Image/Logo.png" alt="Logo Keskonmange">
+            <div id="text">
+                <h3>Keskonmange</h3>
+                <p>Keskonmange vous propose les meilleurs plats pour satisfaire vos envies culinaires.</p>
+            </div>
+
+        </div>
+        <hr>
+        <div id="linkDiv">
+            <a href="#">Qui nous sommes ?</a>
+            <a href="#">Contact</a>
+        </div>
+        <hr>
+        <div id="newsletterDiv">
+            <span>NewsLetter</span>
+            <div id="emailField">
+                <input id="email" type="email" placeholder="Votre email ...">
+                <button id="send">➢</button>
+            </div>
+
+        </div>
+    </footer>
+</body>
+
+</html>
