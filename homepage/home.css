@@ -1,4 +1,4 @@
-:root {
+/*:root {
     --main-font: 'FredokaOne';
     --main-font-sans-serif: 'FredokaOne', sans-serif;
     --second-font: 'RobotoMono';
@@ -16,15 +16,13 @@
 @font-face {
     font-family: 'FredokaOne';
     src: url('../Assets/Fonts/FredokaOne-Regular.ttf') format('truetype');
-
 }
-
+*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-align: center;
-    font-family: var(--second-font);
+    font-family: var(--main-font);
 
 
     .home-cta {
@@ -40,9 +38,10 @@
         color: var(--primary);
         font-weight: bold;
         font-size: 2.6rem;
+        text-align: center;
 
         .font-family {
-            font-family: var(--main-font);
+            /*change rle nom !!!!*/
             font-weight: bold;
             font-size: 5.4rem;
             color: var(--tertiary);
@@ -58,7 +57,7 @@
 
         .test-btn {
             display: inline-block;
-            font-weight: bold;
+            font-weight: 100;
             font-size: 1.8rem;
             text-decoration: none;
             color: white;
@@ -80,23 +79,25 @@
         }
     }
 
+    .title-section {
+        color: var(--primary);
+        font-size: 2.2rem;
+        padding-bottom: 2rem;
+        text-align: center;
+    }
+
     .box-section {
         width: 100%;
         margin: auto;
         background-color: var(--quator-background-color);
         padding: 2rem 0;
 
-        .title-section {
-            color: var(--primary);
-            font-size: 1.8rem;
-            padding-bottom: 2rem;
-        }
 
-        .carousel-container {
-            width: 60rem;
-            margin: auto;
-            overflow: hidden;
-            position: relative;
+        .wrapper {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
 
             #prev,
             #next {
@@ -111,6 +112,7 @@
                 width: 2.4rem;
                 height: 2.4rem;
                 cursor: pointer;
+                line-height: 0;
             }
 
             #prev span {
@@ -118,194 +120,185 @@
                 transform: rotate(180deg);
             }
 
-            .cards {
-                display: flex;
-                align-items: center;
-                gap: 2rem;
-                width: 56rem;
-                /*34*/
-                padding: 0 1rem;
-                margin: 0 2rem;
-                transition: transform 0.4s ease;
+            .carousel-container {
+                width: 58rem;
+                padding: 1rem 0;
+                overflow: hidden;
+                /*indispensable dans ce div*/
 
-                /*
-            .card {
-                color: var(--primary);
-                background-color: white;
-                border-radius: 10px;
-                box-shadow: 5px 5px 10px grey;
-                padding: 1rem;
-                min-width: 14rem;
-
-                .card-title {
-                    padding-bottom: 1.6rem;
-                }
-
-                .shop-btn {
-                    text-decoration: none;
-                    color: white;
-                    background-color: var(--tertiary);
-                    border-radius: 10px;
-                    border: none;
-                    padding: 0.6rem;
-                    text-align: left;
-                }
-            }
-*/
-                /* augusta BOX CARD */
-
-                .box-card {
+                .cards {
                     display: flex;
-                    justify-content: space-between;
                     align-items: center;
-                    background: white;
-                    border-radius: 20px;
-                    overflow: hidden;
-                    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
-                    height: 190px;
-                    /*width: 100%; version augusta*/
-                    /*version aude ancienne
-                    min-width: 14rem;*/
-                    width: 50%;
-                    transition: 0.3s;
+                    gap: 2rem;
+                    width: 56rem;
+                    padding: 1rem;
+                    margin: 0 1rem;
+                    transition: transform 0.4s ease;
 
-                    &:hover {
-                        transform: translateY(-6px);
-                        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-                    }
+                    /* augusta BOX CARD */
 
-                    /* LEFT SIDE */
-
-                    .box-left {
-                        padding: 25px;
-                        background: #f7f2ed;
-                        height: 100%;
+                    .box-card {
                         display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        gap: 6px;
-                        width: 55%;
+                        justify-content: space-between;
+                        align-items: center;
+                        background: white;
+                        border-radius: 20px;
+                        overflow: hidden;
+                        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+                        height: 190px;
+                        /*width: 100%; version augusta*/
+                        width: 50%;
+                        transition: 0.3s;
+                        flex-shrink: 0;
+                        /*empeche les .box-card de se réduire pour s'ajuster à la width de .cards - ainsi chaque .box-card fait bien 50% de .cards*/
 
-                        .box-title {
+                        &:hover {
+                            transform: translateY(-6px);
+                            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+                        }
+
+                        /* LEFT SIDE */
+
+                        .box-left {
+                            padding: 25px;
+                            background: #f7f2ed;
+                            height: 100%;
                             display: flex;
-                            align-items: center;
-                            gap: 8px;
+                            flex-direction: column;
+                            justify-content: center;
+                            gap: 6px;
+                            width: 55%;
 
-                            .mini-logo {
-                                width: 20px;
+                            .box-title {
+                                display: flex;
+                                align-items: center;
+                                gap: 8px;
+
+                                .mini-logo {
+                                    width: 20px;
+                                }
+
+                                h3 {
+                                    color: var(--primary);
+                                    /*font-family: var(--main-font);*/
+                                    font-size: 16px;
+                                    text-align: left;
+                                }
                             }
 
-                            h3 {
+                            p {
+                                /*font-family: var(--main-font);*/
+                                font-size: 13px;
                                 color: var(--primary);
-                                font-family: var(--main-font);
-                                font-size: 16px;
                                 text-align: left;
                             }
+
+                            /* PRICE */
+
+                            .price {
+                                color: var(--primary);
+                                /*font-family: var(--main-font);*/
+                                font-size: 18px;
+                                font-weight: bold;
+                                margin-top: 5px;
+                                text-align: left;
+                            }
+
+                            /* ORDER BUTTON */
+
+                            .btn-order {
+                                margin-top: 8px;
+                                background: var(--tertiary);
+                                border: none;
+                                color: white;
+                                /* font-family: var(--main-font);*/
+                                padding: 8px 18px;
+                                border-radius: 8px;
+                                cursor: pointer;
+                                box-shadow: 0 4px 12px rgba(217, 108, 6, 0.4);
+                                transition: 0.3s;
+
+                                &:hover {
+                                    transform: translateY(-2px);
+                                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+                                }
+                            }
                         }
 
-                        p {
-                            font-family: var(--main-font);
-                            font-size: 13px;
-                            color: var(--primary);
-                            text-align: left;
-                        }
+                        .box-image {
+                            width: 45%;
+                            height: 100%;
+                            position: relative;
+                            overflow: hidden;
 
-                        /* PRICE */
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                left: 0;
+                                top: 0;
+                                height: 100%;
+                                width: 90px;
+                                background: linear-gradient(to right,
+                                        #F7F2ED,
+                                        rgba(247, 242, 237, 0));
+                                z-index: 2;
 
-                        .price {
-                            color: var(--primary);
-                            font-family: var(--main-font);
-                            font-size: 18px;
-                            font-weight: bold;
-                            margin-top: 5px;
-                            text-align: left;
-                        }
+                            }
 
-                        /* ORDER BUTTON */
+                            img {
+                                width: 120%;
+                                height: 100%;
+                                object-fit: cover;
 
-                        .btn-order {
-                            margin-top: 8px;
-                            background: var(--tertiary);
-                            border: none;
-                            color: white;
-                            font-family: var(--main-font);
-                            padding: 8px 18px;
-                            border-radius: 8px;
-                            cursor: pointer;
-                            box-shadow: 0 4px 12px rgba(217, 108, 6, 0.4);
-                            transition: 0.3s;
-
-                            &:hover {
-                                transform: translateY(-2px);
-                                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
                             }
                         }
                     }
 
-                    .box-image {
-                        width: 45%;
-                        height: 100%;
-                        position: relative;
-                        overflow: hidden;
-
-                        &::before {
-                            content: "";
-                            position: absolute;
-                            left: 0;
-                            top: 0;
-                            height: 100%;
-                            width: 90px;
-                            background: linear-gradient(to right,
-                                    #F7F2ED,
-                                    rgba(247, 242, 237, 0));
-                            z-index: 2;
-
-                        }
-
-                        img {
-                            width: 120%;
-                            height: 100%;
-                            object-fit: cover;
-
-                        }
-                    }
+                    /*fin augusta*/
                 }
-
-                /*fin augusta*/
             }
         }
 
         .dots {
             padding: 20px 0;
-        }
+            width: 100%;
+            margin: auto;
+            text-align: center;
 
-        .dot {
-            background-color: white;
-            border-radius: 50%;
-            border: none;
-            width: 20px;
-            height: 20px;
-            cursor: pointer;
+            .dot {
+                background-color: white;
+                border-radius: 50%;
+                border: none;
+                width: 20px;
+                height: 20px;
+                cursor: pointer;
+            }
+
+            .active {
+                background-color: grey;
+            }
         }
     }
 
     .text-section {
-        color: white;
         background-image: radial-gradient(circle, var(--primary), var(--tertiary));
         padding: 2rem 0;
         width: 100%;
-    }
+        text-align: center;
 
-    .text-section h2 {
-        font-size: 1.6rem;
-        padding-bottom: 2rem;
-        font-weight: bold;
-    }
+        h2 {
+            color: white;
+            padding-bottom: 2rem;
+            font-weight: 100;
+        }
 
-    .text-section p {
-        font-size: 1.4rem;
-        padding-bottom: 1.6rem;
-        line-height: 1.4em;
+        p {
+            color: white;
+            font-size: 1.4rem;
+            padding-bottom: 1.6rem;
+            line-height: 1.4em;
+            font-weight: 100;
+        }
     }
 
     .kommu-section {
@@ -315,14 +308,5 @@
         background-color: var(--quator-background-color);
         padding: 2rem 0;
 
-        .title-section {
-            color: var(--primary);
-            font-size: 1.8rem;
-            padding-bottom: 2rem;
-        }
     }
-
-
-
-
 }
