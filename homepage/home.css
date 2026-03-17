@@ -121,8 +121,7 @@
             }
 
             .carousel-container {
-                width: 58rem;
-                padding: 1rem 0;
+                width: 60%;
                 overflow: hidden;
                 /*indispensable dans ce div*/
 
@@ -130,9 +129,8 @@
                     display: flex;
                     align-items: center;
                     gap: 2rem;
-                    width: 56rem;
-                    padding: 1rem;
-                    margin: 0 1rem;
+                    width: 100%;
+                    padding: 2.5rem 1rem;
                     transition: transform 0.4s ease;
 
                     .box-card {
@@ -144,8 +142,8 @@
                         overflow: hidden;
                         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
                         height: 190px;
-                        /*width: 100%; version augusta*/
-                        width: 50%;
+                        width: calc(50% - 1rem);
+                        /*chaque box-card fera 50%-demi-gap de cards*/
                         transition: 0.3s;
                         flex-shrink: 0;
                         /*empeche les .box-card de se réduire pour s'ajuster à la width de .cards - ainsi chaque .box-card fait bien 50% de .cards*/
@@ -252,7 +250,6 @@
         }
 
         .dots {
-            padding-top: 1rem;
             width: 100%;
             margin: auto;
             text-align: center;
