@@ -10,11 +10,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Keskonmange | Test</title>
 </head>
+<!-- body -->
 
 <body>
+    <!-- header -->
     <header>
+        <!-- nav -->
         <nav class="navbar">
+            <!-- logonav -->
             <img src="../Assets/Image/Logo.png" alt="Keskonmange Logo" />
+            <!-- link nav -->
             <ul>
                 <li><a href="#">Comunity</a></li>
                 <li><a href="#">Contact</a></li>
@@ -24,47 +29,66 @@
                 <hr />
                 <li class="signInLink"><a href="#">Sign-in</a></li>
             </ul>
+            <!-- Icon burger for mobile version -->
             <div id="burgerIcon" class="burgerMenuActive"></div>
         </nav>
     </header>
+    <!-- main -->
     <main>
+        <!-- background logo -->
         <img src="../Assets/Image/Logo.png" alt="Logo" id="backgroundLogo">
+        <!-- Quizz section -->
         <section>
             <div id="quizz">
                 <h2 id="title">
                     Keskonmange ?
                 </h2>
+                <!-- Progress bar showing how far the user is in the quiz (1 question answered out of 5) -->
                 <progress value="1" max="5"></progress>
+                <!-- Text displaying the current question number to the user -->
                 <p id="questionNumber">Question 1/5</p>
+                <!-- The question asked in the quiz -->
                 <h3 id="quizzQuestion">Quel est ton envie ?</h3>
+                <!-- Answers options -->
                 <button class="answerButton">Plaisir</button>
                 <button class="answerButton">Sain</button>
                 <button class="answerButton">Sportif</button>
                 <button class="answerButton">Régime</button>
+                <!-- Previous button -->
                 <button id="previousButton">Précédent</button>
             </div>
         </section>
+        <!-- Burger image -->
         <img id="burgerImage" src="../Assets/Image/Burger.png" alt="Burger frites" />
+        <!-- Fish image -->
         <img id="legumsFish" src="../Assets/Image/LegumsFish.png" alt="Salade poisson" />
-
+        <!-- Left color background -->
         <div class="gauche"></div>
+        <!-- Right color backgroud -->
         <div class="droite"></div>
     </main>
+    <!-- Footer -->
     <footer>
+        <!-- Pitch and logo section -->
         <div id="logoAndPitchDiv">
+            <!-- Logo -->
             <img id="logo-footer" src="../Assets/Image/Logo.png" alt="Logo Keskonmange">
+            <!-- Title and pitch -->
             <div id="text">
                 <h3>Keskonmange</h3>
                 <p>Keskonmange vous propose les meilleurs plats pour satisfaire vos envies culinaires.</p>
             </div>
 
         </div>
+
         <hr>
+        <!-- Link section -->
         <div id="linkDiv">
             <a href="#">Qui nous sommes ?</a>
             <a href="#">Contact</a>
         </div>
         <hr>
+        <!-- NewLetter section -->
         <div id="newsletterDiv">
             <span>NewsLetter</span>
             <div id="emailField">
