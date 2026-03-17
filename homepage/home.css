@@ -82,7 +82,7 @@
     .title-section {
         color: var(--primary);
         font-size: 2.2rem;
-        padding-bottom: 2rem;
+        padding-bottom: 3rem;
         text-align: center;
     }
 
@@ -90,7 +90,7 @@
         width: 100%;
         margin: auto;
         background-color: var(--quator-background-color);
-        padding: 2rem 0;
+        padding: 3rem 0;
 
 
         .wrapper {
@@ -135,8 +135,6 @@
                     margin: 0 1rem;
                     transition: transform 0.4s ease;
 
-                    /* augusta BOX CARD */
-
                     .box-card {
                         display: flex;
                         justify-content: space-between;
@@ -180,14 +178,12 @@
 
                                 h3 {
                                     color: var(--primary);
-                                    /*font-family: var(--main-font);*/
                                     font-size: 16px;
                                     text-align: left;
                                 }
                             }
 
                             p {
-                                /*font-family: var(--main-font);*/
                                 font-size: 13px;
                                 color: var(--primary);
                                 text-align: left;
@@ -197,7 +193,6 @@
 
                             .price {
                                 color: var(--primary);
-                                /*font-family: var(--main-font);*/
                                 font-size: 18px;
                                 font-weight: bold;
                                 margin-top: 5px;
@@ -211,7 +206,6 @@
                                 background: var(--tertiary);
                                 border: none;
                                 color: white;
-                                /* font-family: var(--main-font);*/
                                 padding: 8px 18px;
                                 border-radius: 8px;
                                 cursor: pointer;
@@ -253,14 +247,12 @@
                             }
                         }
                     }
-
-                    /*fin augusta*/
                 }
             }
         }
 
         .dots {
-            padding: 20px 0;
+            padding-top: 1rem;
             width: 100%;
             margin: auto;
             text-align: center;
@@ -295,7 +287,6 @@
         p {
             color: white;
             font-size: 1.4rem;
-            padding-bottom: 1.6rem;
             line-height: 1.4em;
             font-weight: 100;
         }
@@ -306,7 +297,146 @@
         width: 100%;
         margin: auto;
         background-color: var(--quator-background-color);
-        padding: 2rem 0;
+        padding: 3rem 0;
 
+        .articles-container {
+            display: grid;
+            width: 70%;
+            margin: auto;
+            gap: 1rem;
+            grid-template-areas:
+                "article1 article3 article3 article6"
+                "article2 article4 article4 article6"
+                "article2 article5 article5 article7";
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-columns: repeat(4, 1fr);
+            align-items: start;
+
+            #article1 {
+                grid-area: article1;
+            }
+
+            #article2 {
+                grid-area: article2;
+            }
+
+            #article3 {
+                grid-area: article3;
+            }
+
+            #article4 {
+                grid-area: article4;
+            }
+
+            #article5 {
+                grid-area: article5;
+            }
+
+            #article6 {
+                grid-area: article6;
+            }
+
+            #article7 {
+                grid-area: article7;
+            }
+
+            article {
+                color: var(--primary);
+                padding: 1rem;
+                background-color: white;
+                border-radius: 10px;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+                height: 100%;
+                position: relative;
+                transition: 0.3s;
+
+                &:hover {
+                    transform: translateY(-6px);
+                    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+                }
+
+                .article-img {
+
+                    box-shadow: 0px 1px 10px 0px black;
+                    border-radius: 5px;
+                    object-fit: cover;
+                    width: 100%;
+                    height: 10rem;
+                }
+
+                .profile-img {
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 100%;
+                    margin: auto;
+                }
+
+                .title-article {
+                    padding-bottom: 1rem;
+                }
+
+                .text-article {
+                    padding: 1rem 0;
+
+                }
+
+                .like-button {
+                    position: absolute;
+                    right: 8px;
+                    bottom: 8px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    background: none;
+                    border: none;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    padding: 8px;
+
+                    .heart {
+                        /* couleur de base */
+                        width: 32px;
+                        height: 32px;
+                        transition: fill 0.3s,
+                            transform 0.2s;
+                    }
+
+                    /* Hover animation */
+                    &:hover .heart {
+                        fill: #e74c3c;
+                        /* rouge “liked” */
+                        transform: scale(1.2);
+                    }
+
+                    /* Active / clic */
+                    &:active .heart {
+                        transform: scale(0.9);
+                    }
+                }
+
+                .btn-follow {
+                    position: absolute;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    right: 16px;
+                    bottom: 16px;
+                    margin-top: 8px;
+                    background: var(--tertiary);
+                    border: none;
+                    color: white;
+                    padding: 8px 18px;
+                    border-radius: 8px;
+                    cursor: pointer;
+                    box-shadow: 0 4px 12px rgba(217, 108, 6, 0.4);
+                    transition: 0.3s;
+
+                    &:hover {
+                        transform: translateY(-2px);
+                        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+                    }
+                }
+            }
+        }
     }
 }

@@ -16,10 +16,10 @@
     <nav class="navbar">
         <img src="../Assets/Image/Logo.png" alt="Keskonmange Logo" />
         <ul>
-            <li><a href="#">Comunity</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Shop</a></li>
-            <li><a href="#">Test</a></li>
+            <li><a href="../comunity/comunity.html">Comunity</a></li>
+            <li><a href="../Contact_Page/contact.html">Contact</a></li>
+            <li><a href="../shop_page/shop.html">Shop</a></li>
+            <li><a href="../testPage/testPage.html">Test</a></li>
             <li class="logInLink"><a href="#">Log-in</a></li>
             <hr />
             <li class="signInLink"><a href="#">Sign-in</a></li>
@@ -43,7 +43,6 @@
                 <button id="prev"><span>&#x279C</span></button>
                 <div class="carousel-container">
                     <div class="cards">
-                        <!--ajout augusta-->
                         <div class="box-card">
                             <div class="box-left">
                                 <div class="box-title">
@@ -86,7 +85,6 @@
                                 <img src="../shop_page/box healthy.png">
                             </div>
                         </div>
-
                         <div class="box-card">
                             <div class="box-left">
                                 <div class="box-title">
@@ -101,20 +99,16 @@
                                 <img src="../shop_page/box surprise.png">
                             </div>
                         </div>
-                        <!--fin ajout augusta-->
-                    </div> <!--fin div cards-->
+                    </div>
                 </div>
                 <button id="next"><span>&#x279C</span></button>
             </div>
-
             <div class="dots">
                 <button class="dot active" id="firstDot"></button>
                 <button class="dot" id="secondDot"></button>
                 <button class="dot" id="thirdDot"></button>
             </div>
-
         </section>
-
         <section class="text-section">
             <h2 class="title-section">Plus jamais la panne d’inspiration</h2>
             <p>Un test pour trouver votre recette.
@@ -124,13 +118,101 @@
         </section>
         <section class="kommu-section">
             <h2 class="title-section">Rejoignez la Kommu</h2>
+            <div class="articles-container">
+                <article id="article1">
+                    <h3 class="title-article">Jenny</h3>
+                    <img class="profile-img" src="https://picsum.photos/50/50" alt="" />
+                    <p class="text-article">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis,
+                        vitae.</p>
+                    <button type="button" class="btn-follow">Suivre</button>
+                </article>
+                <article id="article2">
+                    <h3 class="title-article">Les 3 plats les plus aimés</h3>
+                    <img class="article-img" src="assets/tresiahoban3-fried-chicken-6550521_640.jpg"
+                        alt="zoomed fried chicken" />
+                    <p class="text-article">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis,
+                        vitae. Expedita distinctio, fugiat voluptatibus iste porro quam
+                        dolor, incidunt illo saepe eos similique nulla nihil illum
+                        aspernatur sequi, cum enim.</p>
+                    <button class="like-button" aria-label="Like">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="Currentcolor" class="heart">
+                            <path
+                                d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Zm0-108q96-86 158-147.5t98-107q36-45.5 50-81t14-70.5q0-60-40-100t-100-40q-47 0-87 26.5T518-680h-76q-15-41-55-67.5T300-774q-60 0-100 40t-40 100q0 35 14 70.5t50 81q36 45.5 98 107T480-228Zm0-273Z" />
+                        </svg>
+                    </button>
+                </article>
+                <article id="article3">
+                    <h3 class="title-article">L'art du poulet frit</h3>
+                    <img class="article-img" src="assets/tresiahoban3-fried-chicken-6550521_640.jpg"
+                        alt="zoomed fried chicken" />
+                    <p class="text-article">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis,
+                        vitae. Expedita distinctio, fugiat voluptatibus iste porro quam
+                        dolor.</p>
+                    <button class="like-button" aria-label="Like">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="Currentcolor" class="heart">
+                            <path
+                                d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Zm0-108q96-86 158-147.5t98-107q36-45.5 50-81t14-70.5q0-60-40-100t-100-40q-47 0-87 26.5T518-680h-76q-15-41-55-67.5T300-774q-60 0-100 40t-40 100q0 35 14 70.5t50 81q36 45.5 98 107T480-228Zm0-273Z" />
+                        </svg>
+                    </button>
+                </article>
+                <article id="article4">
+                    <h3 class="title-article">Les bienfaits des oeufs</h3>
+                    <img class="article-img" src="assets/tresiahoban3-fried-chicken-6550521_640.jpg"
+                        alt="zoomed fried chicken" />
+                    <p class="text-article">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis,
+                        vitae. Expedita distinctio, fugiat voluptatibus iste porro quam
+                        dolor.</p>
+                    <button class="like-button" aria-label="Like">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="Currentcolor" class="heart">
+                            <path
+                                d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Zm0-108q96-86 158-147.5t98-107q36-45.5 50-81t14-70.5q0-60-40-100t-100-40q-47 0-87 26.5T518-680h-76q-15-41-55-67.5T300-774q-60 0-100 40t-40 100q0 35 14 70.5t50 81q36 45.5 98 107T480-228Zm0-273Z" />
+                        </svg>
+                    </button>
+                </article>
+                <article id="article5">
+                    <h3 class="title-article">Manger végé</h3>
+                    <img class="article-img" src="assets/tresiahoban3-fried-chicken-6550521_640.jpg"
+                        alt="zoomed fried chicken" />
+                    <p class="text-article">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis,
+                        vitae. Expedita distinctio, fugiat voluptatibus iste porro quam
+                        dolor.</p>
+                    <button class="like-button" aria-label="Like">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="Currentcolor" class="heart">
+                            <path
+                                d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Zm0-108q96-86 158-147.5t98-107q36-45.5 50-81t14-70.5q0-60-40-100t-100-40q-47 0-87 26.5T518-680h-76q-15-41-55-67.5T300-774q-60 0-100 40t-40 100q0 35 14 70.5t50 81q36 45.5 98 107T480-228Zm0-273Z" />
+                        </svg>
+                    </button>
+                </article>
+                <article id="article6">
+                    <h3 class="title-article">Les 3 plats les plus aimés</h3>
+                    <img class="article-img" src="assets/tresiahoban3-fried-chicken-6550521_640.jpg"
+                        alt="zoomed fried chicken" />
+                    <p class="text-article">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis,
+                        vitae. Expedita distinctio, fugiat voluptatibus iste porro quam
+                        dolor, incidunt illo saepe eos similique nulla nihil illum
+                        aspernatur sequi, cum enim.</p>
+                    <button class="like-button" aria-label="Like">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            class="heart">
+                            <path
+                                d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Zm0-108q96-86 158-147.5t98-107q36-45.5 50-81t14-70.5q0-60-40-100t-100-40q-47 0-87 26.5T518-680h-76q-15-41-55-67.5T300-774q-60 0-100 40t-40 100q0 35 14 70.5t50 81q36 45.5 98 107T480-228Zm0-273Z" />
+                        </svg>
+                    </button>
+                </article>
+                <article id="article7">
+                    <h3 class="title-article">Philippe</h3>
+                    <img class="profile-img" src="https://picsum.photos/50/50" alt="" />
+                    <p class="text-article">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis,
+                        vitae.</p>
+                    <button type="button" class="btn-follow">Suivre</button>
+                </article>
+            </div>
         </section>
     </main>
-
-
-
-
-
     <script src="home.js"></script>
     <footer>
         <!-- Description du site -->
