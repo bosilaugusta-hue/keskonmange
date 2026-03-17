@@ -17,7 +17,7 @@
 }
 
 body {
-    background: #efefef;
+    background: #ffcfa280;
 }
 
 
@@ -125,16 +125,17 @@ body {
 
     text-align: center;
 
-    padding: 120px 20px;
+    padding: 180px 20px 170px;
 
     background:
-        linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)),
+        linear-gradient(rgba(255, 255, 255, 0.6), var(--quator-background-color)),
         url("Logo2.png");
 
     background-size: cover;
     background-position: center;
 
 }
+
 
 .hero h1 {
 
@@ -155,6 +156,7 @@ body {
     margin-bottom: 30px;
 
 }
+
 
 
 
