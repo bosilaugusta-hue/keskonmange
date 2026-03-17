@@ -2,6 +2,7 @@
 <html lang="fr">
 
 <head>
+    <link rel="shortcut icon" href="../Assets/Image/Logo.png" type="image/x-icon" />
     <link rel="stylesheet" href="../nav.css">
     <link rel="stylesheet" href="../global.css">
     <link rel="stylesheet" href="testPage.css">
@@ -18,13 +19,12 @@
         <!-- nav -->
         <nav class="navbar">
             <!-- logonav -->
-            <img src="../Assets/Image/Logo.png" alt="Keskonmange Logo" />
+            <a href="../homepage/home.html"><img src="../Assets/Image/Logo.png" alt="Keskonmange Logo" /></a>
             <!-- link nav -->
             <ul>
-                <li><a href="#">Comunity</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Shop</a></li>
-                <li><a href="#">Test</a></li>
+                <li><a href="../comunity/comunity.html">Comunity</a></li>
+                <li><a href="../Contact_Page/contact.html">Contact</a></li>
+                <li><a href="../shop_page/shop.html">Shop</a></li>
                 <li class="logInLink"><a href="#">Log-in</a></li>
                 <hr />
                 <li class="signInLink"><a href="#">Sign-in</a></li>
@@ -44,11 +44,11 @@
                     Keskonmange ?
                 </h2>
                 <!-- Progress bar showing how far the user is in the quiz (1 question answered out of 5) -->
-                <progress value="1" max="5"></progress>
+                <progress value="1" max="4"></progress>
                 <!-- Text displaying the current question number to the user -->
-                <p id="questionNumber">Question 1/5</p>
+                <p id="questionNumber">Question 1/4</p>
                 <!-- The question asked in the quiz -->
-                <h3 id="quizzQuestion">Quel est ton envie ?</h3>
+                <h3 id="quizzQuestion"></h3>
                 <!-- Answers options -->
                 <button class="answerButton">Plaisir</button>
                 <button class="answerButton">Sain</button>
@@ -84,8 +84,8 @@
         <hr>
         <!-- Link section -->
         <div id="linkDiv">
-            <a href="#">Qui nous sommes ?</a>
-            <a href="#">Contact</a>
+            <a href="../About_us_Page/aboutus.html">Qui nous sommes ?</a>
+            <a href="../Contact_Page/contact.html">Contact</a>
         </div>
         <hr>
         <!-- NewLetter section -->
@@ -95,9 +95,9 @@
                 <input id="email" type="email" placeholder="Votre email ...">
                 <button id="send">➢</button>
             </div>
-
         </div>
     </footer>
+    <script src="testPage.js"></script>
 </body>
 
 </html>
