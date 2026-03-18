@@ -3,13 +3,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
     z-index: 2;
-
     width: 100%;
 
     img {
-        height: 72px;
+        height: 54px;
         width: auto;
     }
 
@@ -27,6 +26,7 @@
                 text-decoration: none;
                 color: var(--secondary);
                 font-family: var(--main-font);
+                font-size: 15px;
 
                 &:hover {
                     color: var(--tertiary);
