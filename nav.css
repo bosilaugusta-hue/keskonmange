@@ -67,10 +67,8 @@
                 }
             }
 
-            .active {
-                ul {
-                    left: 0;
-                }
+        .active ul {
+            left: 0;
             }
         }
 

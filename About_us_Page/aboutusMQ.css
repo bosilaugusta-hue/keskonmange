@@ -1,0 +1,262 @@
+/*  Tablette max-width 768px & Mobile max-width 480px */
+
+@media screen and (max-width: 768px) {
+
+    /* --- SECTION 1 : La boîte animée "Qui sommes nous" --- */
+
+    .s1{
+        overflow: hidden;
+    }
+
+    .box1 {
+        width: 90%;
+        max-width: 720px;
+        height: auto;
+        min-height: 360px;
+        overflow: hidden;
+        padding: 2rem;
+    }
+
+    .box1_inside h1 {
+        font-size: 2rem;
+    }
+
+
+    /* --- SECTION 2 : L'accordéon --- */
+
+    .accordion {
+        flex-direction: column;
+        height: 620px;
+        width: 90%;
+    }
+
+    details {
+        flex: 0 0 60px;
+        overflow: hidden;
+        transition: flex-basis var(--transition);
+    }
+
+    details[open] {
+        flex: 1 1 auto;
+        transform: translateX(-8px);
+    }
+
+    summary {
+        writing-mode: horizontal-tb;
+        height: 60px;
+        min-height: 60px;
+        padding: 0 1.5rem;
+    }
+
+    .content {
+        position: absolute;
+        inset: 0;
+        padding: 120px 50px 100px 100px;
+        opacity: 0;
+        transform: translateY(50px);   /* glisse de bas en haut */
+    }
+
+    details[open] .content {
+        opacity: 1;
+        transform: translateY(0);
+        position: initial;
+    }
+    
+    /* --- SECTION 3 : Les cards de l'équipe --- */
+    .Container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 1fr 1fr 1fr;
+        padding: 1rem;
+        gap: 1rem;
+        height: 100vh;
+    }
+    
+    .Container h1 {
+        grid-column: 1;
+        grid-row: 2;
+        font-size: 2.5rem;
+        align-self: center;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    
+    .card:nth-child(1) { grid-column: 2; grid-row: 2; }
+    .card:nth-child(2) { grid-column: 1; grid-row: 3; } 
+    .card:nth-child(3) { grid-column: 2; grid-row: 3; }
+    .card:nth-child(4) { grid-column: 1; grid-row: 4; }
+    .card:nth-child(5) { grid-column: 2; grid-row: 4; }
+    
+    .card {
+        height: 100%;
+    }
+    .top {
+        height: 75%;
+        transition: transform: 1s;
+    }
+    .card:hover .top{
+        height: 50%;
+        transform: translateY(-100%);
+        border-bottom-left-radius: 0%;
+        border-bottom-right-radius: 0%;
+    }
+    .bottom {
+        height: 50%;
+    }
+
+    /* --- SECTION 4 : "Keskon va faire d'autre ?" --- */
+    .s4 {
+    overflow: hidden;
+    height: 70vh;
+    }
+    
+    .box2 {
+    width: 80%;
+    max-width: 700px;
+    height: auto;
+    min-height: 420px;
+    overflow: hidden;
+    padding: 8px;
+    }
+
+    .s4box{
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+    }
+
+    .s4box h2{
+    padding-top: 42px;
+    margin-bottom: 16px;
+    }
+
+    .iconbox {
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+    padding: 1rem;
+    }
+
+    .iconwrap{
+    width: 65px;
+    height: 65px;
+    }
+
+    .iconitem a {
+    font-size: 0.8rem;
+    }
+        
+}
+
+
+@media screen and (max-width: 480px) {
+
+    /* --- SECTION 1 --- */
+    .s1{
+        padding-top: 112px;
+    }
+
+    .box1_inside h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .box1_inside p {
+        font-size: 0.85rem;
+    }
+    
+    /* --- SECTION 2 : L'accordéon --- */
+    .content{
+        padding: 100px 25px 20px 50px;
+    }
+    /* --- SECTION 2 : texte accordéon plus petit --- */
+    .content h3 {
+        font-size: 1.1rem;
+    }
+
+    .content p {
+        font-size: 0.85rem;
+    }
+
+    /* --- SECTION 3 : Cards anim via JS --- */
+   .Container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto repeat(5, 24rem);
+        padding: 4rem 2rem 2rem;
+        gap: 4rem;
+        height: auto;
+    }
+
+    .Container h1 {
+        grid-column: 1;
+        grid-row: 1;
+        font-size: 3rem;
+        padding-bottom: 1rem;
+    }
+
+    .card:nth-child(1) { grid-column: 1; grid-row: 2; }
+    .card:nth-child(2) { grid-column: 1; grid-row: 3; }
+    .card:nth-child(3) { grid-column: 1; grid-row: 4; }
+    .card:nth-child(4) { grid-column: 1; grid-row: 5; }
+    .card:nth-child(5) { grid-column: 1; grid-row: 6; }
+
+    .card {
+        height: 24rem;
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+    .card.active{
+        height: 24rem;
+    }
+
+    .card.active .top {
+        transform: translateY(-100%);
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    
+    .card.active .bottom {
+        transform: translateY(0);
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+    
+    .top {
+        height: 12rem;
+    }
+
+    .bottom {
+        height: 12rem;
+    }
+
+    /* --- SECTION 4 : icônes en carré cliquable JS --- */
+    .box2 {
+        width: 90%;
+        min-height: 380px;
+    }
+
+    .s4box {
+        padding: 1rem;
+    }
+
+    .s4box h2 {
+        font-size: 1.2rem;
+        padding-top: 2rem;
+    }
+
+    .iconbox {
+        gap: 1rem;
+        justify-content: center;
+        padding: 14px;
+    }
+
+    .iconitem {
+        flex: 1 0 42%;
+    }
+
+    .iconwrap {
+        width: 55px;
+        height: 55px;
+    }
+
+}
