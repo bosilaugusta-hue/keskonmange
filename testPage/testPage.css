@@ -68,6 +68,24 @@
      min-height: 300px;
      min-width: 300px;
 
+     #recipeAndIngredients {
+
+         display: block;
+         font-family: var(--main-font);
+         z-index: 1;
+         flex-direction: column;
+         align-items: center;
+         background-color: var(--secondary-background-color);
+         border-radius: 15px;
+         width: 40%;
+         border: 7px solid var(--primary);
+         padding-block: 2rem;
+         height: auto;
+         position: relative;
+         word-break: break-word;
+         overflow-wrap: break-word;
+     }
+
      #quizz {
          display: flex;
          font-family: var(--main-font);
