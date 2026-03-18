@@ -1,3 +1,35 @@
+ @keyframes close {
+     0% {
+         transform: scaleY(1);
+         opacity: 1;
+     }
+
+     100% {
+         transform: scaleY(0);
+         opacity: 0;
+     }
+ }
+
+ @keyframes open {
+     0% {
+         transform: scaleY(0);
+         opacity: 0;
+     }
+
+     100% {
+         transform: scaleY(1);
+         opacity: 1;
+     }
+ }
+
+ .closing {
+     animation: close 0.2s ease forwards;
+ }
+
+ .opening {
+     animation: open 0.2s ease forwards;
+ }
+
  body {
      display: flex;
      margin: 0;
@@ -66,26 +98,8 @@
      justify-content: center;
      align-items: center;
      flex: 1;
-     min-height: 200px;
-     min-width: 300px;
-
-     #recipeAndIngredients {
-
-         display: block;
-         font-family: var(--main-font);
-         z-index: 1;
-         flex-direction: column;
-         align-items: center;
-         background-color: var(--secondary-background-color);
-         border-radius: 15px;
-         width: 40%;
-         border: 7px solid var(--primary);
-         padding-block: 2rem;
-         height: auto;
-         position: relative;
-         word-break: break-word;
-         overflow-wrap: break-word;
-     }
+     min-height: 300px;
+     min-width: 400px;
 
      #quizz {
          display: flex;
@@ -93,9 +107,11 @@
          z-index: 1;
          flex-direction: column;
          align-items: center;
-         background-color: var(--secondary-background-color);
+         background: linear-gradient(to right, var(--secondary-background-color), var(--quator-background-color));
          border-radius: 15px;
-         width: 40%;
+         width: 50%;
+         min-height: 400px;
+         transition: all 1s ease;
          border: 7px solid var(--primary);
          padding-block: 2rem;
          height: auto;
@@ -106,7 +122,7 @@
          h2 {
              font-size: 3rem;
              color: var(--primary);
-             margin: 1rem;
+             margin: 1px 5px 1px 5px;
              text-align: center;
              font-weight: 100;
          }
@@ -150,12 +166,15 @@
              height: auto;
              width: 60%;
              border-radius: 50px;
-             margin: 0.4rem;
+             margin: 0.3rem;
              border-color: var(--quator);
              color: var(--quator);
              background-color: var(--primary);
              border-width: 4px;
-             padding-block: 0.5rem;
+             padding-block: 0.4rem;
+
+             transition: color 0.75s ease, border-color 0.75s ease, transform 0.3s ease;
+             ;
 
              &:hover {
                  transform: scale(1.05);
@@ -170,7 +189,7 @@
              color: #454545;
              border-color: #454545;
              width: 40%;
-             height: 5%;
+             height: 4%;
 
              &:hover {
                  color: #000000;

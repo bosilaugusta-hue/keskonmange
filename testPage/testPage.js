@@ -315,72 +315,74 @@ quizzQuestion.textContent = currentQuestion.texte;
 
 
 answerButton.forEach(button => {
-
     button.addEventListener('click', () => {
+        quizz.style.minHeight = quizz.offsetHeight + 'px';
+        answerButton.forEach(btn => btn.classList.add('closing'));
 
-        if (questionNumber < 3) {
-            totalAnswer[currentQuestion.key] = button.textContent;
-            questionNumberX++;
-            questionNumber++;
-            currentQuestion = questions[questionNumber];
-            quizzQuestion.textContent = currentQuestion.texte;
-            questionX.textContent = "Question " + questionNumberX + "/4";
-            progressBar.value = questionNumberX;
-            console.log(totalAnswer);
-            console.log(currentQuestion);
-            if (answerButton.length > currentQuestion.options.length) {
-                answerButton[answerButton.length - 1].remove();
-                answerButton = document.querySelectorAll('.answerButton');
-                console.log(answerButton.length - 1)
-                console.log(currentQuestion.options.length - 1);
+        setTimeout(() => {
+            if (questionNumber < 3) {
+                totalAnswer[currentQuestion.key] = button.textContent;
+                questionNumberX++;
+                questionNumber++;
+                currentQuestion = questions[questionNumber];
+                quizzQuestion.textContent = currentQuestion.texte;
+                questionX.textContent = "Question " + questionNumberX + "/4";
+                progressBar.value = questionNumberX;
+
+                if (answerButton.length > currentQuestion.options.length) {
+                    answerButton[answerButton.length - 1].remove();
+                    answerButton = document.querySelectorAll('.answerButton');
+                }
+                answerButton.forEach((btn, i) => {
+                    btn.classList.remove('closing');
+                    btn.textContent = currentQuestion.options[i];
+                    btn.classList.add('opening');
+                });
+                quizz.style.minHeight = quizz.scrollHeight + 'px';
+                setTimeout(() => {
+                    answerButton.forEach(btn => btn.classList.remove('opening'));
+                }, 300);
+            } else {
+                quizz.classList.add('closing');
+                setTimeout(() => {
+                    totalAnswer[currentQuestion.key] = button.textContent;
+                    progressBar.value = questionNumberX;
+                    const resultatQuizz = plat.filter(p =>
+                        p.categorie === totalAnswer.categorie &&
+                        p.gout === totalAnswer.gout &&
+                        p.type === totalAnswer.type &&
+                        p.accompagnement === totalAnswer.accompagnement
+                    );
+                    const recipe = recipeAndIngredient.find(r =>
+                        r.nom === resultatQuizz[0].nom
+                    );
+                    quizz.classList.remove('closing');
+                    quizz.innerHTML = `
+                        <h2 style="text-align: center;font-size:2.75rem;">${recipe.nom}</h2>
+                        <div style="display: flex;padding:1rem 1rem; gap: 2rem; align-items: start;">
+                            <div style="flex: 1;margin:1em 0 0 0">
+                                <h3 style="text-align:start;font-size:2rem">Recette pour 2p :</h3>
+                                <p style="font-size:1em">${recipe.recette}</p>
+                            </div>
+                            <div style="flex: 1;margin:1em 0 0 0">
+                                <h3 style="text-align:center;font-size:2rem">Ingrédients :</h3>
+                                <ul style="text-align:center;flex: 1;margin:1rem 0 0 0;list-style:none;font-size:0.8em;">
+                                    ${recipe.ingredients.map(i => `<li>${i}</li>`).join('')}
+                                </ul>
+                            </div>
+                        </div>
+                    `;
+                    quizz.classList.add('opening');
+                    quizz.style.minHeight = quizz.scrollHeight + 'px';
+                    setTimeout(() => {
+                        quizz.classList.remove('opening');
+                    }, 300);
+                }, 300);
             }
-            answerButton.forEach((button, i) => {
-                button.textContent = currentQuestion.options[i]
-            })
-            return currentQuestion
-        }
+        }, 300);
+    });
+});
 
-        else {
-            totalAnswer[currentQuestion.key] = button.textContent;
-            currentQuestion = questions[questionNumber];
-            quizzQuestion.textContent = currentQuestion.texte;
-            questionX.textContent = "Question " + questionNumberX + "/4";
-            progressBar.value = questionNumberX;
-            console.log(totalAnswer);
-            console.log(currentQuestion);
-
-            const resultatQuizz = plat.filter(p =>
-                p.categorie === totalAnswer.categorie &&
-                p.gout === totalAnswer.gout &&
-                p.type === totalAnswer.type &&
-                p.accompagnement === totalAnswer.accompagnement
-            );
-            const recipe = recipeAndIngredient.find(r =>
-                r.nom === resultatQuizz[0].nom
-            );
-
-            document.querySelector('#quizz').innerHTML = `
-    <h2 style="text-align: center;">${recipe.nom}</h2>
-    <div style="display: flex;padding:2rem 1rem; gap: 2rem; align-items: center;">
-    <div style="flex: 1;padding:2rem 1rem">
-            <h3 style="text-align:start";>Recette pour 2p :</h3>
-            <p>${recipe.recette}</p>
-        </div>
-        <ul style="flex: 1 ;list-style:none ; ">
-            ${recipe.ingredients.map(i => `<li>${i}</li>`).join('')}
-        </ul>
-        
-    </div>
-`;
-
-            console.log(resultatQuizz);
-            console.log(recipe);
-
-
-        }
-    }
-    )
-})
 
 
 
