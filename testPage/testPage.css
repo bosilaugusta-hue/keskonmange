@@ -1,3 +1,35 @@
+ @keyframes close {
+     0% {
+         transform: scaleY(1);
+         opacity: 1;
+     }
+
+     100% {
+         transform: scaleY(0);
+         opacity: 0;
+     }
+ }
+
+ @keyframes open {
+     0% {
+         transform: scaleY(0);
+         opacity: 0;
+     }
+
+     100% {
+         transform: scaleY(1);
+         opacity: 1;
+     }
+ }
+
+ .closing {
+     animation: close 0.2s ease forwards;
+ }
+
+ .opening {
+     animation: open 0.2s ease forwards;
+ }
+
  body {
      display: flex;
      margin: 0;
@@ -7,6 +39,7 @@
      align-items: stretch;
      flex-direction: column;
      justify-content: space-between;
+     overflow: auto;
 
      main {
          flex: 1;
@@ -66,7 +99,7 @@
      align-items: center;
      flex: 1;
      min-height: 300px;
-     min-width: 300px;
+     min-width: 400px;
 
      #quizz {
          display: flex;
@@ -74,9 +107,11 @@
          z-index: 1;
          flex-direction: column;
          align-items: center;
-         background-color: var(--secondary-background-color);
+         background: linear-gradient(to right, var(--secondary-background-color), var(--quator-background-color));
          border-radius: 15px;
-         width: 40%;
+         width: 50%;
+         min-height: 400px;
+         transition: all 1s ease;
          border: 7px solid var(--primary);
          padding-block: 2rem;
          height: auto;
@@ -87,7 +122,7 @@
          h2 {
              font-size: 3rem;
              color: var(--primary);
-             margin: 1rem;
+             margin: 1px 5px 1px 5px;
              text-align: center;
              font-weight: 100;
          }
@@ -131,12 +166,15 @@
              height: auto;
              width: 60%;
              border-radius: 50px;
-             margin: 0.4rem;
+             margin: 0.3rem;
              border-color: var(--quator);
              color: var(--quator);
              background-color: var(--primary);
              border-width: 4px;
-             padding-block: 0.5rem;
+             padding-block: 0.4rem;
+
+             transition: color 0.75s ease, border-color 0.75s ease, transform 0.3s ease;
+             ;
 
              &:hover {
                  transform: scale(1.05);
@@ -151,7 +189,7 @@
              color: #454545;
              border-color: #454545;
              width: 40%;
-             height: 5%;
+             height: 4%;
 
              &:hover {
                  color: #000000;
@@ -166,7 +204,7 @@
 
  footer {
      background-color: var(--primary);
-     padding: 1rem;
+     /* padding: 0.5rem; */
      width: auto;
      z-index: 1;
      display: flex;
@@ -174,6 +212,7 @@
      justify-content: space-around;
      align-items: center;
      position: relative;
+
 
      hr {
          border: none;
@@ -188,7 +227,7 @@
          width: 30%;
 
          #logo-footer {
-             width: 45px;
+             width: 40px;
              height: auto;
              flex-shrink: 0;
          }
@@ -200,14 +239,14 @@
 
              h3 {
                  font-family: 'FredokaOne', sans-serif;
-                 font-size: 1.5rem;
+                 font-size: 1rem;
                  font-weight: 100;
                  color: var(--tertiary);
              }
 
              p {
                  font-family: 'RobotoMono', sans-serif;
-                 font-size: 0.75rem;
+                 font-size: 0.6rem;
                  color: var(--secondary);
 
              }
@@ -242,7 +281,8 @@
          span {
              font-family: 'RobotoMono', sans-serif;
              color: var(--secondary);
-             font-size: 1.2 ²rem;
+             font-size: 0.75rem;
+             padding: 0.5em;
 
          }
      }
@@ -259,7 +299,7 @@
          width: 70%;
          padding: 0.3rem 0.3rem 0.3rem 1rem;
          border-radius: 25px 0 0 25px;
-         font-size: 0.9rem;
+         font-size: 0.75rem;
          background-color: var(--primary);
          font-family: 'RobotoMono', sans-serif;
          font-weight: bold;
@@ -269,13 +309,13 @@
      button {
          outline: none;
          border: 2px solid var(--tertiary);
-         width: 15%;
-         height: 15%;
+         /* width: 15%;
+         height: 15%; */
          border-radius: 0 25px 25px 0;
-         font-size: 1.2rem;
+         font-size: 1.5rem;
          background-color: var(--tertiary);
          color: var(--secondary);
-         padding: 0.3rem;
+         /* padding: 0.3rem; */
 
      }
  }
