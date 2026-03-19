@@ -359,13 +359,13 @@ answerButton.forEach(button => {
                     quizz.classList.remove('closing');
                     quizz.innerHTML = `
                         <h2 style="text-align: center;font-size:2rem;">${recipe.nom}</h2>
-                        <div class="recipeAndIngredients";style="display: flex;margin:3rem 3rem 3rem 3rem; gap: 2rem; align-items: start;">
+                        <div id="recipeAndIngredients">
                             <div style="flex: 1;margin:1em">
-                                <h3 style="text-align:start;font-size:1.5rem">Recette pour 2p :</h3>
-                                <p style="font-size:1em">${recipe.recette}</p>
+                                <h3 style="text-align:center;font-size:1.25rem">Recette pour 2p :</h3>
+                                <p style="font-size:0.8em">${recipe.recette}</p>
                             </div>
                             <div style="flex: 1;margin:1em 0 0 0">
-                                <h3 style="text-align:center;font-size:1rem">Ingrédients :</h3>
+                                <h3 style="text-align:center;font-size:1.25rem">Ingrédients :</h3>
                                 <ul style="text-align:center;flex: 1;margin:1rem 0 0 0;list-style:none;font-size:0.8em;">
                                     ${recipe.ingredients.map(i => `<li>${i}</li>`).join('')}
                                 </ul>
@@ -373,12 +373,17 @@ answerButton.forEach(button => {
                         </div>
                     `;
                     quizz.classList.add('opening');
-                    quizz.style.minHeight = quizz.scrollHeight + 'px';
+                    requestAnimationFrame(() => {
+                        requestAnimationFrame(() => {
+                            quizz.style.minHeight = quizz.scrollHeight + 'px';
+                        });
+                    });
+                    answerButton.style.minHeight = quizz.scrollHeight + 'px';
                     setTimeout(() => {
                         quizz.classList.remove('opening');
-                    }, 300);
-                }, 300);
+                    }, 250);
+                }, 250);
             }
-        }, 300);
+        }, 250);
     });
 });

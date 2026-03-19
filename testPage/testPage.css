@@ -23,11 +23,11 @@
  }
 
  .closing {
-     animation: close 0.2s ease forwards;
+     animation: close 0.3s ease forwards;
  }
 
  .opening {
-     animation: open 0.2s ease forwards;
+     animation: open 0.3s ease forwards;
  }
 
  body {
@@ -99,9 +99,24 @@
      align-items: center;
      flex: 1;
      min-height: 300px;
-     min-width: 400px;
+     height: auto;
+
+
+
+
+
+     #recipeAndIngredients {
+         display: flex;
+         flex-direction: column-reverse;
+         /* margin: 8px; */
+         gap: 1rem;
+         align-items: center;
+
+
+     }
 
      #quizz {
+         box-shadow: 4px 3px 3px 1px #0b264680;
          display: flex;
          font-family: var(--main-font);
          z-index: 1;
@@ -109,43 +124,44 @@
          align-items: center;
          background: linear-gradient(to right, var(--secondary-background-color), var(--quator-background-color));
          border-radius: 15px;
-         width: 50%;
-         min-height: 400px;
-         transition: all 1s ease;
+         width: 40%;
+         min-height: 300px;
+         max-height: 400px;
+         transition: min-height 1s ease;
          border: 7px solid var(--primary);
-         padding-block: 2rem;
          height: auto;
          position: relative;
          word-break: break-word;
          overflow-wrap: break-word;
 
+
          h2 {
-             font-size: 3rem;
+             font-size: 2.25rem;
              color: var(--primary);
-             margin: 1px 5px 1px 5px;
+             margin: 3px;
              text-align: center;
              font-weight: 100;
          }
 
          h3 {
-             font-size: 1.75rem;
+             font-size: 1.5rem;
              color: var(--primary);
-             margin: 0.25rem;
+             padding: 2px;
              text-align: center;
              font-weight: 100;
          }
 
          p {
              color: var(--primary);
+             font-size: 0.75em;
 
-             text-align: left;
          }
 
          progress {
              width: 50%;
              appearance: none;
              -webkit-appearance: none;
-             height: 5px;
+             height: 4px;
 
              &::-webkit-progress-bar {
                  background-color: var(--secondary);
@@ -161,17 +177,18 @@
 
          button {
              font-family: var(--main-font);
-             font-size: 1rem;
+             font-size: 0.85rem;
              font-weight: 100;
              height: auto;
              width: 60%;
              border-radius: 50px;
-             margin: 0.3rem;
+             margin: 6px;
              border-color: var(--quator);
              color: var(--quator);
              background-color: var(--primary);
              border-width: 4px;
-             padding-block: 0.4rem;
+             padding-block: 6px;
+             justify-content: center;
 
              transition: color 0.75s ease, border-color 0.75s ease, transform 0.3s ease;
              ;
@@ -190,6 +207,7 @@
              border-color: #454545;
              width: 40%;
              height: 4%;
+             transition: min-height 0.3s ease;
 
              &:hover {
                  color: #000000;
@@ -334,4 +352,5 @@
      z-index: 0;
      width: 20rem;
      height: auto;
+     opacity: 50%;
  }
