@@ -1,3 +1,4 @@
+
 const checkboxes = document.querySelectorAll('form input[type="checkbox"]');
   const articles = document.querySelectorAll('.main-article');
 
