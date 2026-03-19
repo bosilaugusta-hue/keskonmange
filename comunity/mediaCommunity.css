@@ -1,6 +1,15 @@
 @media screen and (max-width: 1100px){
+   h1{
+    margin:32px ;
+      margin-bottom: 16px;
+      
+      
+    }
   main{
+   
   .container{
+
+    
          grid-template-areas:
         "main-caroussel main-caroussel main-caroussel "
         "sidebar sidebar sidebar"
@@ -49,7 +58,40 @@
           .box{
             width: 50%;
           }
-        }  
+        } 
+        
+
+
+        
       }
     }
  }
+ @media screen and (max-width: 900px){
+.cards {
+  overflow: hidden;
+
+ .cardsContainer {
+  display: flex;
+  width: max-content;
+  animation: scroll 25s linear infinite;
+  &:hover {
+  animation-play-state: paused; 
+  
+ }
+
+
+/* ← stoppe au hover */
+
+.card1,
+.card2,
+.card3
+ {
+  width: 400px;
+}
+
+ }}
+
+}@keyframes scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); } /* ← 50% car contenu dupliqué */
+}
