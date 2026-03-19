@@ -1,377 +1,482 @@
 :root {
-	--bleu: #0b2545;
-	--orange: #d96c06;
-	--beige: #ffcfa2;
-	--blanc: #f2f2f2;
+
+    --bleu: #0B2545;
+    --orange: #D96C06;
+    --beige: #FFCFA2;
+    --blanc: #F2F2F2;
+
 }
 
 /* RESET */
 
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: "Fredoka One", cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fredoka One', cursive;
 }
 
 body {
-	background: #efefef;
+    background: #efefef;
 }
+
+
 
 /* NAVBAR */
 
 .navbar {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
 
-	padding: 14px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-	background: #0b2545;
+    padding: 14px 80px;
+
+    background: #0B2545;
+
 }
+
 
 /* LEFT SIDE */
 
 .nav-left {
-	display: flex;
-	align-items: center;
-	gap: 10px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
 }
 
 .logo-icon {
-	width: 48px;
+
+    width: 48px;
+
 }
 
 .logo-text {
-	color: #d96c06;
 
-	font-size: 24px;
-	margin-left: 8px;
+    color: #D96C06;
+
+    font-size: 24px;
+    margin-left: 8px;
+
 }
+
 
 /* MENU */
 
 .nav-menu {
-	display: flex;
-	align-items: center;
 
-	gap: 30px;
+    display: flex;
+    align-items: center;
 
-	list-style: none;
+    gap: 30px;
+
+    list-style: none;
+
 }
 
 .nav-menu a {
-	color: white;
 
-	text-decoration: none;
+    color: white;
 
-	font-size: 14px;
+    text-decoration: none;
 
-	transition: 0.3s;
+    font-size: 14px;
+
+    transition: 0.3s;
+
 }
 
 .nav-menu a:hover {
-	color: #d96c06;
+
+    color: #D96C06;
+
 }
 
 .active a {
-	color: #d96c06;
-	border-bottom: 3px solid var(--orange);
-	padding-bottom: 7px;
+
+    color: #D96C06;
+    border-bottom: 3px solid var(--orange);
+    padding-bottom: 7px;
+
 }
+
 
 /* LOG-IN / SIGN-IN DIVIDER */
 
 .divider {
-	width: 1px;
 
-	height: 18px;
+    width: 1px;
 
-	background: white;
+    height: 18px;
 
-	opacity: 0.5;
+    background: white;
+
+    opacity: 0.5;
+
 }
+
+
 
 /* HERO */
 
 .hero {
-	text-align: center;
 
-	padding: 120px 20px;
+    text-align: center;
 
-	background:
-		linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)),
-		url("Logo2.png");
+    padding: 120px 20px;
 
-	background-size: cover;
-	background-position: center;
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)),
+        url("Logo2.png");
+
+    background-size: cover;
+    background-position: center;
+
 }
 
 .hero h1 {
-	font-size: 46px;
 
-	color: var(--bleu);
+    font-size: 46px;
 
-	margin-bottom: 10px;
+    color: var(--bleu);
+
+    margin-bottom: 10px;
+
 }
 
 .hero p {
-	font-size: 18px;
 
-	color: #444;
+    font-size: 18px;
 
-	margin-bottom: 30px;
+    color: #444;
+
+    margin-bottom: 30px;
+
 }
+
+
 
 /* BUTTON */
 
 .btn-primary {
-	background: var(--orange);
 
-	color: white;
+    background: var(--orange);
 
-	border: none;
+    color: white;
 
-	padding: 14px 28px;
+    border: none;
 
-	font-size: 16px;
+    padding: 14px 28px;
 
-	border-radius: 8px;
+    font-size: 16px;
 
-	cursor: pointer;
+    border-radius: 8px;
 
-	transition: 0.3s;
+    cursor: pointer;
+
+    transition: 0.3s;
+
 }
 
 .btn-primary:hover {
-	transform: translateY(-3px);
 
-	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+
 }
+
+
 
 /* BOX SECTION */
 
 .box-container {
-	display: grid;
 
-	grid-template-columns: repeat(2, 1fr);
+    display: grid;
 
-	gap: 40px;
+    grid-template-columns: repeat(2, 1fr);
 
-	padding: 80px 140px;
+    gap: 40px;
 
-	max-width: 1200px;
+    padding: 80px 140px;
 
-	margin: auto;
+    max-width: 1200px;
+
+    margin: auto;
+
 }
+
+
 
 /* BOX CARD */
 
 .box-card {
-	display: flex;
 
-	justify-content: space-between;
+    display: flex;
 
-	align-items: center;
+    justify-content: space-between;
 
-	background: white;
+    align-items: center;
 
-	border-radius: 20px;
+    background: white;
 
-	overflow: hidden;
+    border-radius: 20px;
 
-	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
 
-	height: 190px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
 
-	width: 100%;
+    height: 190px;
 
-	overflow: hidden;
+    width: 100%;
 
-	transition: 0.3s;
+    overflow: hidden;
+
+    transition: 0.3s;
+
 }
 
 .box-card:hover {
-	transform: translateY(-6px);
 
-	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    transform: translateY(-6px);
+
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+
 }
+
+
 
 /* LEFT SIDE */
 
 .box-left {
-	padding: 25px;
 
-	background: #f7f2ed;
+    padding: 25px;
 
-	height: 100%;
+    background: #f7f2ed;
 
-	display: flex;
+    height: 100%;
 
-	flex-direction: column;
+    display: flex;
 
-	justify-content: center;
+    flex-direction: column;
 
-	gap: 6px;
+    justify-content: center;
 
-	width: 55%;
+    gap: 6px;
+
+    width: 55%;
+
 }
 
+
+
 .box-title {
-	display: flex;
 
-	align-items: center;
+    display: flex;
 
-	gap: 8px;
+    align-items: center;
+
+    gap: 8px;
+
 }
 
 .box-image {
-	width: 45%;
 
-	height: 100%;
+    width: 45%;
 
-	position: relative;
+    height: 100%;
 
-	overflow: hidden;
+    position: relative;
+
+    overflow: hidden;
+
 }
 
 .box-image img {
-	width: 120%;
 
-	height: 100%;
+    width: 120%;
 
-	object-fit: cover;
+    height: 100%;
+
+    object-fit: cover;
+
 }
 
 .box-image::before {
-	content: "";
 
-	position: absolute;
+    content: "";
 
-	left: 0;
+    position: absolute;
 
-	top: 0;
+    left: 0;
 
-	height: 100%;
+    top: 0;
 
-	width: 90px;
+    height: 100%;
 
-	background: linear-gradient(to right, #f7f2ed, rgba(247, 242, 237, 0));
+    width: 90px;
 
-	z-index: 2;
+    background: linear-gradient(to right,
+            #F7F2ED,
+            rgba(247, 242, 237, 0));
+
+    z-index: 2;
+
 }
 
 .mini-logo {
-	width: 20px;
+
+    width: 20px;
+
 }
+
+
 
 .box-left h3 {
-	color: var(--bleu);
 
-	font-size: 16px;
+    color: var(--bleu);
+
+    font-size: 16px;
+
 }
+
+
 
 .box-left p {
-	font-size: 13px;
 
-	color: #444;
+    font-size: 13px;
+
+    color: #444;
+
 }
+
+
 
 /* PRICE */
 
 .price {
-	color: var(--bleu);
 
-	font-size: 18px;
+    color: var(--bleu);
 
-	font-weight: bold;
+    font-size: 18px;
 
-	margin-top: 5px;
+    font-weight: bold;
+
+    margin-top: 5px;
+
 }
+
+
 
 /* ORDER BUTTON */
 
 .btn-order {
-	margin-top: 8px;
 
-	background: var(--orange);
+    margin-top: 8px;
 
-	border: none;
+    background: var(--orange);
 
-	color: white;
+    border: none;
 
-	padding: 8px 18px;
+    color: white;
 
-	border-radius: 8px;
+    padding: 8px 18px;
 
-	cursor: pointer;
+    border-radius: 8px;
 
-	box-shadow: 0 4px 12px rgba(217, 108, 6, 0.4);
+    cursor: pointer;
 
-	transition: 0.3s;
+    box-shadow: 0 4px 12px rgba(217, 108, 6, 0.4);
+
+    transition: 0.3s;
+
 }
 
 .btn-order:hover {
-	transform: translateY(-2px);
 
-	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
 }
+
+
 
 /* RIGHT SIDE IMAGE */
 
 .box-right {
-	width: 40%;
 
-	height: 100%;
+    width: 40%;
+
+    height: 100%;
+
 }
 
 .box-right img {
-	width: 115%;
 
-	height: 100%;
+    width: 115%;
 
-	object-fit: cover;
+    height: 100%;
+
+    object-fit: cover;
+
+
 }
+
+
+
 
 /* CTA SECTION */
 
 .cta {
-	background: var(--bleu);
 
-	color: white;
+    background: var(--bleu);
 
-	text-align: center;
+    color: white;
 
-	padding: 60px;
+    text-align: center;
+
+    padding: 60px;
+
 }
 
 .cta h2 {
-	margin-bottom: 20px;
 
-	font-size: 26px;
+    margin-bottom: 20px;
+
+    font-size: 26px;
+
 }
+
+
 
 /* BUTTON PULSE ANIMATION */
 
 .pulse {
-	animation: pulse 2s infinite;
+
+    animation: pulse 2s infinite;
+
 }
 
 @keyframes pulse {
-	0% {
-		box-shadow: 0 0 0 0 rgba(217, 108, 6, 0.7);
-	}
 
-	70% {
-		box-shadow: 0 0 0 15px rgba(217, 108, 6, 0);
-	}
+    0% {
+        box-shadow: 0 0 0 0 rgba(217, 108, 6, 0.7);
+    }
 
-	100% {
-		box-shadow: 0 0 0 0 rgba(217, 108, 6, 0);
-	}
+    70% {
+        box-shadow: 0 0 0 15px rgba(217, 108, 6, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(217, 108, 6, 0);
+    }
+
 }
 
-@media (max-width: 1024px) {
+@media (max-width:1024px) {
 
     .box-container {
 
@@ -425,3 +530,4 @@ body {
         }
 
     }
+}

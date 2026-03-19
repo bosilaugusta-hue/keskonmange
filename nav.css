@@ -1,87 +1,91 @@
 .navbar {
-	background-color: var(--primary);
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 20px;
-	z-index: 2;
-	position: absolute;
-	width: 100%;
+    background-color: var(--primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    z-index: 2;
+    width: 100%;
 
-	img {
-		height: 72px;
-		width: auto;
-	}
+    img {
+        height: 42px;
+        width: auto;
+    }
 
-	ul {
-		list-style: none;
-		display: flex;
-		gap: 16px;
+    ul {
+        list-style: none;
+        display: flex;
+        gap: 16px;
 
-		li {
-			padding: 20px;
+        li {
+            padding: 15px;
 
-			a {
-				width: 100%;
+            a {
+                width: 100%;
 
-				text-decoration: none;
-				color: var(--secondary);
-				font-family: var(--main-font);
+                text-decoration: none;
+                color: var(--secondary);
+                font-family: var(--main-font);
+                font-size: 14px;
+                font-weight: 0;
 
-				&:hover {
-					color: var(--tertiary);
-				}
-			}
-		}
-	}
+                &:hover {
+                    color: var(--tertiary);
+                }
+            }
+        }
 
-	#burgerIcon {
-		cursor: pointer;
-		display: none;
-		font-family: var(--main-font);
-		color: var(--tertiary);
-		padding: 0.5rem;
-		font-size: 2rem;
-	}
+    }
+
+    #burgerIcon {
+        cursor: pointer;
+        display: none;
+        font-family: var(--main-font);
+        color: var(--tertiary);
+        padding: 0.5rem;
+        font-size: 2rem;
+    }
 }
 
 @media (max-width: 768px) {
-	.navbar {
-		ul {
-			position: fixed;
-			left: -100%;
-			top: 111.98px;
-			flex-direction: column;
-			background: var(--primary-background-color);
-			width: 100%;
-			text-align: center;
-			transition: 0.5s;
+    .navbar {
+        ul {
+            position: fixed;
+            left: -100%;
+            top: 111.98px;
+            flex-direction: column;
+            background: var(--primary-background-color);
+            width: 100%;
+            text-align: center;
+            transition: 0.5s;
 
-			li {
-				padding: 3px 0;
+            li {
+                padding: 3px 0;
 
-				&:hover {
-					color: var(--tertiary);
-				}
-			}
+                &:hover {
+                    color: var(--tertiary);
 
-			.active {
-				ul {
-					left: 0;
-				}
-			}
-		}
+                }
+            }
 
-		#burgerIcon {
-			display: block;
+            .active {
+                ul {
+                    left: 0;
+                }
+            }
+        }
 
-			&::before {
-				content: "\2630";
-			}
+        #burgerIcon {
+            display: block;
 
-			.active #icons::before {
-				content: "\2715";
-			}
-		}
-	}
+            &::before {
+                content: "\2630";
+            }
+
+            .active #icons::before {
+                content: "\2715";
+            }
+
+        }
+    }
 }
