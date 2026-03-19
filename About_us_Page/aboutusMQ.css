@@ -91,7 +91,7 @@
     }
     .top {
         height: 75%;
-        transition: transform: 1s;
+        transition: transform 0.5s;
     }
     
     .card:hover .top{
