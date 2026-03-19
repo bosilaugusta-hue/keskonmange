@@ -1,0 +1,349 @@
+@font-face {
+	font-family: "FredokaOne";
+	src: url("Assets/Fonts/FredokaOne-Regular.ttf") format("woff2");
+}
+
+@font-face {
+	font-family: "RobotoMono";
+	src: url("Assets/Fonts/RobotoMono-Regular.ttf") format("woff2");
+}
+
+footer {
+	background-color: var(--primary);
+	color: var(--secondary);
+	position: absolute;
+	display: flex;
+	gap: 0;
+	padding: 1rem 1.5rem;
+	align-items: center;
+	width: 100%;
+}
+
+footer div {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	flex: 1;
+	padding-right: 3rem;
+	align-items: flex-start;
+}
+
+footer div + div {
+	border-left: 2px solid var(--tertiary);
+	padding-left: 3rem;
+}
+
+/* Bloc logo : plus large et centré */
+.footer-logo {
+	flex: 2;
+	align-items: center;
+	text-align: center;
+}
+
+.footer-logo img {
+	width: 80px;
+	height: auto;
+	margin-bottom: 0.5rem;
+}
+
+.footer-logo p {
+	text-align: center;
+}
+
+footer h3 {
+	color: var(--secondary);
+	font-size: 1.1rem;
+	margin-bottom: 0.5rem;
+}
+
+footer p {
+	font-size: 0.9rem;
+	line-height: 1.6;
+	color: var(--secondary);
+}
+
+/* Plan du site */
+footer ul {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+footer ul li {
+	color: var(--secondary);
+	font-size: 0.9rem;
+	cursor: pointer;
+	transition: color var(--transition);
+}
+
+footer ul li:hover {
+	color: var(--secondary);
+}
+
+/* Newsletter */
+.newsletter {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.newsletter input {
+	background: var(--primary-background-color);
+	border: 1px solid var(--tertiary);
+	border-radius: 8px;
+	padding: 10px 14px;
+	color: var(--secondary);
+	font-size: 0.9rem;
+	outline: none;
+}
+
+.newsletter input::placeholder {
+	color: var(--secondary);
+}
+
+.newsletter button {
+	align-self: flex-start;
+	background-color: var(--tertiary);
+	color: var(--secondary);
+	border: none;
+	border-radius: 8px;
+	padding: 10px 16px;
+	cursor: pointer;
+	transition: background var(--transition);
+}
+
+.newsletter button:hover {
+	background-color: var(--tertiary);
+}
+
+/* Réseaux sociaux footer */
+.newsletter ul {
+	flex-direction: row;
+}
+
+.newsletter ul li img {
+	width: 24px;
+	height: 24px;
+
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+.newsletter ul li img[alt="Logo Tiktok"] {
+	filter: brightness(0) invert(1);
+}
+
+
+
+/* ===== FOOTER ===== */
+footer {
+	background-color: var(--couleur-fond-dark);
+	color: var(--quator);
+	display: flex;
+	gap: 0;
+	padding: 3rem 4rem;
+	align-items: center;
+}
+
+footer div {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	flex: 1;
+	padding-right: 3rem;
+	align-items: flex-start;
+}
+
+footer div + div {
+	border-left: 2px solid var(--couleur-primaire);
+	padding-left: 3rem;
+}
+
+/* Bloc logo : plus large et centré */
+.footer-logo {
+	flex: 2;
+	align-items: center;
+	text-align: center;
+}
+
+.footer-logo img {
+	width: 80px;
+	height: auto;
+	margin-bottom: 0.5rem;
+}
+
+.footer-logo p {
+	text-align: center;
+}
+
+footer h3 {
+	color: var(--secondary);
+	font-size: 1.1rem;
+	margin-bottom: 0.5rem;
+}
+
+footer p {
+	font-size: 0.9rem;
+	line-height: 1.6;
+	color: var(--quator);
+}
+
+/* Plan du site */
+footer ul {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+footer ul li {
+	color: var(--quator);
+	font-size: 0.9rem;
+	cursor: pointer;
+	transition: color var(--transition);
+}
+
+footer ul li:hover {
+	color: var(--secondary);
+}
+
+/* Newsletter */
+.newsletter {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.newsletter input {
+	background: var(--couleur-fond-dark2);
+	border: 1px solid var(--primary-background-color);
+	border-radius: 8px;
+	padding: 10px 14px;
+	color: var(--secondary);
+	font-size: 0.9rem;
+	outline: none;
+}
+
+.newsletter input::placeholder {
+	color: var(--couleur-texte-clair);
+}
+
+.newsletter button {
+	align-self: flex-start;
+	background-color: var(--couleur-primaire);
+	color: white;
+	border: none;
+	border-radius: 8px;
+	padding: 10px 16px;
+	cursor: pointer;
+	transition: background var(--transition);
+}
+
+.newsletter button:hover {
+	background-color: var(--couleur-primaire-hover);
+}
+
+/* Réseaux sociaux footer */
+.newsletter ul {
+	flex-direction: row;
+}
+
+.newsletter ul li img {
+	width: 24px;
+	height: 24px;
+
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+.newsletter ul li img[alt="Logo Tiktok"] {
+	filter: brightness(0) invert(1);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+	.contact {
+		flex-direction: column;
+		padding: 2rem;
+	}
+
+	.temoignages {
+		grid-template-columns: 1fr;
+	}
+
+	footer {
+		flex-direction: column;
+		padding: 2rem;
+		align-items: stretch;
+	}
+
+	footer div + div {
+		border-left: 2px solid var(--couleur-primaire);
+		border-top: none;
+		padding-left: 1.5rem;
+		padding-top: 0;
+		margin-top: 1.5rem;
+	}
+
+	.footer-logo {
+		align-items: center;
+		padding-right: 0;
+	}
+}
+
+/* ===== FADE-IN SCROLL ===== */
+.carte-temoignage,
+.contact,
+.banniere,
+.avisclients h2 {
+	opacity: 0;
+	transform: translateY(30px);
+	transition:
+		opacity 0.6s ease,
+		transform 0.6s ease;
+}
+
+.carte-temoignage.visible,
+.contact.visible,
+.banniere.visible,
+.avisclients h2.visible {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+/* ===== COMPTEUR ===== */
+.char-counter {
+	font-size: 0.8rem;
+	color: #4a6a96;
+	text-align: right;
+	display: block;
+}
+
+/* ===== ERREURS ===== */
+.error-message {
+	color: #e53e3e;
+	font-size: 0.8rem;
+	margin-top: -0.5rem;
+}
+
+/* ===== NOTIFICATION ===== */
+.notification {
+	position: fixed;
+	bottom: -80px;
+	left: 50%;
+	transform: translateX(-50%);
+	background: #0b2545;
+	color: white;
+	padding: 14px 28px;
+	border-radius: 12px;
+	font-size: 1rem;
+	transition: bottom 0.4s ease;
+	z-index: 999;
+}
+
+.notification.show {
+	bottom: 30px;
+}
