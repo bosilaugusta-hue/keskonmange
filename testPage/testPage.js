@@ -364,7 +364,7 @@ answerButton.forEach(button => {
                                 <h3 style="text-align:center;font-size:1.25rem">Recette pour 2p :</h3>
                                 <p style="font-size:0.8em">${recipe.recette}</p>
                             </div>
-                            <div style="flex: 1;margin:1em 0 0 0">
+                            <div style="flex: 1;margin:1em">
                                 <h3 style="text-align:center;font-size:1.25rem">Ingrédients :</h3>
                                 <ul style="text-align:center;flex: 1;margin:1rem 0 0 0;list-style:none;font-size:0.8em;">
                                     ${recipe.ingredients.map(i => `<li>${i}</li>`).join('')}
