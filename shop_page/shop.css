@@ -202,11 +202,9 @@ body {
 
     gap: 40px;
 
-    padding: 80px 40px;
+    padding: 80px 140px;
 
-    width: 100%;
-
-    max-width: 1300px;
+    max-width: 1200px;
 
     margin: auto;
 
@@ -226,13 +224,13 @@ body {
 
     background: white;
 
-    border-radius: 25px;
+    border-radius: 20px;
 
     overflow: hidden;
 
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
 
-    height: 220px;
+    height: 190px;
 
     width: 100%;
 
@@ -256,7 +254,7 @@ body {
 
 .box-left {
 
-    padding: 30px;
+    padding: 25px;
 
     background: #f7f2ed;
 
@@ -270,7 +268,7 @@ body {
 
     gap: 6px;
 
-    width: 50%;
+    width: 55%;
 
 }
 
@@ -288,7 +286,7 @@ body {
 
 .box-image {
 
-    width: 55%;
+    width: 45%;
 
     height: 100%;
 
@@ -300,7 +298,7 @@ body {
 
 .box-image img {
 
-    width: 140%;
+    width: 120%;
 
     height: 100%;
 
@@ -342,8 +340,7 @@ body {
 
     color: var(--bleu);
 
-    font-size: 22px;
-    font-weight: 700;
+    font-size: 16px;
 
 }
 
@@ -351,7 +348,7 @@ body {
 
 .box-left p {
 
-    font-size: 15px;
+    font-size: 13px;
 
     color: #444;
 
@@ -365,7 +362,7 @@ body {
 
     color: var(--bleu);
 
-    font-size: 24px;
+    font-size: 18px;
 
     font-weight: bold;
 
@@ -387,9 +384,7 @@ body {
 
     color: white;
 
-    padding: 10px 22px;
-
-    font-size: 14px;
+    padding: 8px 18px;
 
     border-radius: 8px;
 
@@ -483,77 +478,157 @@ body {
 
 }
 
-/* MOBILE */
+/* ============================================================
+   GLOBAL (optionnel pour un rendu plus propre)
+   ============================================================ */
+
+.box-card {
+    display: flex;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* ============================================================
+   MOBILE (≤ 768px)
+   ============================================================ */
 
 @media (max-width: 768px) {
 
-    .box-container {
-        grid-template-columns: 1fr;
-        padding: 40px 20px;
-        gap: 25px;
+    /* NAVBAR */
+    .navbar {
+        padding: 10px 15px;
+        justify-content: space-between;
     }
 
-    .box-card {
-        flex-direction: column;
-        height: auto;
+    .nav-menu {
+        display: none;
     }
 
-    .box-left {
-        width: 100%;
-        padding: 20px;
+    .logo-text {
+        font-size: 18px;
     }
 
-    .box-image {
-        width: 100%;
-        height: 180px;
-    }
-
-    .box-image img {
-        width: 100%;
-    }
-
-    .btn-order {
-        width: 100%;
+    /* HERO */
+    .hero {
+        padding: 100px 15px 60px;
         text-align: center;
     }
 
+    .hero h1 {
+        font-size: 28px;
+        line-height: 1.2;
+        margin-top: 15px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .hero button {
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+
+    /* GRID */
+    .box-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 30px 15px;
+    }
+
+    /* CARD */
+    .box-card {
+        flex-direction: column-reverse;
+        /* 🔥 IMAGE EN HAUT */
+        height: auto;
+        border-radius: 15px;
+        overflow: hidden;
+    }
+
+    /* IMAGE */
+    .box-image {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 15px 15px 0 0;
+    }
+
+    /* TEXTE */
+    .box-left {
+        width: 100%;
+        padding: 15px;
+        text-align: center;
+        align-items: center;
+        border-radius: 0 0 15px 15px;
+    }
+
+    .box-left h3 {
+        font-size: 16px;
+    }
+
+    .box-left p {
+        font-size: 13px;
+    }
+
+    .box-left button {
+        margin-top: 10px;
+        padding: 10px;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    /* SUPPRIME LE DEGRADE */
+    .box-image::before {
+        display: none;
+    }
+}
+
+/* ============================================================
+   TABLETTE (768px → 1024px)
+   ============================================================ */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    /* HERO */
     .hero {
-        padding: 120px 20px;
+        padding: 120px 30px 80px;
+        text-align: center;
     }
 
     .hero h1 {
-        font-size: 32px;
+        font-size: 36px;
     }
 
     .hero p {
         font-size: 16px;
+        max-width: 600px;
+        margin: auto;
     }
-}
 
-/* TABLETTE */
-
-@media (min-width: 769px) and (max-width: 1024px) {
-
+    /* GRID 2 COLONNES */
     .box-container {
-        grid-template-columns: 1fr 1fr;
-        padding: 60px 40px;
-        gap: 30px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        padding: 40px 30px;
     }
 
+    /* CARD */
     .box-card {
-        height: 200px;
-    }
-
-    .box-left {
-        width: 50%;
-        padding: 20px;
+        flex-direction: column-reverse;
+        /* image en haut aussi */
+        height: auto;
     }
 
     .box-image {
-        width: 50%;
+        height: 160px;
+        object-fit: cover;
     }
 
-    .hero h1 {
-        font-size: 40px;
+    .box-left {
+        padding: 20px;
+        text-align: center;
+        align-items: center;
     }
 }
