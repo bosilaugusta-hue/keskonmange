@@ -3,12 +3,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    padding: 20px;
     z-index: 2;
+    position: absolute;
     width: 100%;
 
     img {
-        height: 42px;
+        height: 72px;
         width: auto;
     }
 
@@ -18,7 +19,7 @@
         gap: 16px;
 
         li {
-            padding: 15px;
+            padding: 20px;
 
             a {
                 width: 100%;
@@ -26,8 +27,6 @@
                 text-decoration: none;
                 color: var(--secondary);
                 font-family: var(--main-font);
-                font-size: 14px;
-                font-weight: 0;
 
                 &:hover {
                     color: var(--tertiary);
@@ -68,10 +67,8 @@
                 }
             }
 
-            .active {
-                ul {
-                    left: 0;
-                }
+        .active ul {
+            left: 0;
             }
         }
 
