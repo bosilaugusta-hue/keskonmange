@@ -4,18 +4,24 @@ const btnNext = document.getElementById('next');
 const allDots = document.getElementsByClassName('dot');
 
 const numberOfCards = document.querySelectorAll(".box-card");
-const padding = 1 * 16 /*padding-côté=1rem*/
+/*const padding = 1 * 16 /*padding-côté=1rem*/
 const demiGap = 1 * 16; /*gap=2rem*/
 const boxCardWidth = numberOfCards[0].offsetWidth + padding + demiGap;
-/*numberOfCards[0].offsetWidth : je vais chercher la largeur d'une box-card*/
+//numberOfCards[0].offsetWidth : je vais chercher la largeur d'une box-card
 /*je décale de padding et demi-gap = 1+1 = 2rem
 puis il faut décaler de demi-gap restant et demi-gap suivant= 1+1 = 2rem*/
 
+const itemsVisible = parseInt(
+    getComputedStyle(document.documentElement).getPropertyValue("--items-visible")
+);
+//itemsVisible récupéré selon les media queries
+
 let position = 0;
 const minPosition = 0;
-const maxPosition = numberOfCards.length - 2;
-/*il restera tjs 2 box-card affichées*/
+const maxPosition = numberOfCards.length - itemsVisible;
+//je limite maxPosition pour que le défilement s'arrête sur la dernière box-card
 
+// const padding = getComputedStyle(document.)
 /************************************************************/
 
 function goToPosition(newPosition) {
@@ -25,6 +31,7 @@ function goToPosition(newPosition) {
 function moveCards() {
     divCards.style.transform = `translateX(-${position * boxCardWidth}px)`;
 };
+// if position = 0, on est sur la box-card 1, donc 0*boxcardwidth on ne peut pas décaler plus à gauche
 
 function updateClassActive(index) {
     for (let j = 0; j < allDots.length; j++) {
