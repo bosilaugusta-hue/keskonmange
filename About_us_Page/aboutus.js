@@ -17,7 +17,7 @@ cards.forEach(card => observer.observe(card));
 // ANIMATION pour DREAM TEAM ?
 
 
-// compteur de like mais sans database...
+// compteur de like (sans database...)
 const votes = {
     KeskonTricotte: 0,
     KeskonEcoute: 0,
@@ -26,7 +26,7 @@ const votes = {
     KeskonRegarde: 0
 };
 
-// Pour charger les votes sauvegardés
+// Pour charger les votes sauvegardés dans la mémoire dure
 Object.keys(votes).forEach(key => {
     const save = localStorage.getItem(key);
     if (save) votes[key] = parseInt(save);
@@ -50,7 +50,7 @@ document.querySelectorAll('.iconitem').forEach(item => {
 
         // Déclenche l'animation
     counter.classList.remove('vote-animate');
-    void counter.offsetWidth; // ← force la relance de l'animation
+    void counter.offsetWidth; // pour forcer à relancer l'animation
     counter.classList.add('vote-animate');
     });
 });

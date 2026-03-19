@@ -93,6 +93,7 @@
         height: 75%;
         transition: transform: 1s;
     }
+    
     .card:hover .top{
         height: 50%;
         transform: translateY(-100%);
@@ -103,7 +104,7 @@
         height: 50%;
     }
 
-    /* --- SECTION 4 : "Keskon va faire d'autre ?" --- */
+    /* --- SECTION 4 : "Keskon fait après ?" --- */
     .s4 {
     overflow: hidden;
     height: 70vh;
@@ -131,9 +132,11 @@
 
     .iconbox {
     flex-wrap: wrap;
-    gap: 3rem;
+    gap: 5rem;
     justify-content: center;
     padding: 1rem;
+    padding-left: 80px;
+    padding-right: 80px;
     }
 
     .iconwrap{
@@ -143,8 +146,7 @@
 
     .iconitem a {
     font-size: 0.8rem;
-    }
-        
+    }   
 }
 
 
