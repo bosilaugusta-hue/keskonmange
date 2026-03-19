@@ -1,0 +1,55 @@
+@media screen and (max-width: 1100px){
+  main{
+  .container{
+         grid-template-areas:
+        "main-caroussel main-caroussel main-caroussel "
+        "sidebar sidebar sidebar"
+        "cards cards cards";
+        .main-caroussel{
+          padding-left: 0;
+          margin-top: 0;
+          margin-left: 16px;
+          overflow-x: scroll;
+          scroll-snap-type: x mandatory;
+          overflow-y: hidden;
+          scrollbar-width: none;
+          flex-direction: row;
+          gap: 16px;
+          height: 100%;
+          padding: 20px;
+          width: calc(100% - 16px);
+
+          
+
+        .main-article {
+          gap: 16px;
+          box-shadow: 4px 4px 6px 0px #000000;
+          padding: 20px;
+          flex: 0 0 80%;
+          
+          height: 100%;
+          margin: 0;
+          
+          img{
+            height: 600px;
+            object-position: center;
+            
+          }
+        }
+      }
+        .sidebar{
+          grid-column: span 3;
+          width: calc(100% - 32px);
+          margin: 0;
+          margin-inline: 16px;
+          flex-direction: row;
+          form{
+            width: 50%;
+          }
+          .box{
+            width: 50%;
+          }
+        }  
+      }
+    }
+ }
