@@ -3,14 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact</title>
+    <title>Keskonmange</title>
+    <link rel="shortcut icon" href="../Assets/Image/Logo.png" type="image/x-icon" />
     <link rel="stylesheet" href="./contact.css" />
+     <link rel="stylesheet" href="../footer.css" />
     <link rel="stylesheet" href="../nav.css" />
     <link rel="stylesheet" href="../global.css" />
   </head>
   <body>
     <!-- ===== HEADER ===== -->
-r
+
     <header>
 
          <!-- nav -->
@@ -180,9 +182,10 @@ r
     </section>
 
     <!-- ===== FOOTER ===== -->
-    <footer>
+  <footer>
       <!-- Description du site -->
-      <div class="footer-logo">
+       <section class="containerFooter">
+      <div class="footer-logo block">
         <img
           class="logo-footer"
           src="../Contact_Page/ImagesContact/Logo.png"
@@ -195,19 +198,24 @@ r
         </p>
       </div>
       <!-- Plan du site -->
-      <div>
-        <h3>Plan du site</h3>
+      <div class="footerLinks block">
+        <h3>Plan du site :</h3>
         <ul>
-      <li><a href="../homepage/home.html">Accueil</a></li>
-       <li><a href="../comunity/comunity.html">Communauté</a></li>
-      <li><a href="../Contact_Page/contact.html">Contact</a></li>
-      <li><a href="../shop_page/shop.html">Boutique</a></li>
-        </ul>
+                <li id="comunityLink"><a href="../comunity/comunity.html">Communauté</a></li>
+                <li id="contactLink"><a href="../Contact_Page/contact.html" target="_blank">Contact</a></li>
+                <li id="shopLink"><a href="../shop_page/shop.html"  target="_blank">Boutique</a></li>
+                <li id="aboutUsLink"><a href="../About_us_Page/aboutus.html" target="_blank">En savoir plus</a></li>
+                <li id="testLink"><a href="../testPage/testPage.html" target="_blank">Passer le test</a></li>
+
+
+                
+            </ul>
       </div>
 
       <!-- Newsletter + réseaux sociaux -->
-      <div class="newsletter">
-        <h3>Newsletter</h3>
+      <div class="newsletter block">
+        <h3>Newsletter :</h3>
+        <div class="inputNewsletter">
         <input type="email" placeholder="Votre email" />
         <button>
           <svg
@@ -223,6 +231,7 @@ r
             />
           </svg>
         </button>
+        </div>
 
         <!-- Réseaux sociaux footer -->
         <ul>
@@ -252,6 +261,7 @@ r
           </li>
         </ul>
       </div>
+      </section>
     </footer>
     <script src="./contact.js"></script>
   </body>
