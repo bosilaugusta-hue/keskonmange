@@ -6,20 +6,49 @@
   --font: "Fredoka", "Montserrat", "Roboto Mono";
 }
 
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+ @keyframes titleSlide {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+    
+  }
+    to{
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+   @keyframes titleSlide2 {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+    
+  }
+    to{
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
   body {
     background-color: #ffcfa2;
   }
+  
   h1 {
     font-family: var(--font);
     color: var(--color-primary);
-    text-decoration: underline;
+    animation:  titleSlide 2s ease forwards;
     text-align: center;
-    margin: 16px;
+    font-size: 48px;
+    margin: 32px 32px 0 32px;
+   text-shadow: var(--color-tertiary) 3px 3px 3px;
+
   }
+ 
   
   main {
     
@@ -266,7 +295,12 @@
       h2 {
         font-family: var(--font);
         color: var(--color-primary);
-        text-decoration: underline;
+        font-size: 32px;
+        animation: titleSlide2 1s ease forwards;
+   text-shadow: var(--color-tertiary) 3px 3px 3px;
+
+        
+
       }
       .cardsContainer {
         display: flex;
@@ -334,4 +368,3 @@
     
   }
   
-}
