@@ -521,3 +521,6 @@ details[open] .content {
 
 
 /* ===== FOOTER ===== */
+footer{
+       scroll-snap-align: start;
+    }
