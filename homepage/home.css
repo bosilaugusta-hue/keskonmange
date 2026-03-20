@@ -89,7 +89,7 @@
         background-color: var(--quator-background-color);
         padding: 3rem 0;
 
-        .wrapper {
+        .home-wrapper {
             display: flex;
             flex-direction: row;
             justify-content: center;
@@ -116,7 +116,7 @@
                 transform: rotate(180deg);
             }
 
-            .carousel-container {
+            .home-carousel-container {
                 width: 60%;
                 overflow: hidden;
                 /*indispensable dans ce div*/

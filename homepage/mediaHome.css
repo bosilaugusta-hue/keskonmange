@@ -1,7 +1,7 @@
 @media screen and (max-width:1100px) {
     .box-section {
-        .wrapper {
-            .carousel-container {
+        .home-wrapper {
+            .home-carousel-container {
                 width: 70%;
             }
         }
@@ -39,8 +39,8 @@
     }
 
     .home-box-section {
-        .wrapper {
-            .carousel-container {
+        .home-wrapper {
+            .home-carousel-container {
                 .home-cards {
                     .home-box-card {
                         width: 100%;
@@ -65,7 +65,7 @@
             .home-profile {
                 padding-bottom: 2rem;
 
-                .profile-img {
+                .home-profile-img {
                     width: 100%;
                 }
             }
@@ -91,8 +91,8 @@
     }
 
     .home-box-section {
-        .wrapper {
-            .carousel-container {
+        .home-wrapper {
+            .home-carousel-container {
                 .home-cards {
                     .home-box-card {
                         .home-box-left {
