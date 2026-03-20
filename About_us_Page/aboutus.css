@@ -17,7 +17,16 @@ html {
     background:var(--quator-background-color);
 }
 
-
+.navbar {
+    background-color: var(--primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+}
 
 /* section 1 Qui qu'on est? */
 .s1 {
@@ -131,7 +140,8 @@ html {
     font-family: var(--second-font);
     padding: 0.5rem 1rem;
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
 }
 
 .box1_inside h1{
@@ -212,7 +222,7 @@ details[open] summary {
 .content {
     position: absolute;
     inset:0;
-    padding: 45px 90px 90px;
+    padding: 20px 90px 90px;
     background: var(--secondary);
     opacity: 0;
     transform: translateX(40px);
@@ -220,10 +230,13 @@ details[open] summary {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    font-size: 1rem;
+    font-weight: 600;
 }
 .content h3{
     font-family: var(--main-font-sans-serif);
-    font-size: 1.5rem;
+    font-size: 2rem;
+    padding-bottom: 20px;
 }
 
 details[open] .content {
@@ -240,12 +253,12 @@ details[open] .content {
 .Container{
     scroll-snap-align: start;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    /* grid-template-rows: 1fr auto 25rem 1fr; */
-    gap: 3rem;
-    /* padding: 2rem; */
+    /* grid-template-rows: 1fr auto minmax(0, 22rem) 1fr; */
+    gap: 3em;
+    padding: 2rem;
     font-family: var(--second-font-sans-serif);
 }
 
@@ -254,10 +267,24 @@ details[open] .content {
     grid-row: 2 / 3;
     font-family: var(--main-font);
     color: var(--primary);
-    font-size: 4rem;
+    font-size: 3.5rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
     text-align: center;
     text-shadow: 4px 4px 4px var(--tertiary);
     align-self: center;
+    /* effect = */
+}
+
+.h1-inner {
+    display: inline-block;
+    filter: blur(12px);
+    opacity: 0;
+    transition: filter 1s ease, opacity 0.8s ease;
+}
+.h1-visible .h1-inner {
+    filter: blur(0);
+    opacity: 1;
 }
 
 .crew-cards{
@@ -271,7 +298,7 @@ details[open] .content {
 
 .card{
     width: 100%;
-    height: 24rem;
+    height: clamp(16rem, 28vh,24rem);
     position: relative;
     cursor: pointer;
     border-radius: 20px;
@@ -322,13 +349,15 @@ details[open] .content {
     align-items: center;
     flex-direction: column;
     transition: 1s;
+    /* test */
+    overflow: hidden;
 }
 
 .bottom h2{
     font-size: 1.5rem;
     font-family: var(--main-font-sans-serif);
     color: var(--primary);
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     width: 100%;
     text-align: center;
 }
@@ -349,7 +378,6 @@ details[open] .content {
 
 
 /* section4 OTRAS COSAS  */
-
 .s4{
     scroll-snap-align: start;
     width: 100%;
