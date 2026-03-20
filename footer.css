@@ -1,177 +1,269 @@
-@font-face {
-  font-family: "FredokaOne";
-  src: url("Assets/Fonts/FredokaOne-Regular.ttf") format("woff2");
+:root {
+	--main-font: "FredokaOne";
+	--main-font-sans-serif: "FredokaOne", sans-serif;
+	--second-font: "RobotoMono";
+	--second-font-sans-serif: "RobotoMono", sans-serif;
+	--primary: #0b2545;
+	--secondary: #f2f2f2;
+	--tertiary: #d96c06;
+	--quator: #ffcfa2;
+	--primary-background-color: #0b264680;
+	--secondary-background-color: #f2f2f280;
+	--tertiary-background-color: #db6d0680;
+	--quator-background-color: #ffcfa280;
 }
 
-@font-face {
-  font-family: "RobotoMono";
-  src: url("Assets/Fonts/RobotoMono-Regular.ttf") format("woff2");
-}
 
 footer {
-  background-color: var(--primary);
-  color: var(--secondary);
-  display: flex;
-  gap: 0;
-  padding: 1rem 1.5rem;
-  align-items: center;
-  width: 100%;
-}
-
-footer div {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  flex: 1;
-  padding-right: 3rem;
-  align-items: flex-start;
-}
-
-footer div + div {
-  border-left: 2px solid var(--tertiary);
-  padding-left: 3rem;
-}
-
-/* Bloc logo : plus large et centré */
-.footer-logo {
-  flex: 2;
-  align-items: center;
-  text-align: center;
-}
-
-.footer-logo img {
-  width: 80px;
-  height: auto;
-  margin-bottom: 0.5rem;
-}
-
-.footer-logo p {
-  text-align: center;
-}
-
-footer h3 {
-  color: var(--secondary);
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-  font-family: var(--main-font-sans-serif);
-
-}
-
-footer p {
-  font-size: 0.9rem;
-  line-height: 1.6;
-  color: var(--secondary);
-  font-family: var(--second-font-sans-serif);
-}
-
-/* Plan du site */
-footer ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  font-family: var(--second-font-sans-serif);
-}
-
-footer ul li {
-  color: var(--secondary);
-  font-size: 0.9rem;
-  cursor: pointer;
-  transition: color var(--transition);
-    font-family: var(--second-font-sans-serif);
-}
-
-footer ul li:hover {
-  color: var(--secondary);
-}
-
-/* Newsletter */
-.newsletter {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  font-family: var(--main-font-sans-serif);
-}
-
-.newsletter input {
-  background: var(--primary-background-color);
-  border: 1px solid var(--tertiary);
-  border-radius: 8px;
-  padding: 10px 14px;
-  color: var(--secondary);
-  font-size: 0.9rem;
-  outline: none;
-}
-
-.newsletter input::placeholder {
-  color: var(--secondary);
-}
-
-.newsletter button {
-  align-self: flex-start;
-  background-color: var(--tertiary);
-  color: var(--secondary);
-  border: none;
-  border-radius: 8px;
-  padding: 10px 16px;
-  cursor: pointer;
-  transition: background var(--transition);
-}
-
-.newsletter button:hover {
-  background-color: var(--tertiary);
-}
-
-/* Réseaux sociaux footer */
-.newsletter ul {
-  flex-direction: row;
-}
-
-.newsletter ul li img {
-  width: 24px;
-  height: 24px;
-
-  &:hover {
-    cursor: pointer;
-  }
-}
-
-.newsletter ul li img[alt="Logo Tiktok"] {
-  filter: brightness(0) invert(1);
-}
-
-
-@media screen and (max-width: 480px) {
-
-  html {
-    scroll-snap-type: none;
-  }
-
-  footer {
+  .containerFooter{
+    display: flex;
+    background-color: var(--primary);
+   
+    .block{
+      width: 33%;
+      padding-inline: 16px;
+      margin-block: 16px;
+      
+    }
+    .block:nth-child(2){
+border-left: #d96c06 1px solid;
+    }
+    .block:nth-child(3){
+      border-left: #d96c06 1px solid;
+    }
+    
+.footer-logo{
+   display: flex;
    flex-direction: column;
    align-items: center;
-   padding: 2rem 1rem;
+   gap: 16px;
+  
+    img{
+      width: 60px;
+      height: auto;
+    }
+    p{
+      color: var(--secondary);
+      font-family: var(--second-font);
+      font-size: 12px;
+      text-align: center
+    };
   }
-
-  footer div {
-    width: 100%;
-    padding-right: 0;
+  .footerLinks{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
     align-items: center;
-    text-align: center;
+    
+    h3{
+      color: var(--tertiary);
+      font-family: var(--second-font);
+      letter-spacing: 1px;
+      
+    }
+    ul{
+      list-style: none;
+      
+      li{
+        margin-block: 8px;
+        a{
+        
+        text-decoration: none;
+        color: var(--secondary);
+        font-size: 12px;
+        font-family: var(--second-font);
+        &:hover {
+          color: #ffcfa2;
+        }
+        }
+      }
+    }
   }
-
-  footer div + div {
-    border-left: none;
-    border-top: 2px solid var(--tertiary);
-    padding-left: 0;
-    padding-top: 2rem;
+  .newsletter{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    
+    h3{
+       color: var(--tertiary);
+      font-family: var(--second-font);
+      letter-spacing: 1px;
+    }
+    .inputNewsletter{
+      display: flex;
+      gap: 8px;
+    input {
+      padding: 8px;
+      border-radius: 5px;
+      border: none;
+    }
+    button{
+      background-color: var(--tertiary);
+      border: none;
+      border-radius: 5px;
+      padding: 8px;
+      &:hover{
+        cursor: pointer;
+      }
+    }
   }
-
-  .footer-logo p {
-    font-size: 1rem;
+    ul{
+      list-style: none;
+      display: flex;
+      gap: 8px;
+      li{
+        img{
+          width: 30px;
+          &:hover{
+            cursor: pointer;
+            opacity: 0.8;
+          }
+        }
+      }
+    }
   }
-
-  .newsletter input {
-    width: 100%;
-  }
+  
 }
+@media screen and (max-width: 860px){
+    .containerFooter{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+     row-gap: 8px;
+      grid-auto-rows: auto;
+      .block{
+      width: 100%;
+      padding-inline: 16px;
+      margin-block: 16px;
+      
+    }
+     .block:nth-child(2){
+border-left: none;
+    }
+    
+      .footer-logo{
+        grid-column: span 3;
+        
+        
+        
+     
+    }
+    .newsletter{
+      grid-column: span 2;
+    }
+    }
+    
+  }
+  @media screen and (max-width: 430px){
+    .containerFooter{
+      display: flex;
+      flex-direction: column;
+      .block{
+      width: 100%;
+      
+      padding-block: 16px;
+      margin-block: 0;
+      
+    }
+      
+    .block:nth-child(2){
+border-left: none;
+
+border-top: #d96c06 1px solid;
+    
+    
+      
+   
+    }
+    .block:nth-child(3){
+      border-left: none;
+      border-top: #d96c06 1px solid;
+    }
+      
+    }
+    
+  }
+  }
+  
+
+  /* <footer>
+      <!-- Description du site -->
+       <section class="containerFooter">
+      <div class="footer-logo block">
+        <img
+          class="logo-footer"
+          src="../Contact_Page/ImagesContact/Logo.png"
+          alt="Logo Keskonmange"
+        />
+        <p>
+          Keskonmange vous propose les meilleurs plats pour satisfaire vos
+          envies culinaires. Découvrez notre sélection de repas savoureux et
+          équilibrés.
+        </p>
+      </div>
+      <!-- Plan du site -->
+      <div class="footerLinks block">
+        <h3>Plan du site :</h3>
+        <ul>
+                <li id="comunityLink"><a href="../comunity/comunity.html">Communauté</a></li>
+                <li id="contactLink"><a href="../Contact_Page/contact.html" target="_blank">Contact</a></li>
+                <li id="shopLink"><a href="../shop_page/shop.html"  target="_blank">Boutique</a></li>
+                <li id="aboutUsLink"><a href="../About_us_Page/aboutus.html" target="_blank">En savoir plus</a></li>
+                <li id="testLink"><a href="../testPage/testPage.html" target="_blank">Passer le test</a></li>
+
+
+                
+            </ul>
+      </div>
+
+      <!-- Newsletter + réseaux sociaux -->
+      <div class="newsletter block">
+        <h3>Newsletter :</h3>
+        <div class="inputNewsletter">
+        <input type="email" placeholder="Votre email" />
+        <button>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M15.328 1.294a.798.798 0 0 0-.034-.174c-.006-.02-.013-.046-.026-.066A.65.65 0 0 0 15.14.86a.648.648 0 0 0-.267-.153.567.567 0 0 0-.146-.027.338.338 0 0 0-.087-.013.478.478 0 0 0-.193.04h-.007c-.013.007-.02.007-.033.013L1.114 5.374a.66.66 0 0 0-.446.6.658.658 0 0 0 .393.633l5.78 2.567 2.56 5.766c.107.247.36.407.633.394a.668.668 0 0 0 .6-.447l4.667-13.333a.743.743 0 0 0 .033-.207c0-.02-.006-.04-.006-.053ZM12.12 2.94 7.188 7.874l-4.047-1.8 8.98-3.134Zm-2.187 9.927L8.128 8.814l4.96-4.96-3.154 9.013Z"
+            />
+          </svg>
+        </button>
+        </div>
+
+        <!-- Réseaux sociaux footer -->
+        <ul>
+          <li>
+            <img
+              src="../Contact_Page/ImagesContact/icons8-facebook.svg"
+              alt="Logo Facebook"
+            />
+          </li>
+          <li>
+            <img
+              src="../Contact_Page/ImagesContact/icons8-instagram.svg"
+              alt="Logo Instagram"
+            />
+          </li>
+          <li>
+            <img
+              src="../Contact_Page/ImagesContact/icons8-tiktok.svg"
+              alt="Logo Tiktok"
+            />
+          </li>
+          <li>
+            <img
+              src="../Contact_Page/ImagesContact/icons8-linkedin.svg"
+              alt="Logo Linkedin"
+            />
+          </li>
+        </ul>
+      </div>
+      </section>
+    </footer> */
