@@ -377,219 +377,83 @@
                 }
 
                 .title-article {
-                    font-size: clamp(1rem, 5vw, 1.2rem);
-                    /*marche pas*/
+                    font-size: clamp(1rem, 2vw, 1.2rem);
                     padding-bottom: 1rem;
                 }
 
+                h4 {
+                    font-size: clamp(0.8rem, 2vw, 1rem);
+                    padding: 0.5rem 0;
+                    font-weight: 100;
+                }
+
                 .text-article {
-                    font-size: clamp(0.6rem, 5vw, 1rem);
-                    /*marche pas*/
                     padding: 1rem 0;
-                }
+                    font-size: clamp(0.8rem, 2vw, 1rem);
 
-                /*button from comunity page*/
-                .like-button {
-                    position: absolute;
-                    right: 8px;
-                    bottom: 8px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: flex-end;
-                    background: none;
-                    border: none;
-                    border-radius: 50%;
-                    cursor: pointer;
-                    padding: 8px;
-
-                    .heart {
-                        /* couleur de base */
-                        width: 32px;
-                        height: 32px;
-                        transition: fill 0.3s,
-                            transform 0.2s;
-                    }
-
-                    /* Hover animation */
-                    &:hover .heart {
-                        fill: #e74c3c;
-                        /* rouge “liked” */
-                        transform: scale(1.2);
-                    }
-
-                    /* Active / clic */
-                    &:active .heart {
-                        transform: scale(0.9);
-                    }
-                }
-
-                .btn-follow {
-                    position: absolute;
-                    right: 16px;
-                    bottom: 16px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: flex-end;
-                    color: white;
-                    background: var(--tertiary);
-                    border: none;
-                    border-radius: 8px;
-                    padding: 8px 18px;
-                    margin-top: 8px;
-                    cursor: pointer;
-                    box-shadow: 0 4px 12px rgba(217, 108, 6, 0.4);
-                    transition: 0.3s;
-
-                    &:hover {
-                        transform: translateY(-2px);
-                        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+                    li {
+                        list-style-type: none;
+                        font-size: clamp(0.6rem, 2vw, 0.9rem);
+                        padding-left: 3px;
                     }
                 }
             }
-        }
-    }
-}
 
-@media screen and (max-width:1100px) {
-    .box-section {
-        .wrapper {
-            .carousel-container {
-                width: 70%;
-            }
-        }
-    }
+            /*button from comunity page*/
+            .like-button {
+                position: absolute;
+                right: 8px;
+                bottom: 8px;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                background: none;
+                border: none;
+                border-radius: 50%;
+                cursor: pointer;
+                padding: 8px;
 
-    .kommu-section {
-        .articles-container {
-            grid-template-areas:
-                "article3 article3 article6"
-                "article2 article1 article6"
-                "article2 article4 article4"
-                "article5 article5 article7";
-            grid-template-rows: repeat(4, 1fr);
-            grid-template-columns: repeat(3, 1fr);
-            width: 80%;
-        }
-    }
-}
-
-@media screen and (max-width:768px) {
-    :root {
-        --items-visible: 1;
-    }
-
-    .home-cta {
-        .text-intro {
-            h1 {
-                width: 70%;
-            }
-        }
-
-        .slogan {
-            padding-bottom: 4rem;
-        }
-    }
-
-    .box-section {
-        .wrapper {
-            .carousel-container {
-                .cards {
-                    .box-card {
-                        width: 100%;
-                    }
+                .heart {
+                    /* couleur de base */
+                    width: 32px;
+                    height: 32px;
+                    transition: fill 0.3s,
+                        transform 0.2s;
                 }
-            }
-        }
 
-        .dots {
-            .visibility-toggle {
-                visibility: visible;
-            }
-        }
-    }
+                /* Hover animation */
+                &:hover .heart {
+                    fill: #e74c3c;
+                    /* rouge “liked” */
+                    transform: scale(1.2);
+                }
 
-    .kommu-section {
-        .articles-container {
-            article {
-                padding-bottom: 2rem;
-            }
-
-            .profile {
-                padding-bottom: 2rem;
-
-                .profile-img {
-                    width: 100%;
+                /* Active / clic */
+                &:active .heart {
+                    transform: scale(0.9);
                 }
             }
 
-            .favorite-plate {
-                padding-bottom: 4rem;
-            }
-        }
-    }
-}
+            .btn-follow {
+                position: absolute;
+                right: 16px;
+                bottom: 16px;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                color: white;
+                background: var(--tertiary);
+                border: none;
+                border-radius: 8px;
+                padding: 8px 18px;
+                margin-top: 8px;
+                cursor: pointer;
+                box-shadow: 0 4px 12px rgba(217, 108, 6, 0.4);
+                transition: 0.3s;
 
-/*enlever du texte dans favorite-plate*/
-
-@media screen and (max-width:360px) {
-    .home-cta {
-        .text-intro {
-            h1 {
-                width: 80%;
-            }
-
-            .slogan {
-                max-width: 16ch;
-            }
-        }
-    }
-
-    .box-section {
-        .wrapper {
-            .carousel-container {
-                .cards {
-                    .box-card {
-                        .box-left {
-                            padding: 0.5rem;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    .kommu-section {
-        .articles-container {
-            grid-template-areas:
-                "article3 article3"
-                "article2 article1"
-                "article2 article6"
-                "article7 article6"
-                "article4 article4";
-            grid-template-rows: repeat(5, auto);
-            grid-template-columns: repeat(2, 1fr);
-
-            #article5 {
-                display: none;
-            }
-
-            .profile {
-                padding-bottom: 4rem;
-
-                .profile-img {
-                    width: 100%;
-                }
-
-                p {
-                    display: none;
-                }
-            }
-
-            .favorite-plate {
-                padding-bottom: 4rem;
-
-                p {
-                    display: none;
+                &:hover {
+                    transform: translateY(-2px);
+                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
                 }
             }
         }
