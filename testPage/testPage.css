@@ -1,276 +1,356 @@
-body {
-	display: flex;
-	margin: 0;
-	min-height: 100vh;
-	position: relative;
-	overflow: hidden;
-	align-items: stretch;
-	flex-direction: column;
-	justify-content: space-between;
+ @keyframes close {
+     0% {
+         transform: scaleY(1);
+         opacity: 1;
+     }
 
-	main {
-		flex: 1;
-		position: relative;
-		overflow: hidden;
-		display: flex;
-		flex-direction: column;
-		padding: 1rem 0;
+     100% {
+         transform: scaleY(0);
+         opacity: 0;
+     }
+ }
 
-		.gauche {
-			position: absolute;
-			inset: 0;
-			background: var(--tertiary-background-color);
-			clip-path: polygon(0 0, 100% 0, 0 100%, 0 100%);
-			z-index: -1;
-		}
+ @keyframes open {
+     0% {
+         transform: scaleY(0);
+         opacity: 0;
+     }
 
-		.droite {
-			position: absolute;
-			inset: 0;
-			background: var(--quator-background-color);
-			clip-path: polygon(100% 0, 100% 0, 100% 100%, 0 100%);
-			z-index: -1;
-		}
+     100% {
+         transform: scaleY(1);
+         opacity: 1;
+     }
+ }
 
-		#legumsFish {
-			position: fixed;
-			bottom: 0%;
-			right: 0%;
-			transform: translate(15%, -15%) rotate(1deg);
-			z-index: 0;
-			width: 35rem;
-			height: auto;
-		}
-	}
+ .closing {
+     animation: close 0.3s ease forwards;
+ }
 
-	#burgerImage {
-		position: fixed;
-		top: 0%;
-		left: 0%;
-		transform: translate(-25%, -25%) rotate(-50deg);
-		z-index: 0;
-		width: 40rem;
-		height: auto;
-	}
-}
+ .opening {
+     animation: open 0.3s ease forwards;
+ }
 
-section {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex: 1;
-	min-height: 300px;
-	min-width: 300px;
+ body {
+     display: flex;
+     margin: 0;
+     min-height: 100vh;
+     position: relative;
+     overflow: hidden;
+     align-items: stretch;
+     flex-direction: column;
+     justify-content: space-between;
+     overflow: auto;
 
-	#quizz {
-		display: flex;
-		font-family: var(--main-font);
-		z-index: 1;
-		flex-direction: column;
-		align-items: center;
-		background-color: hsla(29, 100%, 82%, 0.75);
-		border-radius: 15px;
-		width: 40%;
-		border: 7px solid var(--primary);
-		padding-block: 2rem;
-		height: auto;
-		position: relative;
-		word-break: break-word;
-		overflow-wrap: break-word;
+     main {
+         flex: 1;
+         position: relative;
+         overflow: hidden;
+         display: flex;
+         flex-direction: column;
+         padding: 1rem 0;
 
-		h2 {
-			font-size: 3rem;
-			color: var(--primary);
-			margin: 1rem;
-			text-align: center;
-			font-weight: 100;
-		}
+         .gauche {
+             position: absolute;
+             inset: 0;
+             background: var(--tertiary-background-color);
+             clip-path: polygon(0 0, 100% 0, 0 100%, 0 100%);
+             z-index: -1;
+         }
 
-		h3 {
-			font-size: 2rem;
-			color: var(--primary);
-			margin: 0.25rem;
-			text-align: center;
-			font-weight: 100;
-		}
+         .droite {
+             position: absolute;
+             inset: 0;
+             background: var(--quator-background-color);
+             clip-path: polygon(100% 0, 100% 0, 100% 100%, 0 100%);
+             z-index: -1;
+         }
+     }
 
-		p {
-			color: var(--primary);
+     #legumsFish {
 
-			text-align: left;
-		}
+         position: absolute;
+         bottom: 0%;
+         right: 0%;
+         transform: translate(30%, 15%) rotate(1deg);
+         z-index: 0;
+         width: 35rem;
+         height: auto;
 
-		progress {
-			width: 50%;
-			appearance: none;
-			-webkit-appearance: none;
-			height: 5px;
+     }
 
-			&::-webkit-progress-bar {
-				background-color: var(--secondary);
-				border-radius: 999px;
-			}
 
-			&::-webkit-progress-value {
-				background-color: var(--tertiary);
-				transition: width 0.3s ease;
-				border-radius: 999px;
-			}
-		}
+     #burgerImage {
 
-		button {
-			font-family: var(--main-font);
-			font-size: 1rem;
-			font-weight: 100;
-			height: auto;
-			width: 60%;
-			border-radius: 50px;
-			margin: 0.4rem;
-			border-color: var(--quator);
-			color: var(--quator);
-			background-color: var(--primary);
-			border-width: 4px;
-			padding-block: 0.5rem;
+         position: absolute;
+         top: 0%;
+         left: 0%;
+         transform: translate(-25%, -25%) rotate(-50deg);
+         z-index: 0;
+         width: 40rem;
+         height: auto;
 
-			&:hover {
-				transform: scale(1.05);
-				color: var(--tertiary);
-				border-color: var(--tertiary);
-			}
-		}
+     }
 
-		#previousButton {
-			background-color: hsla(0, 0%, 0%, 0.251);
-			color: #454545;
-			border-color: #454545;
-			width: 40%;
-			height: 5%;
+ }
 
-			&:hover {
-				color: #000000;
-				border-color: #000000;
-				transform: scale(0.95);
-			}
-		}
-	}
-}
+ section {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex: 1;
+     min-height: 300px;
+     height: auto;
 
-footer {
-	background-color: var(--primary);
-	padding: 1rem;
-	width: auto;
-	z-index: 1;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	align-items: center;
-	position: relative;
 
-	hr {
-		border: none;
-		background: var(--tertiary);
-		width: 3px;
-		height: 50px;
-	}
 
-	#logoAndPitchDiv {
-		display: flex;
-		align-items: center;
-		width: 30%;
 
-		#logo-footer {
-			width: 45px;
-			height: auto;
-			flex-shrink: 0;
-		}
 
-		#text {
-			display: flex;
-			flex-direction: column;
-			padding: 0 1rem 0 1rem;
+     #recipeAndIngredients {
+         display: flex;
+         flex-direction: column-reverse;
+         /* margin: 8px; */
+         gap: 1rem;
+         align-items: center;
 
-			h3 {
-				font-family: "FredokaOne", sans-serif;
-				font-size: 1.5rem;
-				font-weight: 100;
-				color: var(--tertiary);
-			}
 
-			p {
-				font-family: "RobotoMono", sans-serif;
-				font-size: 0.75rem;
-				color: var(--secondary);
-			}
-		}
-	}
+     }
 
-	#linkDiv {
-		width: 30%;
-		display: flex;
-		flex-direction: column;
-		padding: 0 1rem 0 1rem;
+     #quizz {
+         box-shadow: 4px 3px 3px 1px #0b264680;
+         display: flex;
+         font-family: var(--main-font);
+         z-index: 1;
+         flex-direction: column;
+         align-items: center;
+         background: linear-gradient(to right, var(--secondary-background-color), var(--quator-background-color));
+         border-radius: 15px;
+         width: 40%;
+         min-height: 300px;
+         max-height: 400px;
+         transition: min-height 1s ease;
+         border: 7px solid var(--primary);
+         height: auto;
+         position: relative;
+         word-break: break-word;
+         overflow-wrap: break-word;
 
-		a {
-			text-decoration: none;
-			color: var(--secondary);
-			font-size: 0.75rem;
-			padding: 0.25rem;
-			font-family: "RobotoMono", sans-serif;
 
-			&:hover {
-				color: var(--tertiary);
-			}
-		}
-	}
+         h2 {
+             font-size: 2.25rem;
+             color: var(--primary);
+             margin: 3px;
+             text-align: center;
+             font-weight: 100;
+         }
 
-	#newsletterDiv {
-		width: 30%;
-		display: flex;
-		flex-direction: column;
-		padding: 0.5rem;
+         h3 {
+             font-size: 1.5rem;
+             color: var(--primary);
+             padding: 2px;
+             text-align: center;
+             font-weight: 100;
+         }
 
-		span {
-			font-family: "RobotoMono", sans-serif;
-			color: var(--secondary);
-			font-size: 1.2 ²rem;
-		}
-	}
+         p {
+             color: var(--primary);
+             font-size: 0.75em;
 
-	#emailField {
-		display: flex;
-	}
+         }
 
-	#email {
-		outline: none;
-		border: 2px solid var(--tertiary);
-		width: 70%;
-		padding: 0.3rem 0.3rem 0.3rem 1rem;
-		border-radius: 25px 0 0 25px;
-		font-size: 0.9rem;
-		background-color: var(--primary);
-		font-family: "RobotoMono", sans-serif;
-		font-weight: bold;
-	}
+         progress {
+             width: 50%;
+             appearance: none;
+             -webkit-appearance: none;
+             height: 4px;
 
-	button {
-		outline: none;
-		border: 2px solid var(--tertiary);
-		width: 15%;
-		height: 15%;
-		border-radius: 0 25px 25px 0;
-		font-size: 1.2rem;
-		background-color: var(--tertiary);
-		color: var(--secondary);
-		padding: 0.3rem;
-	}
-}
+             &::-webkit-progress-bar {
+                 background-color: var(--secondary);
+                 border-radius: 999px
+             }
 
-#backgroundLogo {
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%) rotate(-25deg);
-	z-index: 0;
-	width: 20rem;
-	height: auto;
-}
+             &::-webkit-progress-value {
+                 background-color: var(--tertiary);
+                 transition: width 0.3s ease;
+                 border-radius: 999px
+             }
+         }
+
+         button {
+             font-family: var(--main-font);
+             font-size: 0.85rem;
+             font-weight: 100;
+             height: auto;
+             width: 60%;
+             border-radius: 50px;
+             margin: 6px;
+             border-color: var(--quator);
+             color: var(--quator);
+             background-color: var(--primary);
+             border-width: 4px;
+             padding-block: 6px;
+             justify-content: center;
+
+             transition: color 0.75s ease, border-color 0.75s ease, transform 0.3s ease;
+             ;
+
+             &:hover {
+                 transform: scale(1.05);
+                 color: var(--tertiary);
+                 border-color: var(--tertiary);
+
+             }
+         }
+
+         #previousButton {
+             background-color: hsla(0, 0%, 0%, 0.251);
+             color: #454545;
+             border-color: #454545;
+             width: 40%;
+             height: 4%;
+             transition: min-height 0.3s ease;
+
+             &:hover {
+                 color: #000000;
+                 border-color: #000000;
+                 transform: scale(0.95);
+
+             }
+         }
+     }
+ }
+
+
+ footer {
+     background-color: var(--primary);
+     /* padding: 0.5rem; */
+     width: auto;
+     z-index: 1;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-around;
+     align-items: center;
+     position: relative;
+
+
+     hr {
+         border: none;
+         background: var(--tertiary);
+         width: 3px;
+         height: 50px;
+     }
+
+     #logoAndPitchDiv {
+         display: flex;
+         align-items: center;
+         width: 30%;
+
+         #logo-footer {
+             width: 40px;
+             height: auto;
+             flex-shrink: 0;
+         }
+
+         #text {
+             display: flex;
+             flex-direction: column;
+             padding: 0 1rem 0 1rem;
+
+             h3 {
+                 font-family: 'FredokaOne', sans-serif;
+                 font-size: 1rem;
+                 font-weight: 100;
+                 color: var(--tertiary);
+             }
+
+             p {
+                 font-family: 'RobotoMono', sans-serif;
+                 font-size: 0.6rem;
+                 color: var(--secondary);
+
+             }
+         }
+     }
+
+     #linkDiv {
+         width: 30%;
+         display: flex;
+         flex-direction: column;
+         padding: 0 1rem 0 1rem;
+
+         a {
+             text-decoration: none;
+             color: var(--secondary);
+             font-size: 0.75rem;
+             padding: 0.25rem;
+             font-family: 'RobotoMono', sans-serif;
+
+             &:hover {
+                 color: var(--tertiary);
+             }
+         }
+     }
+
+     #newsletterDiv {
+         width: 30%;
+         display: flex;
+         flex-direction: column;
+         padding: 0.5rem;
+
+         span {
+             font-family: 'RobotoMono', sans-serif;
+             color: var(--secondary);
+             font-size: 0.75rem;
+             padding: 0.5em;
+
+         }
+     }
+
+     #emailField {
+         display: flex;
+
+
+     }
+
+     #email {
+         outline: none;
+         border: 2px solid var(--tertiary);
+         width: 70%;
+         padding: 0.3rem 0.3rem 0.3rem 1rem;
+         border-radius: 25px 0 0 25px;
+         font-size: 0.75rem;
+         background-color: var(--primary);
+         font-family: 'RobotoMono', sans-serif;
+         font-weight: bold;
+
+     }
+
+     button {
+         outline: none;
+         border: 2px solid var(--tertiary);
+         /* width: 15%;
+         height: 15%; */
+         border-radius: 0 25px 25px 0;
+         font-size: 1.5rem;
+         background-color: var(--tertiary);
+         color: var(--secondary);
+         /* padding: 0.3rem; */
+
+     }
+ }
+
+
+
+
+
+
+
+ #backgroundLogo {
+     position: fixed;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%) rotate(-25deg);
+     z-index: 0;
+     width: 20rem;
+     height: auto;
+     opacity: 50%;
+ }

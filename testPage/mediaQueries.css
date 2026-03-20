@@ -1,10 +1,13 @@
 @media (max-width: 768px) {
+
 	body {
 		overflow: auto;
 		min-height: 100vh;
 		display: flex;
 		flex-direction: column;
+
 	}
+
 
 	main {
 		flex: 1;
@@ -35,6 +38,7 @@
 			padding: 2rem 1rem;
 			/* ← remplace height: 0% qui cassait tout */
 
+
 			#quizz {
 				width: 80%;
 				height: auto;
@@ -47,6 +51,9 @@
 				h3 {
 					font-size: 1.5rem;
 				}
+
+
+
 			}
 		}
 
@@ -59,6 +66,8 @@
 			width: 20em;
 			height: auto;
 		}
+
+
 	}
 
 	footer {
@@ -106,6 +115,7 @@
 
 		#email {
 			width: 80%;
+
 		}
 	}
 
@@ -119,6 +129,8 @@
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
+
+
 	main {
 		section {
 			#quizz {
@@ -147,5 +159,4 @@
 	}
 }
 
-@media (min-width: 1024px) {
-}
+@media (min-width: 1024px) {}

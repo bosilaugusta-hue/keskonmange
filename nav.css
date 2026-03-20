@@ -1,87 +1,116 @@
 .navbar {
-	background-color: var(--primary);
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 20px;
-	z-index: 2;
-	position: absolute;
-	width: 100%;
+    background-color: var(--primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    z-index: 2;
+    width: 100%;
 
-	img {
-		height: 72px;
-		width: auto;
-	}
+    img {
+        height: 42px;
+        width: auto;
+    }
 
-	ul {
-		list-style: none;
-		display: flex;
-		gap: 16px;
+    hr {
+        border: none;
+        background: var(--tertiary);
+        width: 2px;
+        height: 50px;
+    }
 
-		li {
-			padding: 20px;
+    ul {
+        list-style: none;
+        display: flex;
+        gap: 16px;
 
-			a {
-				width: 100%;
+        li {
+            padding: 15px;
 
-				text-decoration: none;
-				color: var(--secondary);
-				font-family: var(--main-font);
+            a {
+                width: 100%;
 
-				&:hover {
-					color: var(--tertiary);
-				}
-			}
-		}
-	}
+                text-decoration: none;
+                color: var(--secondary);
+                font-family: var(--main-font);
+                font-size: 14px;
+                font-weight: 0;
 
-	#burgerIcon {
-		cursor: pointer;
-		display: none;
-		font-family: var(--main-font);
-		color: var(--tertiary);
-		padding: 0.5rem;
-		font-size: 2rem;
-	}
+                &:hover {
+                    color: var(--tertiary);
+                }
+            }
+        }
+
+    }
+
+    #burgerIcon {
+        cursor: pointer;
+        display: none;
+        font-family: var(--main-font);
+        color: var(--tertiary);
+        padding: 0.5rem;
+        font-size: 2rem;
+    }
 }
 
 @media (max-width: 768px) {
-	.navbar {
-		ul {
-			position: fixed;
-			left: -100%;
-			top: 111.98px;
-			flex-direction: column;
-			background: var(--primary-background-color);
-			width: 100%;
-			text-align: center;
-			transition: 0.5s;
+    .navbar {
+        ul {
+            position: fixed;
+            left: -100%;
+            top: 111.98px;
+            flex-direction: column;
+            background: var(--primary-background-color);
+            width: 100%;
+            text-align: center;
+            transition: 0.5s;
 
-			li {
-				padding: 3px 0;
+            li {
+                padding: 3px 0;
 
-				&:hover {
-					color: var(--tertiary);
-				}
-			}
+                &:hover {
+                    color: var(--tertiary);
+                }
+            }
 
-			.active {
-				ul {
-					left: 0;
-				}
-			}
-		}
+            .active {
+                ul {
+                    left: 0;
+                }
+            }
+        }
 
-		#burgerIcon {
-			display: block;
+        #burgerIcon {
+            display: block;
 
-			&::before {
-				content: "\2630";
-			}
+            &::before {
+                content: "\2630";
+            }
 
-			.active #icons::before {
-				content: "\2715";
-			}
-		}
-	}
+            .active #icons::before {
+                content: "\2715";
+            }
+
+        }
+    }
 }
+
+
+/* <header>
+        <!-- nav -->
+        <nav class="navbar">
+            <!-- logonav -->
+            <a href="../homepage/home.html"><img src="../Assets/Image/Logo.png" alt="Keskonmange Logo" /></a>
+            <!-- link nav -->
+            <ul>
+                <li id="comunityLink"><a href="../comunity/comunity.html">Communauté</a></li>
+                <li id="contactLink"><a href="../Contact_Page/contact.html">Contact</a></li>
+                <li id="shopLink"><a href="../shop_page/shop.html">Boutique</a></li>
+                <li class="logInLink"><a href="#">Connection</a></li>
+                <hr />
+                <li class="signInLink"><a href="#">Inscription</a></li>
+            </ul>
+            <!-- Icon burger for mobile version -->
+            <div id="burgerIcon" class="burgerMenuActive"></div>
+        </nav> */
