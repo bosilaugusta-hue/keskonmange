@@ -358,15 +358,16 @@ answerButton.forEach(button => {
                     );
                     quizz.classList.remove('closing');
                     quizz.innerHTML = `
+                    <img src="../Assets/Image/Logo.png" alt="Logo" id="backgroundLogo">
                         <h2 style="text-align: center;font-size:2rem;">${recipe.nom}</h2>
                         <div id="recipeAndIngredients">
-                            <div style="flex: 1;margin:1em">
+                            <div style="flex: 1;margin:0.5em">
                                 <h3 style="text-align:center;font-size:1.25rem">Recette pour 2p :</h3>
-                                <p style="font-size:0.8em">${recipe.recette}</p>
+                                <p style="color: var(--primary);font-size:0.8em;margin:1rem 0 0 0">${recipe.recette}</p>
                             </div>
-                            <div style="flex: 1;margin:1em 0 0 0">
+                            <div style="flex: 1;margin:0.5em">
                                 <h3 style="text-align:center;font-size:1.25rem">Ingrédients :</h3>
-                                <ul style="text-align:center;flex: 1;margin:1rem 0 0 0;list-style:none;font-size:0.8em;">
+                                <ul style="color: var(--primary);text-align:center;flex: 1;margin:1rem 0 0 0;list-style:none;font-size:0.8em;">
                                     ${recipe.ingredients.map(i => `<li>${i}</li>`).join('')}
                                 </ul>
                             </div>
@@ -381,9 +382,9 @@ answerButton.forEach(button => {
                     answerButton.style.minHeight = quizz.scrollHeight + 'px';
                     setTimeout(() => {
                         quizz.classList.remove('opening');
-                    }, 250);
-                }, 250);
+                    }, 300);
+                }, 300);
             }
-        }, 250);
+        }, 300);
     });
 });
