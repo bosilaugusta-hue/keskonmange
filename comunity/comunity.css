@@ -20,43 +20,7 @@
     text-align: center;
     margin: 16px;
   }
-  .navbar {
-    background-color: var(--color-primary);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-
-    img {
-      height: 72px;
-      width: auto;
-    }
-
-    ul {
-      list-style: none;
-      display: flex;
-      gap: 16px;
-
-      li {
-        padding: 20px;
-
-        a {
-          width: 100%;
-
-          text-decoration: none;
-          color: white;
-          font-family: var(--font);
-          &:hover {
-            color: #ffcfa2;
-          }
-        }
-        .firstLink {
-          text-decoration: underline;
-          color: #ffcfa2;
-        }
-      }
-    }
-  }
+  
   main {
     
     .container {
@@ -85,6 +49,7 @@
           background-color: var(--color-secondary);
           display: flex;
           flex-direction: column;
+          
           padding: 40px;
           margin-block: 10px;
           height: 100%;
@@ -94,15 +59,18 @@
           height: auto;
           position: relative;
           box-shadow: 4px 4px 6px 0px #000000;
+          &[hidden]{
+             display: none !important;
+          }
           .article-backgroundImg {
              img:first-child{
-              height: 400px;
+              height: 520px;
              }
              img{
               
               object-fit: cover;
               border-radius: 20px;
-              height: 600px ;
+              
               width: 100%;
              }
             &:hover {
@@ -130,6 +98,7 @@
             font-family: "Montserrat";
             color: var(var(--color-primary));
             width: 90%;
+           
           }
           .like-button {
             position: absolute;
@@ -163,7 +132,9 @@
           .like-button:active .heart {
             transform: scale(0.9);
           }
+          
         }
+     
       }
       
       
