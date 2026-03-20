@@ -337,7 +337,7 @@
                 alt="profile photo"
               />
               <p>Philippe</p>
-              <button type="button">Suivre</button>
+              <button class="followBtn" type="button">Suivre</button>
             </div>
             <div class="box2">
               <img
@@ -346,7 +346,7 @@
                 alt="profile photo"
               />
               <p>José</p>
-              <button type="button">Suivre</button>
+              <button class="followBtn" type="button">Suivre</button>
             </div>
             <div class="box3">
               <img
@@ -355,7 +355,7 @@
                 alt="profile photo"
               />
               <p>Xavier</p>
-              <button type="button">Suivre</button>
+              <button class="followBtn" type="button">Suivre</button>
             </div>
           </article>
         </aside>
@@ -442,7 +442,8 @@
 
     <footer>
       <!-- Description du site -->
-      <div class="footer-logo">
+       <section class="containerFooter">
+      <div class="footer-logo block">
         <img
           class="logo-footer"
           src="../Contact_Page/ImagesContact/Logo.png"
@@ -455,19 +456,24 @@
         </p>
       </div>
       <!-- Plan du site -->
-      <div>
-        <h3>Plan du site</h3>
+      <div class="footerLinks block">
+        <h3>Plan du site :</h3>
         <ul>
-          <li>Communauté</li>
-          <li>A propos</li>
-          <li>Contact</li>
-          <li>Shop</li>
-        </ul>
+                <li id="comunityLink"><a href="../comunity/comunity.html">Communauté</a></li>
+                <li id="contactLink"><a href="../Contact_Page/contact.html" target="_blank">Contact</a></li>
+                <li id="shopLink"><a href="../shop_page/shop.html"  target="_blank">Boutique</a></li>
+                <li id="aboutUsLink"><a href="../About_us_Page/aboutus.html" target="_blank">En savoir plus</a></li>
+                <li id="testLink"><a href="../testPage/testPage.html" target="_blank">Passer le test</a></li>
+
+
+                
+            </ul>
       </div>
 
       <!-- Newsletter + réseaux sociaux -->
-      <div class="newsletter">
-        <h3>Newsletter</h3>
+      <div class="newsletter block">
+        <h3>Newsletter :</h3>
+        <div class="inputNewsletter">
         <input type="email" placeholder="Votre email" />
         <button>
           <svg
@@ -483,6 +489,7 @@
             />
           </svg>
         </button>
+        </div>
 
         <!-- Réseaux sociaux footer -->
         <ul>
@@ -512,6 +519,7 @@
           </li>
         </ul>
       </div>
+      </section>
     </footer>
     <script src="./comunity.js">
   
