@@ -14,7 +14,20 @@ cards.forEach(card => observer.observe(card));
 
 
 
-// ANIMATION pour DREAM TEAM ?
+// ANIMATION pour DREAM TEAM
+const h1DreamTeam = document.querySelector('.Container h1');
+
+const h1Observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            h1DreamTeam.classList.add('h1-visible');
+        } else {
+            h1DreamTeam.classList.remove('h1-visible');
+        }
+    });
+}, { threshold: 0.8 });
+
+h1Observer.observe(h1DreamTeam);
 
 
 // compteur de like (sans database...)
