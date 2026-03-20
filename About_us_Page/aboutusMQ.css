@@ -146,9 +146,12 @@
 
     .iconitem a {
     font-size: 0.8rem;
-    }   
+    }
+    
+    footer{
+       scroll-snap-align: start;
+    }
 }
-
 
 @media screen and (max-width: 480px) {
 
