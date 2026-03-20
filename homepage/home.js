@@ -1,9 +1,9 @@
-const divCards = document.querySelector('.cards');
+const divCards = document.querySelector('.home-cards');
 const btnPrev = document.getElementById('prev');
 const btnNext = document.getElementById('next');
 const allDots = document.getElementsByClassName('dot');
 
-const numberOfCards = document.querySelectorAll(".box-card");
+const numberOfCards = document.querySelectorAll(".home-box-card");
 
 const padding = parseInt(getComputedStyle(divCards).getPropertyValue("padding-left"));
 const demiGap = parseInt(getComputedStyle(divCards).getPropertyValue("gap")) / 2;

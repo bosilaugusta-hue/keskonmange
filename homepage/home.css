@@ -83,7 +83,7 @@
         text-align: center;
     }
 
-    .box-section {
+    .home-box-section {
         width: 100%;
         margin: auto;
         background-color: var(--quator-background-color);
@@ -121,7 +121,7 @@
                 overflow: hidden;
                 /*indispensable dans ce div*/
 
-                .cards {
+                .home-cards {
                     display: flex;
                     align-items: center;
                     gap: 2rem;
@@ -130,7 +130,7 @@
                     transition: transform 0.4s ease;
 
                     /*code shop_page adapté*/
-                    .box-card {
+                    .home-box-card {
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
@@ -151,7 +151,7 @@
                         }
 
                         /* LEFT SIDE */
-                        .box-left {
+                        .home-box-left {
                             padding: 25px;
                             background: #f7f2ed;
                             height: 100%;
@@ -163,7 +163,7 @@
 
                             .text-deco-none {
 
-                                .box-title {
+                                .home-box-title {
                                     display: flex;
                                     align-items: center;
                                     gap: 8px;
@@ -188,7 +188,7 @@
 
                                 /* PRICE */
 
-                                .price {
+                                .home-price {
                                     color: var(--primary);
                                     font-size: clamp(0.8rem, 2vw, 1.1rem);
                                     font-weight: bold;
@@ -199,7 +199,7 @@
 
                             /* ORDER BUTTON */
 
-                            .btn-order {
+                            .home-btn-order {
                                 font-size: clamp(0.8rem, 1vw, 1.1rem);
                                 margin-top: 8px;
                                 background: var(--tertiary);
@@ -218,7 +218,7 @@
                             }
                         }
 
-                        .box-image {
+                        .home-box-image {
                             width: 45%;
                             height: 100%;
                             position: relative;
@@ -294,14 +294,14 @@
         }
     }
 
-    .kommu-section {
+    .home-kommu-section {
         color: var(--primary);
         width: 100%;
         margin: auto;
         background-color: var(--quator-background-color);
         padding: 3rem 0;
 
-        .articles-container {
+        .home-articles-container {
             display: grid;
             width: 70%;
             margin: auto;
@@ -356,10 +356,10 @@
                     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
                 }
 
-                .article-img-container {
+                .home-article-img-container {
                     width: 100%;
 
-                    .article-img {
+                    .home-article-img {
                         box-shadow: 0px 1px 10px 0px black;
                         border-radius: 5px;
                         object-fit: cover;
@@ -368,14 +368,14 @@
                     }
                 }
 
-                .profile-img {
+                .home-profile-img {
                     width: 45%;
                     height: auto;
                     border-radius: 100%;
                     margin: auto;
                 }
 
-                .title-article {
+                .home-title-article {
                     font-size: clamp(1rem, 2vw, 1.2rem);
                     padding-bottom: 1rem;
                 }
@@ -386,7 +386,7 @@
                     font-weight: 100;
                 }
 
-                .text-article {
+                .home-text-article {
                     padding: 1rem 0;
                     font-size: clamp(0.8rem, 2vw, 1rem);
 
