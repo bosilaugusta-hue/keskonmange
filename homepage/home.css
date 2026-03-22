@@ -1,5 +1,6 @@
 :root {
     --items-visible: 2;
+    /*utile pour JS pour le nombre de box-card affichées dans le carrousel*/
 }
 
 * {
@@ -22,7 +23,7 @@
         width: 100%;
         color: var(--primary);
         text-align: center;
-
+        
         .text-intro {
             display: flex;
             flex-direction: column;
@@ -174,7 +175,7 @@
 
                                     h3 {
                                         color: var(--primary);
-                                        font-size: clamp(0.8rem, 2vw, 1.1rem);
+                                        font-size: clamp(0.9rem, 1.5vw, 1.1rem);
                                         text-align: left;
                                     }
                                 }
@@ -190,7 +191,7 @@
 
                                 .home-price {
                                     color: var(--primary);
-                                    font-size: clamp(0.8rem, 2vw, 1.1rem);
+                                    font-size: clamp(0.9rem, 1.5vw, 1.1rem); /*0.8 2*/
                                     font-weight: bold;
                                     margin-top: 5px;
                                     text-align: left;
